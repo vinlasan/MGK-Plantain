@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+PlantainJam/.vscode
+PlantainJam/UserSettings
+PlantainJam/Library
+PlantainJam/Logs
