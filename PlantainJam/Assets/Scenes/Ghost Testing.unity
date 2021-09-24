@@ -231,8 +231,6 @@ MonoBehaviour:
   patrolPointAreas:
   - points: []
     floorLevel: 0
-  - points: []
-    floorLevel: 1
 --- !u!1 &217295294
 GameObject:
   m_ObjectHideFlags: 0

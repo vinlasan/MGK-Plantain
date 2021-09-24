@@ -13,12 +13,13 @@ namespace AI
         // Start is called before the first frame update
         void Start()
         {
-            allKnownPoints = FindObjectsOfType<PatrolPoint>(true);
+            allKnownPoints = FindObjectsOfType<PatrolPoint>();
 
+            //Debug.Log(allKnownPoints.Length);
             //sort points
             foreach(AreaPointHolder aPH in patrolPointAreas)
             {
-                AssignPointsInSceneToAreaHolders(aPH);
+                aPH.points = AssignPointsInSceneToAreaHolders(aPH);
                 if(aPH.points.Length > 0)
                     aPH.points = SortPatrolPointsByPathOrder(aPH.points);
                 else Debug.LogError(String.Format("No points found matching level {0}", aPH.floorLevel));
@@ -32,7 +33,7 @@ namespace AI
             return points;
 		}
 
-        public void AssignPointsInSceneToAreaHolders(AreaPointHolder aPH)
+        public PatrolPoint[] AssignPointsInSceneToAreaHolders(AreaPointHolder aPH)
         {
             List<PatrolPoint> pointGroup = new List<PatrolPoint>();
 
@@ -40,12 +41,15 @@ namespace AI
             {
                 if(aPH.floorLevel == allKnownPoints[i].patrolFloor)
                     pointGroup.Add(allKnownPoints[i]);
+                
             }
+            
+            return pointGroup.ToArray();
         }
 
         public PatrolPoint GetNextPoint()
         {
-
+            //TODO get the next point in the list
             return new PatrolPoint();
         }
     }
