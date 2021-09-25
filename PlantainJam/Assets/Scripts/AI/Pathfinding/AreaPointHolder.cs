@@ -1,4 +1,4 @@
-namespace AI
+namespace Ghost.Pathfinding
 {
     [System.Serializable]
     public class AreaPointHolder 

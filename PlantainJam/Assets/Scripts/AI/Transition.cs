@@ -1,5 +1,6 @@
-namespace AI
+namespace Ghost
 {
+    [System.Serializable]
     public class Transition
     {
         public enum TransitionPriority {High, Medium, Low}

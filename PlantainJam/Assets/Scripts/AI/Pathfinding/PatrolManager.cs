@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-namespace AI
+namespace Ghost.Pathfinding
 {
     public class PatrolManager : MonoBehaviour
     {
         public AreaPointHolder[] patrolPointAreas;
         private PatrolPoint[] allKnownPoints;
 
-        // Start is called before the first frame update
+        public static PatrolManager Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         void Start()
         {
             AissginAllPoints();   
@@ -36,7 +42,7 @@ namespace AI
             return points;
 		}
 
-        public PatrolPoint[] AssignPointsInSceneToAreaHolders(AreaPointHolder aPH)
+        private PatrolPoint[] AssignPointsInSceneToAreaHolders(AreaPointHolder aPH)
         {
             List<PatrolPoint> pointGroup = new List<PatrolPoint>();
 
@@ -50,10 +56,15 @@ namespace AI
             return pointGroup.ToArray();
         }
 
-        public PatrolPoint GetNextPoint()
+        public PatrolPoint[] GetPatrolPoints(PatrolPoint.FloorLevel floorLevel)
         {
-            //TODO get the next point in the list
-            return new PatrolPoint();
+            for(int i = 0; i < patrolPointAreas.Length; i++)
+            {
+                if (patrolPointAreas[i].floorLevel == floorLevel)
+                    return patrolPointAreas[i].points;
+            }
+
+            return null;
         }
     }
 }

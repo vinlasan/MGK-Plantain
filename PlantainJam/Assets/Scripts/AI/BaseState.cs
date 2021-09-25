@@ -1,9 +1,10 @@
 using UnityEngine;
 
-namespace AI
+namespace Ghost
 {
     public abstract class BaseState : ScriptableObject
     {
+        [SerializeField]
         public Transition[] transitions;
 
         public abstract void InitializeState(StateController controller);

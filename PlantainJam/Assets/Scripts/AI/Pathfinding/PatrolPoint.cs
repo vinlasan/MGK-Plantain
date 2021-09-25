@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AI
+namespace Ghost.Pathfinding
 {
     public class PatrolPoint : MonoBehaviour
     {

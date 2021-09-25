@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AI
+namespace Ghost
 {
     public class DecisionMaker 
     {
-        public enum DecisionName { PlayerBodyFound, WayPointReached,  }
+        public enum DecisionName { PlayerBodyFound, WayPointReached, DistractionEncountered }
         private Dictionary<DecisionName, Func<StateController, bool>> Decisions;
 
         public DecisionMaker()
@@ -38,7 +38,7 @@ namespace AI
 
         private bool WayPointReached(StateController controller)
         {
-            return false;
+            return controller.ghostMovement.endOfPath;
         }
     }
 }
