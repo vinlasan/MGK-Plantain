@@ -7,13 +7,12 @@ namespace AI
         public Transition[] transitions;
 
         public abstract void InitializeState(StateController controller);
-        public virtual void UpdateState(StateController controller){}
-        public virtual void ExitState(StateController controller)
+        public virtual void UpdateState(StateController controller)
         {
-            //darkController.ClearCooldowns();
+            CheckTransitions(controller);
         }
+        public virtual void ExitState(StateController controller){ }
         public virtual void MovementUpdate(StateController controller){}
-        protected virtual void CooldownCallback(StateController controller) {}
         protected void CheckTransitions(StateController controller)
         {
             foreach (Transition tran in transitions)

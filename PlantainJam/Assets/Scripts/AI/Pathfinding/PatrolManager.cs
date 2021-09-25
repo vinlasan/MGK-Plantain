@@ -13,10 +13,13 @@ namespace AI
         // Start is called before the first frame update
         void Start()
         {
+            AissginAllPoints();   
+        }
+
+        private void AissginAllPoints()
+        {
             allKnownPoints = FindObjectsOfType<PatrolPoint>();
 
-            //Debug.Log(allKnownPoints.Length);
-            //sort points
             foreach(AreaPointHolder aPH in patrolPointAreas)
             {
                 aPH.points = AssignPointsInSceneToAreaHolders(aPH);
