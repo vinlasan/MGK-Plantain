@@ -11,6 +11,9 @@ public enum PlayerState
     stagger,
     gameover,
 }
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class MainControl : MonoBehaviour
 {
     public GameObject RestartMenu;

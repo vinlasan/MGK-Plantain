@@ -9,9 +9,9 @@ namespace Gameplay
         public delegate void GameEvent();
         public delegate void GameEvent<T>(T obj);
 
-        public static event GameEvent<GameDirector.WorldMode> WorldTypeChange;
+        public static event GameEvent<WorldMode> WorldTypeChange;
 
-        public static void OnWorldTypeChanged(GameDirector.WorldMode worldMode)
+        public static void OnWorldTypeChanged(WorldMode worldMode)
         {
             if (WorldTypeChange != null)
                 WorldTypeChange(worldMode);
