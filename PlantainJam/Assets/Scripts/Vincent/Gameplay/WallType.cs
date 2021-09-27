@@ -8,8 +8,7 @@ namespace Gameplay.Puzzle
     [RequireComponent(typeof(BoxCollider2D))]
     public class WallType : MonoBehaviour
     {
-        [SerializeField]
-        private WorldMode wallColliderType;
+        public WorldMode wallColliderType;
 
         private bool spiritWorldTraverse;
 
@@ -55,12 +54,27 @@ namespace Gameplay.Puzzle
                 else spriteRenderer.color = spiritColor;
             }
         }
+        
+        /*private void OnTriggerEnter2D(Collider2D col)
+        {
+            Plantain plantain = col.GetComponent<Plantain>();
+            if (plantain != null && wallColliderType == WorldMode.SpiritWorld)
+            {
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                spriteRenderer.color = Color.grey;
+            }
+        }*/
 
-        public void ToggleSpiritWorldTraverse()
+        public void EnableSpiritWorldTraverse()
         {
             //if(wallColliderType == WorldMode.SpiritWorld)
             Debug.Log("Plaintain encountered " + wallColliderType);
-            spiritWorldTraverse = !spiritWorldTraverse;
+            spiritWorldTraverse = true;
+        }
+
+        public void DisableSpiritWorldTraverse()
+        {
+            spiritWorldTraverse = false;
         }
     }
 }
