@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,12 @@ namespace Gameplay
     public enum WorldMode { RealWorld, SpiritWorld }
     public class GameDirector : MonoBehaviour
     {
+        public WorldMode worldMode { get; private set; }
         
         public void Start()
         {
-            EventManager.OnWorldTypeChanged(WorldMode.RealWorld);
+            worldMode = WorldMode.RealWorld;
+            EventManager.OnWorldTypeChanged(worldMode);
         }
 
         private void OnEnable()
@@ -23,7 +26,24 @@ namespace Gameplay
             EventManager.WorldTypeChange -= WorldModeChanged;
         }
 
-        public void WorldModeChanged(WorldMode worldMode)
+        private void Update()
+        {
+            DebugWorldSwitch();
+        }
+
+#if UNITY_EDITOR
+        private void DebugWorldSwitch()
+        {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                if(worldMode == WorldMode.RealWorld)
+                    EventManager.OnWorldTypeChanged(worldMode = WorldMode.SpiritWorld);
+                else EventManager.OnWorldTypeChanged(worldMode = WorldMode.RealWorld);
+            }
+        }
+#endif
+
+        public void WorldModeChanged(WorldMode mode)
         {
             //Debug.Log("World mode changed to " + worldMode);
         }

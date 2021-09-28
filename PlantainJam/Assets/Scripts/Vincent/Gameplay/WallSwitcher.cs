@@ -15,8 +15,6 @@ namespace Gameplay.Puzzle
         [SerializeField]
         private Color realColor, spiritColor;
 
-        private WorldMode currentMode;
-
         private void OnEnable()
         {
             EventManager.WorldTypeChange += WorldTypeChanged;
