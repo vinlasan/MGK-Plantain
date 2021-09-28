@@ -9,7 +9,8 @@ public class TestInkScript : MonoBehaviour
 	public static event Action<Story> OnCreateStory;
 	public bool done = false;
 	public GameObject dialogueHolder;
-
+	public string playerChoiceText;
+	public AudioChoice audioChoice;
 	void Awake()
 	{
 		// Remove the default message
@@ -80,6 +81,8 @@ public class TestInkScript : MonoBehaviour
 	{
 		story.ChooseChoiceIndex(choice.index);
 		Debug.Log(choice.text);
+		playerChoiceText = choice.text;
+		audioChoice.PlayAudio();
 		RefreshView();
 	}
 
