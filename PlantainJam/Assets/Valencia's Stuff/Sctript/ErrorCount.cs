@@ -19,7 +19,7 @@ public class ErrorCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             increaseErrrorCount();
         }

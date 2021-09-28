@@ -464,6 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccbefdfcfd2b74478a30455aeab19cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
+  dialogueHolder: {fileID: 1075670706}
   inkJSONAsset: {fileID: 4900000, guid: a3b6c92a49b565f41acb79e202b4dbf1, type: 3}
   image: {fileID: 1075670707}
   textPrefab: {fileID: 6509907229318258519, guid: 38f975b09a976064cadfe8ba73bf69a0, type: 3}

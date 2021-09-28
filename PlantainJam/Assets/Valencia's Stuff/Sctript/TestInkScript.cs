@@ -7,12 +7,22 @@ using Ink.Runtime;
 public class TestInkScript : MonoBehaviour
 {
 	public static event Action<Story> OnCreateStory;
+	public bool done = false;
+	public GameObject dialogueHolder;
 
 	void Awake()
 	{
 		// Remove the default message
 		RemoveChildren();
 		StartStory();
+	}
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space) && done == true)
+		{
+			dialogueHolder.SetActive(false);
+
+		}
 	}
 
 	// Creates a new Story object with the compiled story which we can then play!
@@ -58,8 +68,10 @@ public class TestInkScript : MonoBehaviour
 		// If we've read all the content and there's no choices, the story is finished!
 		else
 		{
-			CreateContentView("End of story");
-			
+			CreateContentView("Press 'Space' to continue");
+			done = true;
+
+
 		}
 	}
 
