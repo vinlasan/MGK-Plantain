@@ -25,7 +25,7 @@ namespace Gameplay
 
         public void WorldModeChanged(WorldMode worldMode)
         {
-            Debug.Log("World mode changed to " + worldMode);
+            //Debug.Log("World mode changed to " + worldMode);
         }
     }
 }
