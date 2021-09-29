@@ -10,10 +10,15 @@ namespace Gameplay
     {
         public WorldMode worldMode { get; private set; }
         
+        [SerializeField]
+        private bool enableDebugModeOnStart;
+        
         public void Start()
         {
             worldMode = WorldMode.RealWorld;
             EventManager.OnWorldTypeChanged(worldMode);
+            if(enableDebugModeOnStart)
+                EventManager.OnDebugMode(true);
         }
 
         private void OnEnable()
@@ -25,23 +30,6 @@ namespace Gameplay
         {
             EventManager.WorldTypeChange -= WorldModeChanged;
         }
-
-        private void Update()
-        {
-            DebugWorldSwitch();
-        }
-
-#if UNITY_EDITOR
-        private void DebugWorldSwitch()
-        {
-            if (Input.GetKeyDown(KeyCode.F1))
-            {
-                if(worldMode == WorldMode.RealWorld)
-                    EventManager.OnWorldTypeChanged(worldMode = WorldMode.SpiritWorld);
-                else EventManager.OnWorldTypeChanged(worldMode = WorldMode.RealWorld);
-            }
-        }
-#endif
 
         public void WorldModeChanged(WorldMode mode)
         {

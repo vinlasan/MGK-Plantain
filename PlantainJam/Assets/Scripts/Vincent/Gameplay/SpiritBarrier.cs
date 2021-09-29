@@ -4,9 +4,11 @@ using UnityEngine;
 
 namespace Gameplay.Puzzle
 {
+    [RequireComponent(typeof(BoxCollider2D))]
     public class SpiritBarrier : MonoBehaviour
     {
-        private Transform visuals;
+        private SpriteRenderer visuals;
+        private BoxCollider2D collider;
 
         private void OnEnable()
         {
@@ -18,23 +20,24 @@ namespace Gameplay.Puzzle
             EventManager.WorldTypeChange -= WorldTypeChanged;
         }
 
-        public void Start()
+        public void Awake()
         {
-            visuals = GetComponentInChildren<Transform>();
+            visuals = GetComponentInChildren<SpriteRenderer>();
+            collider = GetComponent<BoxCollider2D>();
         }
-        
+
         private void WorldTypeChanged(WorldMode worldMode)
         {
             
             if (worldMode == WorldMode.SpiritWorld)
             {
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
-                visuals.gameObject.SetActive(true); 
+                collider.enabled = true;
+                visuals.enabled = true;
             }
             else
             {
-                visuals.gameObject.SetActive(false); 
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                collider.enabled = false;
+                visuals.enabled = false;
             }
         }
     }

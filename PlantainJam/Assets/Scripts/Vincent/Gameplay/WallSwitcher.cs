@@ -9,7 +9,7 @@ namespace Gameplay.Puzzle
     public class WallSwitcher : MonoBehaviour
     {
         [SerializeField]
-        private bool spiritWorldTraverse;
+        private bool spiritWorldTraverse, debugVisuals;
 
         private SpriteRenderer spriteRenderer;
         [SerializeField]
@@ -18,17 +18,24 @@ namespace Gameplay.Puzzle
         private void OnEnable()
         {
             EventManager.WorldTypeChange += WorldTypeChanged;
+            EventManager.DebugMode += EnableDebugVisuals;
         }
 
         private void OnDisable()
         {
             EventManager.WorldTypeChange -= WorldTypeChanged;
+            EventManager.DebugMode -= EnableDebugVisuals;
         }
 
-        public void Start()
+        public void Awake()
         {
             spiritWorldTraverse = false;
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        public void EnableDebugVisuals(bool enabled)
+        {
+            debugVisuals = enabled;
         }
 
         private void WorldTypeChanged(WorldMode worldMode)
@@ -37,14 +44,18 @@ namespace Gameplay.Puzzle
             if (worldMode == WorldMode.SpiritWorld && spiritWorldTraverse)
             {
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                spriteRenderer.color = Color.grey;
+                if(debugVisuals)
+                    spriteRenderer.color = Color.grey;
             }
             else
             {
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
-                if (worldMode == WorldMode.RealWorld)
-                    spriteRenderer.color = realColor;
-                else spriteRenderer.color = spiritColor;
+                if (debugVisuals)
+                {
+                    if (worldMode == WorldMode.RealWorld)
+                        spriteRenderer.color = realColor;
+                    else spriteRenderer.color = spiritColor;
+                }
             }
         }
         
