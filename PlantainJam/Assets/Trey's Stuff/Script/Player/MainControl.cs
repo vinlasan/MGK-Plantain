@@ -21,23 +21,20 @@ public class MainControl : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
-    public FloatValue currentHealth;
-    public Notification healthSignal;
-    public VectorValue startingPoint;
+    //public FloatValue currentHealth;
+    //public Notification healthSignal;
+    //public VectorValue startingPoint;
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
-    public GameObject attacksfx;
     //public GameObject walksfx;
-    //public GameObject playerhitsfx;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        animator.SetFloat("moveX", 0);
-        animator.SetFloat("moveY", -1);
-        transform.position = startingPoint.initialValue;
+        //animator.SetFloat("moveX", 0);
+        //animator.SetFloat("moveY", -1);
 
     }
 
