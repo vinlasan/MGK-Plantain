@@ -26,6 +26,10 @@ public class MainControl : MonoBehaviour
     //public VectorValue startingPoint;
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
+<<<<<<< Updated upstream
+=======
+    //public GameObject attacksfx;
+>>>>>>> Stashed changes
     //public GameObject walksfx;
 
     // Start is called before the first frame update
@@ -35,6 +39,10 @@ public class MainControl : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         //animator.SetFloat("moveX", 0);
         //animator.SetFloat("moveY", -1);
+<<<<<<< Updated upstream
+=======
+        //transform.position = startingPoint.initialValue;
+>>>>>>> Stashed changes
 
     }
 
