@@ -3,13 +3,44 @@ Choose an audio to play
 
 ==Audio_Choices==
 *Piano 
-    Playing Piano  -> Audio_Choices
+    Playing Piano 
+        Is this the correct sample -> PianoChoices
 *Jazz
-    Playing Jazz -> Audio_Choices
+    Playing Jazz
+        Is this the correct sample -> JazzChoice
 *Dig
-    Playing Dig -> Audio_Choices
+    Playing Dig 
+        Is this the correct sample -> DigChoice
 *Organ
-    Playing Organ -> Audio_Choices
+    Playing Organ 
+        Is this the correct sample -> OrganChoice
 *Country
-    Playing Country -> Audio_Choices
-*Finished Music -> DONE
+    Playing Piano 
+        Is this the correct sample -> CountryChoice
+
+
+==PianoChoices==
+*Yes
+     -> DONE
+*No 
+     -> DONE
+==JazzChoice==
+*Yes
+     -> DONE
+*No 
+     -> DONE
+==DigChoice==
+*Yes
+     -> DONE
+*No 
+     -> DONE
+==OrganChoice==
+*Yes
+     -> DONE
+*No 
+     -> DONE
+==CountryChoice==
+*Yes
+     -> DONE
+*No 
+     -> DONE

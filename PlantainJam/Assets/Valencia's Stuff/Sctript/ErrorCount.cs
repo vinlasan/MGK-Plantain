@@ -30,7 +30,7 @@ public class ErrorCount : MonoBehaviour
         }
     }
 
-    void increaseErrrorCount()
+   public void increaseErrrorCount()
     {
         errorCount++;
         errorText.text = "Error Count: " + errorCount;

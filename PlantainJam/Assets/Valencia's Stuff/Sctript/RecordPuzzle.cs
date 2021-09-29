@@ -4,27 +4,28 @@ using System;
 using Ink.Runtime;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
-public class TestInkScript : MonoBehaviour
+public class RecordPuzzle : MonoBehaviour
 {
 	public static event Action<Story> OnCreateStory;
 	public bool done = false;
 	public GameObject dialogueHolder;
 	public string playerChoiceText;
-	
+	public AudioChoice audioChoice;
+
 	void Awake()
 	{
 		// Remove the default message
 		RemoveChildren();
 		StartStory();
 	}
-	private void Update()
+ 
+    private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Space) && done == true)
 		{
 			dialogueHolder.SetActive(false);
 
 		}
-       
 	}
 
 	// Creates a new Story object with the compiled story which we can then play!
@@ -48,7 +49,7 @@ public class TestInkScript : MonoBehaviour
 		{
 			// Continue gets the next line of the story
 			string text = story.ContinueMaximally();
-			
+
 			// This removes any white space from the text.
 			text = text.Trim();
 			// Display the text on screen!
@@ -71,6 +72,11 @@ public class TestInkScript : MonoBehaviour
 		// If we've read all the content and there's no choices, the story is finished!
 		else
 		{
+			if (audioChoice.correct == true)
+            {
+				CreateContentView("You choose correctly");
+			}
+            
 			CreateContentView("Press 'Space' to continue");
 			done = true;
 
@@ -84,8 +90,8 @@ public class TestInkScript : MonoBehaviour
 		story.ChooseChoiceIndex(choice.index);
 		Debug.Log(choice.text);
 		playerChoiceText = choice.text;
-		//audioChoice.PlayAudio();
-
+		audioChoice.PlayAudio();
+		//ResetStory();
 		RefreshView();
 	}
 
@@ -124,10 +130,16 @@ public class TestInkScript : MonoBehaviour
 			GameObject.Destroy(image.transform.GetChild(i).gameObject);
 		}
 	}
-    public void RestStory()
-    {
+	public void ResetStory()
+	{
 		story.ResetState();
-    }
+	}
+	public void correctChoice()
+    {
+
+		CreateContentView("You choose correctly");
+		RefreshView();
+	}
 
     [SerializeField]
 	private TextAsset inkJSONAsset = null;
