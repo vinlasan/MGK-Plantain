@@ -3,71 +3,21 @@ using UnityEngine;
 
 namespace Gameplay.Puzzle
 {
-    public class Plantain : MonoBehaviour
+    public class Plantain : Interactable 
     {
-        private void OnEnable()
-        {
-            EventManager.WorldTypeChange += WorldTypeChanged;
-        }
-
-        private void OnDisable()
-        {
-            EventManager.WorldTypeChange -= WorldTypeChanged;
-        }
-
-        private void WorldTypeChanged(WorldMode worldMode)
-        {
-            //StartCoroutine(ResetTrigger());
-        }
+        //TODO Create function playing sounds on pickup or put down
         
-        private IEnumerator ResetTrigger()
+        //TODO make this inherit from Interactable
+        protected void OnTriggerEnter2D(Collider2D col)
         {
-            GetComponent<CircleCollider2D>().enabled = false;
-            yield return new WaitForFixedUpdate();
-            GetComponent<CircleCollider2D>().enabled = true;
-        }
-
-        private void OnTriggerEnter2D(Collider2D col)
-        {
-            /*WallType wall = col.GetComponent<WallType>();
-            if(wall != null && wall.wallColliderType != WorldMode.SpiritWorld)
-            {
-                wall.EnableSpiritWorldTraverse();
-            }*/
-            //WallSwitcher wallSwitcher = col.GetComponent<WallSwitcher>();
-            
-            //if(wallSwitcher != null)
-            //    wallSwitcher.EnableSpiritWorldTraverse();
-            
             if(col.TryGetComponent(out WallSwitcher wall))
-            {
                 wall.EnableSpiritWorldTraverse();
-            }
         }
-        
-        
 
-        /*private void OnTriggerStay2D(Collider2D col)
+        protected void OnTriggerExit2D(Collider2D col)
         {
-            WallType wall = col.GetComponent<WallType>();
-            if (wall != null)
-            {
-                wall.EnableSpiritWorldTraverse();
-            }
-        }*/
-
-        private void OnTriggerExit2D(Collider2D col)
-        {
-            /*WallType wall = col.GetComponent<WallType>();
-            if(wall != null)
-            {
-                wall.DisableSpiritWorldTraverse();
-            }*/
-            
             if(col.TryGetComponent(out WallSwitcher wall))
-            {
                 wall.DisableSpiritWorldTraverse();
-            }
         }
     }
 }
