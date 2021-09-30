@@ -49,7 +49,19 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 625e459b10167844e917915be8475515
+    name: LimboVolume
+  - guid: d020d0808ea2eb3448a2856ec5fecc82
+    name: MasterVolume
+  - guid: 5640f8011a599e74a94023d4ee542174
+    name: MusicVolume
+  - guid: 2e6ca458f3f497b45b0f506496325d52
+    name: LowPassCutOffMusic
+  - guid: 3320e25757775114294d7e0964bd64db
+    name: PhysVolume
+  - guid: 969bdbf854c936042858ca6fc163abad
+    name: SFXVolume
   m_AudioMixerGroupViews:
   - guids:
     - d2f5a76f96cc40c499aeff6cc21c72f3
