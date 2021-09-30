@@ -17,8 +17,9 @@ namespace Gameplay
         {
             worldMode = WorldMode.RealWorld;
             EventManager.OnWorldTypeChanged(worldMode);
-            if(enableDebugModeOnStart)
+            if (enableDebugModeOnStart)
                 EventManager.OnDebugMode(true);
+            else EventManager.OnDebugMode(false);
         }
 
         private void OnEnable()

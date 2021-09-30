@@ -36,6 +36,7 @@ namespace Gameplay.Puzzle
         public void EnableDebugVisuals(bool enabled)
         {
             debugVisuals = enabled;
+            spriteRenderer.gameObject.SetActive(enabled);
         }
 
         private void WorldTypeChanged(WorldMode worldMode)
