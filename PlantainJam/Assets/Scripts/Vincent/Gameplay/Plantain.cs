@@ -7,7 +7,6 @@ namespace Gameplay.Puzzle
     {
         //TODO Create function playing sounds on pickup or put down
         
-        //TODO make this inherit from Interactable
         protected void OnTriggerEnter2D(Collider2D col)
         {
             if(col.TryGetComponent(out WallSwitcher wall))
