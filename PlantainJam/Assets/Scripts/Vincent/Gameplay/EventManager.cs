@@ -1,4 +1,6 @@
 using AudioUtilities;
+using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Gameplay
 {
@@ -6,6 +8,7 @@ namespace Gameplay
     {
         public delegate void GameEvent();
         public delegate void GameEvent<T>(T obj);
+        public delegate void GameEvent<T1, T2>(T1 obj1, T2 obj2);
 
         public static event GameEvent<WorldMode> WorldTypeChange;
         public static event GameEvent<bool> DebugMode;
@@ -13,6 +16,11 @@ namespace Gameplay
         /// Only to be listened to by the Game Director for storing what hints are collected.
         /// </summary>
         public static event GameEvent<HintState> HintCollected;
+
+        public static event GameEvent<AudioSource> AudioPlayRecordMusic;
+        public static event GameEvent AudioStopRecordMusic;
+        public static event GameEvent<float> AudioGhostApproach;
+        public static event GameEvent GameStart;
 
         public static void OnWorldTypeChanged(WorldMode worldMode)
         {
@@ -30,6 +38,30 @@ namespace Gameplay
         {
             if (HintCollected != null)
                 HintCollected(hint);
+        }
+
+        public static void OnAudioPlayRecordMusic(AudioSource clip)
+        {
+            if (AudioPlayRecordMusic != null)
+                AudioPlayRecordMusic(clip);
+        }
+
+        public static void OnAudioStopRecordMusic()
+        {
+            if (AudioStopRecordMusic != null)
+                AudioStopRecordMusic();
+        }
+
+        public static void OnAudioGhostApproach(float duration)
+        {
+            if (AudioGhostApproach != null)
+                AudioGhostApproach(duration);
+        }
+
+        public static void OnGameStart()
+        {
+            if (GameStart != null)
+                GameStart();
         }
     }
 }

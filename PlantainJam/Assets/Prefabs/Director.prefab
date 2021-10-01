@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939455389316934837}
   - component: {fileID: 939455389316934836}
+  - component: {fileID: 908636645}
   m_Layer: 0
   m_Name: Director
   m_TagString: Untagged
@@ -43,3 +44,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818d240107be57940bd993d8f2b80769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableDebugModeOnStart: 0
+--- !u!114 &908636645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939455389316934835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8820550e32305d848a08fb99df9632a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
+  limboSnapshot: {fileID: 7287107925512867842, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
+  physicalSnapShot: {fileID: 24500006, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
+  bgmMutedSnapshot: {fileID: 1907764440575525580, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
+  limboMusic: {fileID: 0}
+  physicalMusic: {fileID: 0}

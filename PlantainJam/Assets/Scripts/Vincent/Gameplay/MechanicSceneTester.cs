@@ -15,28 +15,59 @@ namespace Gameplay.Puzzle.Test
         
         private Queue<Plantain> plantains;
 
+        [SerializeField]
+        private bool debugWorld, debugLimbo;
+
+        [SerializeField]
+        private AudioTester[] audioSources;
+
         private void Awake()
         {
             plantains = new Queue<Plantain>();
             worldMode = WorldMode.RealWorld;
         }
 
+        private void Start()
+        {
+            EventManager.OnGameStart();
+        }
+
         void Update()
         {
-            DebugWorldSwitch();
-            if (Input.GetKeyDown(KeyCode.F2) || Input.GetKeyDown(KeyCode.Q))
+            if (debugWorld)
+                DebugWorldSwitch();
+
+            if (debugLimbo)
             {
-                Plantain p = Instantiate(plantainPrefab, playerLocation.position, Quaternion.identity);
-                plantains.Enqueue(p);
+                if (Input.GetKeyDown(KeyCode.F2) || Input.GetKeyDown(KeyCode.Q))
+                {
+                    Plantain p = Instantiate(plantainPrefab, playerLocation.position, Quaternion.identity);
+                    plantains.Enqueue(p);
+                }
+
+                if (Input.GetKeyDown(KeyCode.F3) || Input.GetKeyDown(KeyCode.E))
+                {
+                    if (plantains.Count > 0)
+                    {
+                        Plantain p = plantains.Peek();
+                        plantains.Dequeue();
+                        Destroy(p.gameObject);
+                    }
+                }
             }
 
-            if (Input.GetKeyDown(KeyCode.F3) || Input.GetKeyDown(KeyCode.E))
+            AudioProcess();
+            if (Input.GetKeyDown(KeyCode.Keypad8))
+                EventManager.OnAudioStopRecordMusic();
+        }
+
+        private void AudioProcess()
+        {
+            foreach (AudioTester aTester in audioSources)
             {
-                if (plantains.Count > 0)
+                if (Input.GetKeyDown(aTester.keyCode))
                 {
-                    Plantain p = plantains.Peek();
-                    plantains.Dequeue();
-                    Destroy(p.gameObject);
+                    EventManager.OnAudioPlayRecordMusic(aTester.audioSource);
                 }
             }
         }
@@ -64,6 +95,15 @@ namespace Gameplay.Puzzle.Test
                     EventManager.OnWorldTypeChanged(WorldMode.SpiritWorld);
                 else EventManager.OnWorldTypeChanged(worldMode = WorldMode.RealWorld);
             }
+        }
+        
+        [System.Serializable]
+        private class AudioTester
+        {
+            [SerializeField]
+            public AudioSource audioSource;
+            [SerializeField]
+            public KeyCode keyCode;
         }
     }
 }

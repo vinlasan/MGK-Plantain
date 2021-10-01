@@ -12,13 +12,14 @@ namespace Gameplay.Puzzle
         Collider2D colision;
         //TODO Create function playing sounds on pickup or put down
 
-        /*
-        protected void OnTriggerEnter2D(Collider2D col)
+        
+        protected override void OnTriggerEnter2D(Collider2D col)
         {
+            base.OnTriggerEnter2D(col);
             if (col.TryGetComponent(out WallSwitcher wall))
                 wall.EnableSpiritWorldTraverse();
         }
-        */
+        
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space) && inRange)
@@ -84,8 +85,9 @@ namespace Gameplay.Puzzle
         }
 
 
-        protected void OnTriggerExit2D(Collider2D col)
+        protected override void OnTriggerExit2D(Collider2D col)
         {
+            base.OnTriggerExit2D(col);
             if(col.TryGetComponent(out WallSwitcher wall))
                 wall.DisableSpiritWorldTraverse();
         }

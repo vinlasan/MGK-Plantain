@@ -60,12 +60,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2858555297653684515}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66cdfaa9a525d254c824cc5b1ca97a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 0}
   inRange: 0
   isDown: 0
   contents: {fileID: 11400000, guid: 802cdc1402e003c4e856729e6fbc3667, type: 2}
@@ -181,15 +180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b123b0f8edd0846a08b8a997050407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 0}
   inRange: 0
   isDown: 0
   contents: {fileID: 0}
   playerInventory: {fileID: 0}
   raiseItem: {fileID: 0}
-  collectsfx: {fileID: 0}
-  dialogueBox: {fileID: 0}
-  dialogueText: {fileID: 0}
 --- !u!1 &4914437261067245966
 GameObject:
   m_ObjectHideFlags: 0
