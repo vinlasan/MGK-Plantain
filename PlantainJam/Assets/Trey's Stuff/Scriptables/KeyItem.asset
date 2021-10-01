@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b60cf6a116d7f4888839b7b47173af, type: 3}
   m_Name: KeyItem
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 5d66c72966192814891017bc60f48a91, type: 3}
   itemDescription: Key item
   isKey: 1

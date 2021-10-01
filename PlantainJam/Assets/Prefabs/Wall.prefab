@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 6885526190828592648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.13, y: 0.11127913, z: -0.14960459}
-  m_LocalScale: {x: 1, y: 50, z: 1}
+  m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children:
   - {fileID: 6885526190663803079}
   m_Father: {fileID: 0}
@@ -154,5 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spiritWorldTraverse: 0
+  debugVisuals: 0
   realColor: {r: 1, g: 1, b: 1, a: 1}
   spiritColor: {r: 0, g: 0.821918, b: 1, a: 1}

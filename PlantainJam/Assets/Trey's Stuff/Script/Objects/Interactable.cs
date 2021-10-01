@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
 
-    public Notification context;
+    //public Notification context;
     public bool inRange;
 
     // Use this for initialization
@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
-            context.Raise();
+            //context.Raise();
             inRange = true;
         }
     }
@@ -33,7 +33,7 @@ public class Interactable : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
-            context.Raise();
+            //context.Raise();
             inRange = false;
         }
     }

@@ -37,7 +37,7 @@ public class Object : Interactable
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
-            context.Raise();
+            //context.Raise();
             inRange = false;
             dialogueBox.SetActive(false);
         }

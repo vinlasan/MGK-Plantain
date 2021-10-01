@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -31,7 +32,6 @@ public class MainControl : MonoBehaviour
     public SpriteRenderer receivedItem;
     //public GameObject attacksfx;
     //public GameObject walksfx;
-    //public GameObject playerhitsfx;
 
     // Start is called before the first frame update
     void Start()
