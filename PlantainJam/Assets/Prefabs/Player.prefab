@@ -340,9 +340,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -816752761
+  m_SortingLayer: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 1839895257976571527}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RestartMenu: {fileID: 0}
   currentState: 0
-  speed: 8
+  speed: 10
   playerInventory: {fileID: 0}
   receivedItem: {fileID: 0}
 --- !u!70 &1839895257976571527
