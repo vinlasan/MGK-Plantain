@@ -595,7 +595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554beab938ea7964dab12117941d65cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 0}
   inRange: 1
   contents: {fileID: 11400000, guid: 802cdc1402e003c4e856729e6fbc3667, type: 2}
   playerInventory: {fileID: 11400000, guid: 055c33ff347878842b9f86d8faf46eba, type: 2}
@@ -1489,7 +1488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2858555297653684515, guid: 9a7bf9675560eee4f9d28db0cfe01768, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2858555297653684540, guid: 9a7bf9675560eee4f9d28db0cfe01768, type: 3}
       propertyPath: m_Enabled
@@ -1944,12 +1943,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8a84fb4aae8d44e860dc8968dc579b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 0}
   inRange: 0
   contents: {fileID: 11400000, guid: 802cdc1402e003c4e856729e6fbc3667, type: 2}
   isOpen: 0
   playerInventory: {fileID: 11400000, guid: e718e3204efb47c49925ff6b5ace05b6, type: 2}
-  opensfx: {fileID: 0}
   raiseItem: {fileID: 11400000, guid: 43d211a22737ab546aa4d22021213674, type: 2}
 --- !u!1 &1095609442
 GameObject:
