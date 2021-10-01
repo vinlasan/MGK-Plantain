@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using AudioUtilities;
 
 namespace Gameplay
 {
@@ -11,6 +9,10 @@ namespace Gameplay
 
         public static event GameEvent<WorldMode> WorldTypeChange;
         public static event GameEvent<bool> DebugMode;
+        /// <summary>
+        /// Only to be listened to by the Game Director for storing what hints are collected.
+        /// </summary>
+        public static event GameEvent<HintState> HintCollected;
 
         public static void OnWorldTypeChanged(WorldMode worldMode)
         {
@@ -22,6 +24,12 @@ namespace Gameplay
         {
             if (DebugMode != null)
                 DebugMode(enabled);
+        }
+        
+        public static void OnHintCollected(HintState hint)
+        {
+            if (HintCollected != null)
+                HintCollected(hint);
         }
     }
 }

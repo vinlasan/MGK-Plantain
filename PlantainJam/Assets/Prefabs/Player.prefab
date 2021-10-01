@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 1801455805404932287}
   - component: {fileID: 1801455805404932286}
   - component: {fileID: 1801455805404932272}
-  - component: {fileID: 2147170936}
+  - component: {fileID: 1839895257976571527}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -446,14 +446,10 @@ MonoBehaviour:
   RestartMenu: {fileID: 0}
   currentState: 0
   speed: 8
-  currentHealth: {fileID: 0}
-  healthSignal: {fileID: 0}
-  startingPoint: {fileID: 11400000, guid: 0880c072bcd12724ca103f6052999bd8, type: 2}
   playerInventory: {fileID: 0}
   receivedItem: {fileID: 0}
-  attacksfx: {fileID: 0}
---- !u!58 &2147170936
-CircleCollider2D:
+--- !u!70 &1839895257976571527
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -466,5 +462,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.75
+  m_Size: {x: 0.95, y: 2}
+  m_Direction: 0
