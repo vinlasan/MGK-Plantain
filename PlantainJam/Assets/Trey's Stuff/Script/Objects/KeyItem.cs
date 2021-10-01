@@ -10,6 +10,7 @@ public class KeyItem : Interactable
     public Inventory playerInventory;
     //public GameObject collectsfx;
     public Notification raiseItem;
+    //public Collider2D colision;
 
 
     // Start is called before the first frame update
@@ -21,15 +22,33 @@ public class KeyItem : Interactable
     // Update is called once per frame
     void Update()
     {
-    
+        /*
+         * if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Collider2D colision;
+            if (colision.CompareTag("Player") && !colision.isTrigger)
+            {
+                playerInventory.AddItem(contents);
+                playerInventory.currentItem = contents;
+                Destroy(this.gameObject);
+            }
+        }
+        */
     }
+
+    
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+        if (collision.CompareTag("Player"))
         {
-            playerInventory.AddItem(contents);
-            playerInventory.currentItem = contents;
-            Destroy(this.gameObject);
+            if (Input.GetKeyDown(KeyCode.Space) && !collision.isTrigger)
+            {
+                playerInventory.AddItem(contents);
+                playerInventory.currentItem = contents;
+                Destroy(this.gameObject);
+            }
         }
+     
     }
+    
 }

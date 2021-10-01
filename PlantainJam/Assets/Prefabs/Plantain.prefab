@@ -64,6 +64,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   context: {fileID: 0}
   inRange: 0
+  contents: {fileID: 11400000, guid: 802cdc1402e003c4e856729e6fbc3667, type: 2}
+  playerInventory: {fileID: 11400000, guid: e718e3204efb47c49925ff6b5ace05b6, type: 2}
+  raiseItem: {fileID: 0}
 --- !u!50 &2858555297653684536
 Rigidbody2D:
   serializedVersion: 4
