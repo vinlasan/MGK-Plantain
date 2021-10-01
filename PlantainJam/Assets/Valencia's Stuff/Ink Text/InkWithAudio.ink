@@ -15,7 +15,7 @@ Choose an audio to play
     Playing Organ 
         Is this the correct sample -> OrganChoice
 *Country
-    Playing Piano 
+    Playing Country 
         Is this the correct sample -> CountryChoice
 
 
