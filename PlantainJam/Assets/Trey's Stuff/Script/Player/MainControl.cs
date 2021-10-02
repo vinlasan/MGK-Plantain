@@ -37,6 +37,7 @@ public class MainControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //playerInventory.currentItem = null;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         //animator.SetFloat("moveX", 0);

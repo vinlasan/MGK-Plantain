@@ -9,7 +9,7 @@ namespace Gameplay.Puzzle
         public Item contents;
         public Inventory playerInventory;
         public Notification raiseItem;
-        Collider2D colision;
+        //Collider2D colision;
         //TODO Create function playing sounds on pickup or put down
 
         
@@ -27,10 +27,17 @@ namespace Gameplay.Puzzle
                 if (!isDown)
                 {
                     Collect();
+                    Destroy(this.gameObject);
                 }
                 else
                 {
                     Place();
+                    /*
+                    if (playerInventory.Equals(1))
+                    {
+
+                    }
+                    */
                 }
             }
         }
@@ -45,6 +52,7 @@ namespace Gameplay.Puzzle
                 Destroy(this.gameObject);
             }
             */
+            
 
            playerInventory.AddItem(contents);
            playerInventory.currentItem = contents;
