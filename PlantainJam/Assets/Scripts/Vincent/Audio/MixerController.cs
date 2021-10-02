@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using Gameplay;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -29,6 +28,7 @@ namespace AudioUtilities
         private void Start()
         {
             puzzleMusicPlaying = false;
+            StartBGM();
             //bgmMusicGroup.audioMixer.SetFloat("Volume", 10);
         }
 
@@ -46,7 +46,6 @@ namespace AudioUtilities
             EventManager.GameStart -= StartBGM;
             EventManager.WorldTypeChange -= SwitchSnapshots;
             EventManager.AudioStopRecordMusic -= StopRecordAudio;
-            StopBGM();
         }
 
         private void StartBGM()

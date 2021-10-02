@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818d240107be57940bd993d8f2b80769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limboEffects: {fileID: 0}
   enableDebugModeOnStart: 0
 --- !u!114 &908636645
 MonoBehaviour:

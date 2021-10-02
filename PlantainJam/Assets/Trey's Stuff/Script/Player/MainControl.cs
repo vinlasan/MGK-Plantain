@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using Gameplay;
 using UnityEngine;
 
 public enum PlayerState
@@ -60,6 +61,10 @@ public class MainControl : MonoBehaviour
             UpdateAnimationAndMove();
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            EventManager.OnSwitchWorldType();
+        }
     }
 
     public void RaiseItem()

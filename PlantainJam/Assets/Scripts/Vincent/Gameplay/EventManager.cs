@@ -21,6 +21,7 @@ namespace Gameplay
         public static event GameEvent AudioStopRecordMusic;
         public static event GameEvent<float> AudioGhostApproach;
         public static event GameEvent GameStart;
+        public static event GameEvent SwitchWorldType;
 
         public static void OnWorldTypeChanged(WorldMode worldMode)
         {
@@ -62,6 +63,12 @@ namespace Gameplay
         {
             if (GameStart != null)
                 GameStart();
+        }
+
+        public static void OnSwitchWorldType()
+        {
+            if (SwitchWorldType != null)
+                SwitchWorldType();
         }
     }
 }

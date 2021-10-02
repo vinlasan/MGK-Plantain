@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace Gameplay
 {
@@ -9,6 +8,7 @@ namespace Gameplay
     [DisallowMultipleComponent]
     public class GameDirector : MonoBehaviour
     {
+        public GameObject limboEffects;
         public WorldMode worldMode { get; private set; }
         
         [SerializeField]
@@ -32,23 +32,38 @@ namespace Gameplay
             if (enableDebugModeOnStart)
                 EventManager.OnDebugMode(true);
             else EventManager.OnDebugMode(false);
+            if (limboEffects != null)
+                limboEffects.SetActive(false);
         }
 
         private void OnEnable()
         {
-            EventManager.WorldTypeChange += WorldModeChanged;
             EventManager.HintCollected += HintAdded;
+            EventManager.SwitchWorldType += ToggleWorldType;
         }
 
         private void OnDisable()
         {
-            EventManager.WorldTypeChange -= WorldModeChanged;
             EventManager.HintCollected -= HintAdded;
+            EventManager.SwitchWorldType -= ToggleWorldType;
         }
 
-        private void WorldModeChanged(WorldMode mode)
+        private void ToggleWorldType()
         {
-            //Add any changes that need to happen during world transition here
+            if (worldMode == WorldMode.RealWorld)
+            {
+                worldMode = WorldMode.SpiritWorld;
+                EventManager.OnWorldTypeChanged(worldMode);
+                if (limboEffects != null)
+                    limboEffects.SetActive(true);
+            }
+            else
+            {
+                worldMode = WorldMode.RealWorld;
+                EventManager.OnWorldTypeChanged(worldMode);
+                if (limboEffects != null)
+                    limboEffects.SetActive(false); 
+            }
         }
 
         private void HintAdded(HintState hint)
