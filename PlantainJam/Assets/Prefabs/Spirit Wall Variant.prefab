@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adbb40a4c288704c87a7f89ee1f6442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visualsObj: {fileID: 5544555268001319270}
 --- !u!1001 &1404131552095857056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6885526190828592648, guid: ad80772b7a2488443b027dff239df363, type: 3}
       propertyPath: m_Name
-      value: Spirit Wall Variant (3)
+      value: Spirit Wall Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6885526190828592649, guid: ad80772b7a2488443b027dff239df363, type: 3}
       propertyPath: m_RootOrder
@@ -97,5 +98,10 @@ PrefabInstance:
 --- !u!1 &5544555268415420328 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6885526190828592648, guid: ad80772b7a2488443b027dff239df363, type: 3}
+  m_PrefabInstance: {fileID: 1404131552095857056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5544555268001319270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6885526190663803078, guid: ad80772b7a2488443b027dff239df363, type: 3}
   m_PrefabInstance: {fileID: 1404131552095857056}
   m_PrefabAsset: {fileID: 0}
