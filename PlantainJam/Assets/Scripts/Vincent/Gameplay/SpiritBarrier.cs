@@ -8,6 +8,8 @@ namespace Gameplay.Puzzle
     public class SpiritBarrier : MonoBehaviour
     {
         private SpriteRenderer visuals;
+        [SerializeField]
+        private GameObject visualsObj;
         private BoxCollider2D collider;
 
         private void OnEnable()
@@ -33,11 +35,15 @@ namespace Gameplay.Puzzle
             {
                 collider.enabled = true;
                 visuals.enabled = true;
+                if(visualsObj != null)
+                    visualsObj.SetActive(true);
             }
             else
             {
                 collider.enabled = false;
                 visuals.enabled = false;
+                if(visualsObj != null)
+                    visualsObj.SetActive(false);
             }
         }
     }
