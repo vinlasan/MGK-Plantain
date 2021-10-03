@@ -5,10 +5,10 @@ namespace Gameplay.Puzzle
 {
     public class Plantain : Interactable 
     {
-        public bool isDown;
-        public Item contents;
-        public Inventory playerInventory;
-        public Notification raiseItem;
+        //public bool isDown;
+        //public Item contents;
+        //public Inventory playerInventory;
+        //public Notification raiseItem;
         //Collider2D colision;
         //TODO Create function playing sounds on pickup or put down
 
@@ -19,6 +19,8 @@ namespace Gameplay.Puzzle
             if (col.TryGetComponent(out WallSwitcher wall))
                 wall.EnableSpiritWorldTraverse();
         }
+
+        /*
         
         void Update()
         {
@@ -33,12 +35,12 @@ namespace Gameplay.Puzzle
                 else
                 {
                     Place();
-                    /*
+                    
                     if (playerInventory.Equals(1))
                     {
 
                     }
-                    */
+                    
                 }
             }
 
@@ -59,14 +61,14 @@ namespace Gameplay.Puzzle
 
         public void Collect()
         {
-            /*
+            
             if (collision.CompareTag("Player") && !collision.isTrigger)
             {
                 playerInventory.AddItem(contents);
                 playerInventory.currentItem = contents;
                 Destroy(this.gameObject);
             }
-            */
+            
             
 
            playerInventory.AddItem(contents);
@@ -106,7 +108,7 @@ namespace Gameplay.Puzzle
 
 
         }
-
+        */
 
         protected override void OnTriggerExit2D(Collider2D col)
         {
