@@ -27,7 +27,8 @@ namespace Gameplay.Puzzle
                 if (!isDown)
                 {
                     Collect();
-                    Destroy(this.gameObject);
+                    this.gameObject.SetActive(false);
+                    //Destroy(this.gameObject);
                 }
                 else
                 {
@@ -39,6 +40,20 @@ namespace Gameplay.Puzzle
                     }
                     */
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                    //checks if player has key
+                    if (playerInventory.numberOfKeys > 0)
+                    {
+                        //removes a player key
+                        playerInventory.numberOfKeys--;
+                    //this.gameObject.SetActive(true);
+                    //transform.position = Input.mousePosition;
+                        
+                    }
+                
             }
         }
 
