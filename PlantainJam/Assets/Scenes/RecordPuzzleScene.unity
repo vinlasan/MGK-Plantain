@@ -1401,6 +1401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad80772b7a2488443b027dff239df363, type: 3}
+--- !u!82 &838056077 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9100377319159747682, guid: 17340585b8d494d4599aeb27c7b0cab7, type: 3}
+  m_PrefabInstance: {fileID: 244235000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &872091053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,7 +2233,7 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 8bb86a1e5aea1b648b1f22ead563763b, type: 3}
   textPrefab: {fileID: 6509907229318258519, guid: 38f975b09a976064cadfe8ba73bf69a0, type: 3}
   image: {fileID: 23255077}
-  cutsceneSFX: {fileID: 2763462240904282989, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+  cutsceneSFX: {fileID: 838056077}
   player: {fileID: 247303543}
   errorCount: {fileID: 1834695775}
 --- !u!114 &1507879270
