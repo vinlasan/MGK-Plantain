@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818d240107be57940bd993d8f2b80769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limboEffects: {fileID: 0}
+  limboEffects: {fileID: 5773779807055684872, guid: 731a856349d80784d983303162a84f3f, type: 3}
   enableDebugModeOnStart: 0
 --- !u!114 &908636645
 MonoBehaviour:
@@ -62,5 +62,5 @@ MonoBehaviour:
   limboSnapshot: {fileID: 7287107925512867842, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
   physicalSnapShot: {fileID: 24500006, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
   bgmMutedSnapshot: {fileID: 1907764440575525580, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
-  limboMusic: {fileID: 0}
-  physicalMusic: {fileID: 0}
+  limboMusic: {fileID: 4739893980903551047, guid: c61d787db8d662e4bb612ba446178fde, type: 3}
+  physicalMusic: {fileID: 1700809873435182612, guid: 57dc3714baa8d2a43be3c03ff3e63f86, type: 3}

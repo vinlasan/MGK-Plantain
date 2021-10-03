@@ -129,5 +129,9 @@ public class MainControl : MonoBehaviour
         {
             SceneManager.LoadScene("EndCutscene");
         }
+        if (collision.gameObject.tag == "body")
+        {
+            SceneManager.LoadScene("RecordPuzzleOpenScene");
+        }
     }
 }

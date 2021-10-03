@@ -10,6 +10,7 @@ TagManager:
   - organ
   - country
   - ghost
+  - body
   layers:
   - Default
   - TransparentFX
