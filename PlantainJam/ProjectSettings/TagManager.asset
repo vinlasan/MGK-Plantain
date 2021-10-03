@@ -9,6 +9,7 @@ TagManager:
   - dig
   - organ
   - country
+  - ghost
   layers:
   - Default
   - TransparentFX

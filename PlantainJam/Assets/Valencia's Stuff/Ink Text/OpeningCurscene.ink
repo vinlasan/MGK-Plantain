@@ -1,5 +1,5 @@
 We are in Brooklyn. 
-You are a medium.
+You are a medium. 
 You have made a mistake.
 In the house you live in,                                       but don't live in,
 You think your brokenness is special                            and it is (it isnt)

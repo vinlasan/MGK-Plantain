@@ -10,13 +10,19 @@ public class CutsceneScript : MonoBehaviour
     public TextAsset inkJSON;
     private Story story;
 
+
     public Text textPrefab;
     public Image image;
     public AudioSource cutsceneSFX;
 
+    public GameObject player;
+
+    public ErrorCount errorCount;
+  
     private void Start()
     {
         story = new Story(inkJSON.text);
+
 
         refreshUI();
     }
@@ -35,7 +41,30 @@ public class CutsceneScript : MonoBehaviour
         eraseUI();
 
         Text storyText = Instantiate(textPrefab) as Text;
-        storyText.text = loadStoryChunk();
+
+        string text = loadStoryChunk();
+        List<string> tags = story.currentTags;
+      
+        if (tags.Count > 0 && tags[0] != "EndScene" && tags[0] != "EndRightChoice")
+        {
+            text = tags[0] + " : " +text;
+       
+        }
+        else if (tags[0] == "EndScene")
+        {
+            player.transform.position = new Vector3(-32f, -31f, -5f);
+            story.ResetState();
+            errorCount.ResetPuzzle();
+        }
+        else if (tags[0] == "EndRightChoice")
+        {
+            SceneManager.LoadScene("EndGame");
+        }
+
+
+
+        Debug.Log(storyText.text);
+        storyText.text = text;
         cutsceneSFX.Play();
         storyText.transform.SetParent(image.transform, false);
 
@@ -56,11 +85,13 @@ public class CutsceneScript : MonoBehaviour
 
         if (story.canContinue)
         {
+
             text = story.Continue();
+            
             Debug.Log(text);
             
         }
-
+      
 
         return text;
     }

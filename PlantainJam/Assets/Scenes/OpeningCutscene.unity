@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 1596185260}
   - component: {fileID: 1596185259}
   - component: {fileID: 1596185258}
+  - component: {fileID: 1596185261}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -507,6 +508,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1596185261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596185257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!82 &1663523326 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2763462240904282989, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
@@ -607,11 +640,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2036801724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bc9af14fe6dee45b4d7cd1f4b97e9b, type: 3}
+  m_Script: {fileID: 11500000, guid: e03a55fa8e6c4c942a9957671854e7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 811e2ba75fa25ae40b5cae604b9ac4c8, type: 3}
-  textPrefab: {fileID: 6509907229318258519, guid: 2ad90df6a8d609642ad6778a26adfbdc, type: 3}
+  textPrefab: {fileID: 6509907229318258519, guid: 38f975b09a976064cadfe8ba73bf69a0, type: 3}
   image: {fileID: 455309951}
   cutsceneSFX: {fileID: 1663523326}
 --- !u!114 &2036801726

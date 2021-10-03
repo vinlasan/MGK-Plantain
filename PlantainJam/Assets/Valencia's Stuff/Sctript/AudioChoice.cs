@@ -6,14 +6,26 @@ using Gameplay;
 public class AudioChoice : MonoBehaviour
 {
     public RecordPuzzle recordPuzzle;
-    public AudioSource piano;
-    public AudioSource jazz;
-    public AudioSource dig;
-    public AudioSource organ;
-    public AudioSource country;
+     AudioSource piano;
+     AudioSource jazz;
+     AudioSource dig;
+     AudioSource organ;
+     AudioSource country;
     public bool correct;
     public ErrorCount errorScript;
 
+    
+
+    private void Start()
+    {
+        piano = GameObject.FindGameObjectWithTag("piano").GetComponent<AudioSource>();
+        jazz = GameObject.FindGameObjectWithTag("jazz").GetComponent<AudioSource>();
+        dig = GameObject.FindGameObjectWithTag("dig").GetComponent<AudioSource>();
+        organ = GameObject.FindGameObjectWithTag("organ").GetComponent<AudioSource>();
+        country = GameObject.FindGameObjectWithTag("country").GetComponent<AudioSource>();
+
+
+    }
     public void PlayAudio()
     {
         switch (recordPuzzle.playerChoiceText)

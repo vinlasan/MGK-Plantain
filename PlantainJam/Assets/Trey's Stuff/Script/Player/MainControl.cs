@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using Gameplay;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum PlayerState
 {
@@ -122,5 +123,11 @@ public class MainControl : MonoBehaviour
         //walksfx.SetActive(false);
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "EndGameTrigger")
+        {
+            SceneManager.LoadScene("EndCutscene");
+        }
+    }
 }
