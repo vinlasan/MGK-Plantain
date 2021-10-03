@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using Ink.Runtime;
+using System.Collections;
+using System.Collections.Generic;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class RecordPuzzle : MonoBehaviour
@@ -11,7 +13,7 @@ public class RecordPuzzle : MonoBehaviour
 	public GameObject dialogueHolder;
 	public string playerChoiceText;
 	public AudioChoice audioChoice;
-
+	public RecordPlayerCorrect playerCorrect;
 	void Awake()
 	{
 		// Remove the default message
@@ -49,7 +51,13 @@ public class RecordPuzzle : MonoBehaviour
 		{
 			// Continue gets the next line of the story
 			string text = story.ContinueMaximally();
+			List<string> tags = story.currentTags;
+			
+			if (tags.Count > 0)
+			{
+				text = tags[0] + " : " + text;
 
+			}
 			// This removes any white space from the text.
 			text = text.Trim();
 			// Display the text on screen!
@@ -72,13 +80,13 @@ public class RecordPuzzle : MonoBehaviour
 		// If we've read all the content and there's no choices, the story is finished!
 		else
 		{
-			if (audioChoice.correct == true)
-            {
-				CreateContentView("You choose correctly");
+			if (audioChoice.correct == true) { 
+
+				playerCorrect.RightChoice();
 			}
             
-			CreateContentView("Press 'Space' to continue");
-			done = true;
+			//CreateContentView("Press 'Space' to continue");
+			//done = true;
 
 
 		}

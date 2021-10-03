@@ -1,22 +1,17 @@
-Choose an audio to play
+Play some tunes boy! #Theophilus
 -> Audio_Choices
 
 ==Audio_Choices==
 *Piano 
-    Playing Piano 
-        Is this the correct sample -> PianoChoices
+        Do you want to play this for Theophilus? -> PianoChoices
 *Jazz
-    Playing Jazz
-        Is this the correct sample -> JazzChoice
+        Do you want to play this for Theophilus?  -> JazzChoice
 *Dig
-    Playing Dig 
-        Is this the correct sample -> DigChoice
+        Do you want to play this for Theophilus?  -> DigChoice
 *Organ
-    Playing Organ 
-        Is this the correct sample -> OrganChoice
+        Do you want to play this for Theophilus? -> OrganChoice
 *Country
-    Playing Country 
-        Is this the correct sample -> CountryChoice
+        Do you want to play this for Theophilus? -> CountryChoice
 
 
 ==PianoChoices==

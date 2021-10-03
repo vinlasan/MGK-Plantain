@@ -8,6 +8,9 @@ public class ErrorCount : MonoBehaviour
 {
     public Text errorText;
     public int errorCount;
+    public GameObject RecordPuzzleDialogue;
+    public GameObject RecordPuzzleWrong;
+    public GameObject RecordPuzzle;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +22,7 @@ public class ErrorCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            increaseErrrorCount();
-        }
-
+       
         if (errorCount == 3)
         {
             SceneManager.LoadScene("Game Over");
@@ -34,5 +33,16 @@ public class ErrorCount : MonoBehaviour
     {
         errorCount++;
         errorText.text = "Error Count: " + errorCount;
+        DontDestroyOnLoad(GameObject.Find("ErrorManager"));
+        RecordPuzzleDialogue.SetActive(false);
+        RecordPuzzleWrong.SetActive(true);
+
+    }
+
+   public void ResetPuzzle()
+    {
+        RecordPuzzleDialogue.SetActive(false);
+        RecordPuzzleWrong.SetActive(false);
+        
     }
 }
