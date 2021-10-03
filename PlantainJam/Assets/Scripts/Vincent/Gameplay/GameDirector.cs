@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 namespace Gameplay
 {
@@ -20,20 +21,33 @@ namespace Gameplay
 
         private void Awake()
         {
-            DontDestroyOnLoad(this);
+           // DontDestroyOnLoad(this);
             CollectedHints = new List<HintState>();
             Instance = this;
         }
         
         private void Start()
         {
-            worldMode = WorldMode.RealWorld;
-            EventManager.OnWorldTypeChanged(worldMode);
-            if (enableDebugModeOnStart)
-                EventManager.OnDebugMode(true);
-            else EventManager.OnDebugMode(false);
-            if (limboEffects != null)
-                limboEffects.SetActive(false);
+            if (SceneManager.GetActiveScene().name != "GhostIntro" && SceneManager.GetActiveScene().name != "RunToBody" && SceneManager.GetActiveScene().name != "RecordPuzzleOpenScene")
+            {
+                worldMode = WorldMode.RealWorld;
+                EventManager.OnWorldTypeChanged(worldMode);
+                if (enableDebugModeOnStart)
+                    EventManager.OnDebugMode(true);
+                else EventManager.OnDebugMode(false);
+                if (limboEffects != null)
+                    limboEffects.SetActive(false);
+            }
+            else {
+                worldMode = WorldMode.SpiritWorld;
+                EventManager.OnWorldTypeChanged(worldMode);
+                if (enableDebugModeOnStart)
+                    EventManager.OnDebugMode(true);
+                else EventManager.OnDebugMode(false);
+                if (limboEffects != null)
+                    limboEffects.SetActive(true);
+            }
+           
         }
 
         private void OnEnable()

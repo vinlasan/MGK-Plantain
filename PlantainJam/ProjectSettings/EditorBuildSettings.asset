@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndCutscene.unity
     guid: 7b153ea6442e8db4393db6b5b628200d
+  - enabled: 1
+    path: Assets/Scenes/GhostIntro.unity
+    guid: 61eeb70b71fcf0a449d3694ff9104593
+  - enabled: 1
+    path: Assets/Scenes/RunToBody.unity
+    guid: b484b3b18a86f98499654af909e43452
+  - enabled: 1
+    path: Assets/Scenes/RecordPuzzleOpenScene.unity
+    guid: f7d2c837105d2b241bb7e8473f8b812a
   m_configObjects: {}

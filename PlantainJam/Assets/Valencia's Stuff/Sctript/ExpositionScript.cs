@@ -40,6 +40,19 @@ public class ExpositionScript : MonoBehaviour
 
         string text = loadStoryChunk();
         List<string> tags = story.currentTags;
+        if (tags.Count > 0 && tags[0] != "#EndSceneGhostIntro")
+        {
+            text = tags[0] + " : " + text;
+            if (tags[0] == "EndSceneGhostIntro")
+            {
+                SceneManager.LoadScene("RunToBody");
+            }
+            else if (tags[0] == "StartRecordPuzzle")
+            {
+                SceneManager.LoadScene("RecordPuzzleScene");
+            }
+        }
+    
         Debug.Log(storyText.text);
         storyText.text = text;
         cutsceneSFX.Play();
