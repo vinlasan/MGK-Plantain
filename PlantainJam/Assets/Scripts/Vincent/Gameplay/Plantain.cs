@@ -19,45 +19,15 @@ namespace Gameplay.Puzzle
             if (col.TryGetComponent(out WallSwitcher wall))
                 wall.EnableSpiritWorldTraverse();
         }
+        
+        protected override void OnTriggerExit2D(Collider2D col)
+        {
+            base.OnTriggerExit2D(col);
+            if(col.TryGetComponent(out WallSwitcher wall))
+                wall.DisableSpiritWorldTraverse();
+        }
 
         /*
-        
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && inRange)
-            {
-                if (!isDown)
-                {
-                    Collect();
-                    this.gameObject.SetActive(false);
-                    //Destroy(this.gameObject);
-                }
-                else
-                {
-                    Place();
-                    
-                    if (playerInventory.Equals(1))
-                    {
-
-                    }
-                    
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                    //checks if player has key
-                    if (playerInventory.numberOfKeys > 0)
-                    {
-                        //removes a player key
-                        playerInventory.numberOfKeys--;
-                    //this.gameObject.SetActive(true);
-                    //transform.position = Input.mousePosition;
-                        
-                    }
-                
-            }
-        }
 
         public void Collect()
         {
@@ -110,11 +80,6 @@ namespace Gameplay.Puzzle
         }
         */
 
-        protected override void OnTriggerExit2D(Collider2D col)
-        {
-            base.OnTriggerExit2D(col);
-            if(col.TryGetComponent(out WallSwitcher wall))
-                wall.DisableSpiritWorldTraverse();
-        }
+
     }
 }
