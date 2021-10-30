@@ -66,10 +66,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRange: 0
-  isDown: 0
-  contents: {fileID: 11400000, guid: 802cdc1402e003c4e856729e6fbc3667, type: 2}
-  playerInventory: {fileID: 11400000, guid: e718e3204efb47c49925ff6b5ace05b6, type: 2}
-  raiseItem: {fileID: 0}
 --- !u!50 &2858555297653684536
 Rigidbody2D:
   serializedVersion: 4
@@ -108,7 +104,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 11.82, y: 11.82}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -157,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5d66c72966192814891017bc60f48a91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9cf37fd7de7a5040989942d659b0489, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

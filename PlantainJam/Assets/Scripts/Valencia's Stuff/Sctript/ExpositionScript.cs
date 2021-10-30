@@ -1,6 +1,7 @@
 using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -10,16 +11,17 @@ public class ExpositionScript : MonoBehaviour
     private Story story;
 
 
-    public Text textPrefab;
-    public Image image;
+    public TextMeshProUGUI textPrefab;
+    public GameObject image;
     public AudioSource cutsceneSFX;
 
+    private TextMeshProUGUI textObject;
 
     private void Start()
     {
         story = new Story(inkJSON.text);
-
-
+        textObject = Instantiate(textPrefab, image.transform, false) as TextMeshProUGUI;
+        
         refreshUI();
     }
 
@@ -34,9 +36,9 @@ public class ExpositionScript : MonoBehaviour
     void refreshUI()
     {
 
-        eraseUI();
+        //eraseUI();
 
-        Text storyText = Instantiate(textPrefab) as Text;
+        //TextMeshPro storyText = Instantiate(textPrefab) as TextMeshPro;
 
         string text = loadStoryChunk();
         List<string> tags = story.currentTags;
@@ -53,12 +55,9 @@ public class ExpositionScript : MonoBehaviour
             }
         }
     
-        Debug.Log(storyText.text);
-        storyText.text = text;
+        //Debug.Log(storyText.text);
+        textObject.text = text;
         cutsceneSFX.Play();
-        storyText.transform.SetParent(image.transform, false);
-
-
     }
 
     void eraseUI()
