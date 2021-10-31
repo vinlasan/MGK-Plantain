@@ -11,6 +11,7 @@ namespace Gameplay.Puzzle
         [SerializeField]
         private GameObject visualsObj;
         private BoxCollider2D collider;
+        private bool plantainChipActive;
 
         private void OnEnable()
         {
@@ -26,12 +27,13 @@ namespace Gameplay.Puzzle
         {
             visuals = GetComponentInChildren<SpriteRenderer>();
             collider = GetComponent<BoxCollider2D>();
+            plantainChipActive = false;
         }
 
         private void WorldTypeChanged(WorldMode worldMode)
         {
             
-            if (worldMode == WorldMode.SpiritWorld)
+            if (worldMode == WorldMode.SpiritWorld && plantainChipActive == false)
             {
                 collider.enabled = true;
                 visuals.enabled = true;
@@ -46,5 +48,24 @@ namespace Gameplay.Puzzle
                     visualsObj.SetActive(false);
             }
         }
+
+        //check for collision with plantain chip
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if(collision.gameObject.tag == "SpiritWall")
+            {
+                plantainChipActive = true;
+                collider.enabled = false;
+            }
+        }
+
+        void OnCollisionExit2D(Collision2D collision)
+        {
+            if(collision.gameObject.tag == "SpiritWall")
+            {
+                plantainChipActive = false;
+            }
+        }
+
     }
 }
