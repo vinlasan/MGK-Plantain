@@ -356,8 +356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 323.25244, y: -259.5}
-  m_SizeDelta: {x: 309.9369, y: 89.3283}
+  m_AnchoredPosition: {x: 350, y: -301}
+  m_SizeDelta: {x: 426.2211, y: 167.5558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1430040362
 GameObject:
@@ -395,6 +395,7 @@ MonoBehaviour:
   textPrefab: {fileID: 6509907229318258519, guid: 38f975b09a976064cadfe8ba73bf69a0, type: 3}
   image: {fileID: 457798583}
   cutsceneSFX: {fileID: 2122081753}
+  screamSFX: {fileID: 0}
 --- !u!114 &1430040364
 MonoBehaviour:
   m_ObjectHideFlags: 0

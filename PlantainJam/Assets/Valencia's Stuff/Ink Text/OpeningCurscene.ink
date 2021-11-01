@@ -10,3 +10,4 @@ do we become                                                    or disappear?
 When you truly love something, you have the right to destroy it.   Wouldn't you agree?
 This will not end well for you
 But you will get exactly what you wanted—
+#EndOpening

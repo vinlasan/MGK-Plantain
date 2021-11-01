@@ -11,6 +11,7 @@ TagManager:
   - country
   - ghost
   - body
+  - locked
   layers:
   - Default
   - TransparentFX

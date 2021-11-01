@@ -13,7 +13,7 @@ public class ExpositionScript : MonoBehaviour
     public Text textPrefab;
     public Image image;
     public AudioSource cutsceneSFX;
-
+    public AudioSource screamSFX;
 
     private void Start()
     {
@@ -40,9 +40,13 @@ public class ExpositionScript : MonoBehaviour
 
         string text = loadStoryChunk();
         List<string> tags = story.currentTags;
-        if (tags.Count > 0 && tags[0] != "#EndSceneGhostIntro")
+        if (tags.Count > 0)
         {
             text = tags[0] + " : " + text;
+            if (tags[0] == "Aya")
+            {
+                screamSFX.Play();
+            }
             if (tags[0] == "EndSceneGhostIntro")
             {
                 SceneManager.LoadScene("RunToBody");
@@ -51,6 +55,23 @@ public class ExpositionScript : MonoBehaviour
             {
                 SceneManager.LoadScene("RecordPuzzleScene");
             }
+            else if (tags[0] == "EndOpenScene")
+            {
+                SceneManager.LoadScene("GoToAya");
+            }
+            else if (tags[0] == "BeforeGhostScene")
+            {
+                SceneManager.LoadScene("GhostIntro");
+            }
+            else if (tags[0] == "EndOpening")
+            {
+                SceneManager.LoadScene("OpeningScene"); 
+            }
+            else if (tags[0] == "EndGame")
+            {
+                Application.Quit();
+            }
+
         }
     
         Debug.Log(storyText.text);

@@ -122,7 +122,7 @@ public class MainControl : MonoBehaviour
         myRigidbody.MovePosition(transform.position + change * speed * Time.deltaTime);
         //walksfx.SetActive(false);
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "EndGameTrigger")
@@ -133,5 +133,10 @@ public class MainControl : MonoBehaviour
         {
             SceneManager.LoadScene("RecordPuzzleOpenScene");
         }
+        if (collision.gameObject.tag == "locked")
+        {
+            SceneManager.LoadScene("BeforeGhostScene");
+        }
     }
+    
 }
