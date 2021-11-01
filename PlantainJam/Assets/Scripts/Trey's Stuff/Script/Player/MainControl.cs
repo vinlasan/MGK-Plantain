@@ -32,6 +32,7 @@ public class MainControl : MonoBehaviour
     //public VectorValue startingPoint;
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
+    public Collider2D triggerVolLimbo;
     //public GameObject attacksfx;
     //public GameObject walksfx;
 
@@ -62,12 +63,27 @@ public class MainControl : MonoBehaviour
         {
             UpdateAnimationAndMove();
         }
-
+   
+        //disable this in favor of the new bed trigger setup
         if (Input.GetKeyDown(KeyCode.F))
         {
-            EventManager.OnSwitchWorldType();
+           EventManager.OnSwitchWorldType();
         }
+        
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+            //set variable to allow Limbo switch
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+            //set variable to allow Limbo switch
+    }
+
+
+
 
     public void RaiseItem()
     {
