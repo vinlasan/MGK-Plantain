@@ -15,7 +15,7 @@ namespace Gameplay
         /// <summary>
         /// Only to be listened to by the Game Director for storing what hints are collected.
         /// </summary>
-        public static event GameEvent<HintState> HintCollected;
+        public static event GameEvent<bool> TogglePlayerMovement;
 
         public static event GameEvent<AudioSource> AudioPlayRecordMusic;
         public static event GameEvent AudioStopRecordMusic;
@@ -35,10 +35,10 @@ namespace Gameplay
                 DebugMode(enabled);
         }
         
-        public static void OnHintCollected(HintState hint)
+        public static void OnTogglePlayerMovement(bool shouldMove)
         {
-            if (HintCollected != null)
-                HintCollected(hint);
+            if (TogglePlayerMovement != null)
+                TogglePlayerMovement(shouldMove);
         }
 
         public static void OnAudioPlayRecordMusic(AudioSource clip)

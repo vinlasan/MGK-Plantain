@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ public class MainControl : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+
+    private bool movementEnabled = true;
     //public FloatValue currentHealth;
     //public Notification healthSignal;
     //public VectorValue startingPoint;
@@ -48,6 +51,16 @@ public class MainControl : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        EventManager.TogglePlayerMovement += ToggleMovement;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.TogglePlayerMovement -= ToggleMovement;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -57,19 +70,20 @@ public class MainControl : MonoBehaviour
             return;
         }
         change = Vector3.zero;
-        change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
+        if (movementEnabled)
+        {
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
+        }
         if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
         }
-   
         //disable this in favor of the new bed trigger setup
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
            EventManager.OnSwitchWorldType();
-        }
-        
+        }*/
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -82,8 +96,10 @@ public class MainControl : MonoBehaviour
             //set variable to allow Limbo switch
     }
 
-
-
+    private void ToggleMovement(bool canMove)
+    {
+        movementEnabled = canMove;
+    }
 
     public void RaiseItem()
     {

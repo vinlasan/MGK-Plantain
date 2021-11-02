@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Gameplay
 {
@@ -15,14 +15,15 @@ namespace Gameplay
         [SerializeField]
         private bool enableDebugModeOnStart;
 
-        private List<HintState> CollectedHints;
-
         public static GameDirector Instance { get; private set; }
+
+        [SerializeField]
+        private SceneState[] sceneStates;
 
         private void Awake()
         {
            // DontDestroyOnLoad(this);
-            CollectedHints = new List<HintState>();
+            //CollectedHints = new List<HintState>();
             Instance = this;
         }
         
@@ -31,34 +32,28 @@ namespace Gameplay
             if (SceneManager.GetActiveScene().name != "GhostIntro" && SceneManager.GetActiveScene().name != "RunToBody" && SceneManager.GetActiveScene().name != "RecordPuzzleOpenScene")
             {
                 worldMode = WorldMode.RealWorld;
-                EventManager.OnWorldTypeChanged(worldMode);
-                if (enableDebugModeOnStart)
-                    EventManager.OnDebugMode(true);
-                else EventManager.OnDebugMode(false);
-                if (limboEffects != null)
-                    limboEffects.SetActive(false);
             }
-            else {
+            else 
+            {
                 worldMode = WorldMode.SpiritWorld;
-                EventManager.OnWorldTypeChanged(worldMode);
-                if (enableDebugModeOnStart)
-                    EventManager.OnDebugMode(true);
-                else EventManager.OnDebugMode(false);
-                if (limboEffects != null)
-                    limboEffects.SetActive(true);
             }
-           
+            EventManager.OnWorldTypeChanged(worldMode);
+            if (enableDebugModeOnStart)
+                EventManager.OnDebugMode(true);
+            else EventManager.OnDebugMode(false);
+            if (limboEffects != null)
+                limboEffects.SetActive(true);
         }
 
         private void OnEnable()
         {
-            EventManager.HintCollected += HintAdded;
+            //EventManager.HintCollected += HintAdded;
             EventManager.SwitchWorldType += ToggleWorldType;
         }
 
         private void OnDisable()
         {
-            EventManager.HintCollected -= HintAdded;
+            //EventManager.HintCollected -= HintAdded;
             EventManager.SwitchWorldType -= ToggleWorldType;
         }
 
@@ -80,16 +75,16 @@ namespace Gameplay
             }
         }
 
-        private void HintAdded(HintState hint)
+        /*private void HintAdded(HintState hint)
         {
             CollectedHints.Add(hint);
-        }
+        }*/
 
         /// <summary>
         /// Checks if the HintType is recorded in the collection
         /// </summary>
         /// <param name="hintType"></param>
-        public bool WasHintCollected(HintType hintType)
+        /*public bool WasHintCollected(HintType hintType)
         {
             foreach (HintState hState in CollectedHints)
             {
@@ -97,6 +92,6 @@ namespace Gameplay
                     return true;
             }
             return false;
-        }
+        }*/
     }
 }
