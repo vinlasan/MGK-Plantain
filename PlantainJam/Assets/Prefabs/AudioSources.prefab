@@ -43,9 +43,80 @@ Transform:
   - {fileID: 1887465522870371907}
   - {fileID: 7009672937480581778}
   - {fileID: 4571335043477161243}
+  - {fileID: 4118737296664394515}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2027727512
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 680378489449753176}
+    m_Modifications:
+    - target: {fileID: 2763462240904282989, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763462240904282989, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.388302
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 42.615883
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.722527
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029209674310244189, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+      propertyPath: m_Name
+      value: sfx-click
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+--- !u!4 &4118737296664394515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4118737295979958667, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+  m_PrefabInstance: {fileID: 2027727512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680378489408924443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,6 +127,10 @@ PrefabInstance:
     - target: {fileID: 1917009364666922745, guid: d22265e9c6d3c6a4a917c22671b4cbb5, type: 3}
       propertyPath: m_Name
       value: sfx-puzzleS3Dig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917009364666922745, guid: d22265e9c6d3c6a4a917c22671b4cbb5, type: 3}
+      propertyPath: m_TagString
+      value: dig
       objectReference: {fileID: 0}
     - target: {fileID: 6048763680238210595, guid: d22265e9c6d3c6a4a917c22671b4cbb5, type: 3}
       propertyPath: m_RootOrder
@@ -163,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sfx-puzzleS5Country
       objectReference: {fileID: 0}
+    - target: {fileID: 8288901799675016089, guid: 71af258620b89d94da133ffdd78d9186, type: 3}
+      propertyPath: m_TagString
+      value: country
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71af258620b89d94da133ffdd78d9186, type: 3}
 --- !u!4 &5530885080049166394 stripped
@@ -180,6 +259,10 @@ PrefabInstance:
     - target: {fileID: 3116932670299224432, guid: 8638538733d30ba4cb743634453c421d, type: 3}
       propertyPath: m_Name
       value: sfx-puzzleS2Piano
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116932670299224432, guid: 8638538733d30ba4cb743634453c421d, type: 3}
+      propertyPath: m_TagString
+      value: piano
       objectReference: {fileID: 0}
     - target: {fileID: 5125596027336551014, guid: 8638538733d30ba4cb743634453c421d, type: 3}
       propertyPath: m_RootOrder
@@ -287,6 +370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sfx-puzzleS1Jazz
       objectReference: {fileID: 0}
+    - target: {fileID: 6693506154324307574, guid: 138e8798792d5014d9df560bb386768b, type: 3}
+      propertyPath: m_TagString
+      value: jazz
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138e8798792d5014d9df560bb386768b, type: 3}
 --- !u!4 &2387164374155480929 stripped
@@ -304,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 518772443398123842, guid: 7b672bf3e8590134aae5393eada694e6, type: 3}
       propertyPath: m_Name
       value: sfx-puzzleS4Organ
+      objectReference: {fileID: 0}
+    - target: {fileID: 518772443398123842, guid: 7b672bf3e8590134aae5393eada694e6, type: 3}
+      propertyPath: m_TagString
+      value: organ
       objectReference: {fileID: 0}
     - target: {fileID: 8075953150073255544, guid: 7b672bf3e8590134aae5393eada694e6, type: 3}
       propertyPath: m_RootOrder

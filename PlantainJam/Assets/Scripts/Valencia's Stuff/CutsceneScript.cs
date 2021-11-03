@@ -1,9 +1,9 @@
 using Ink.Runtime;
-using System.Collections;
+using TMPro;
 using System.Collections.Generic;
+using Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class CutsceneScript : MonoBehaviour
 {
@@ -11,19 +11,25 @@ public class CutsceneScript : MonoBehaviour
     private Story story;
 
 
-    public Text textPrefab;
     public Image image;
     public AudioSource cutsceneSFX;
 
     public GameObject player;
 
     public ErrorCount errorCount;
+    
+    [SerializeField]
+    private TextMeshProUGUI textObject;
+    [SerializeField] 
+    private SceneStateType endGameScene;
   
     private void Start()
     {
         story = new Story(inkJSON.text);
-
-
+        if(!endGameScene)
+            Debug.LogError("Assign the scene state for " + this.gameObject);
+        if(!textObject)
+            Debug.LogError("Assign a TextMeshPro for " + this.gameObject);
         refreshUI();
     }
 
@@ -37,10 +43,8 @@ public class CutsceneScript : MonoBehaviour
     }
     void refreshUI()
     {
-
-        eraseUI();
-
-        Text storyText = Instantiate(textPrefab) as Text;
+        //eraseUI();
+        //Text storyText = Instantiate(textPrefab) as Text;
 
         string text = loadStoryChunk();
         List<string> tags = story.currentTags;
@@ -58,26 +62,27 @@ public class CutsceneScript : MonoBehaviour
         }
         else if (tags[0] == "EndRightChoice")
         {
-            SceneManager.LoadScene("EndGame");
+            //SceneManager.LoadScene("EndGame");
+            GameDirector.OnSceneStateChanged(endGameScene);
         }
 
 
 
-        Debug.Log(storyText.text);
-        storyText.text = text;
+        //Debug.Log(storyText.text);
+        textObject.text = text;
         cutsceneSFX.Play();
-        storyText.transform.SetParent(image.transform, false);
+        //storyText.transform.SetParent(image.transform, false);
 
        
     }
 
-    void eraseUI()
+    /*void eraseUI()
     {
         for (int i = 0; i < image.transform.childCount; i++)
         {
             Destroy(image.transform.GetChild(i).gameObject);
         }
-    }
+    }*/
 
     string loadStoryChunk()
     {
@@ -92,7 +97,7 @@ public class CutsceneScript : MonoBehaviour
             
         }
       
-
+        
         return text;
     }
 }

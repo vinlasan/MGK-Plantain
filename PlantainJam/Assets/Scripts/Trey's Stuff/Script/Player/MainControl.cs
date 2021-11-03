@@ -30,14 +30,12 @@ public class MainControl : MonoBehaviour
     private Animator animator;
 
     private bool movementEnabled = true;
-    //public FloatValue currentHealth;
-    //public Notification healthSignal;
-    //public VectorValue startingPoint;
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
     public Collider2D triggerVolLimbo;
-    //public GameObject attacksfx;
-    //public GameObject walksfx;
+
+    [SerializeField]
+    private SceneStateType endCutscene, recordPuzzleOpenScene, beforeGhostScene;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +43,8 @@ public class MainControl : MonoBehaviour
         //playerInventory.currentItem = null;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        if(!endCutscene || !recordPuzzleOpenScene || !beforeGhostScene)
+            Debug.LogError("Assign the scene states for " + this.gameObject.name);
         //animator.SetFloat("moveX", 0);
         //animator.SetFloat("moveY", -1);
         //transform.position = startingPoint.initialValue;
@@ -65,19 +65,21 @@ public class MainControl : MonoBehaviour
     void Update()
     {
         //checks if player is in an interaction
-        if (currentState == PlayerState.interact)
-        {
-            return;
-        }
-        change = Vector3.zero;
         if (movementEnabled)
         {
+            if (currentState == PlayerState.interact)
+            {
+                return;
+            }
+
+            change = Vector3.zero;
             change.x = Input.GetAxisRaw("Horizontal");
             change.y = Input.GetAxisRaw("Vertical");
-        }
-        if (currentState == PlayerState.walk || currentState == PlayerState.idle)
-        {
-            UpdateAnimationAndMove();
+
+            if (currentState == PlayerState.walk || currentState == PlayerState.idle)
+            {
+                UpdateAnimationAndMove();
+            }
         }
         //disable this in favor of the new bed trigger setup
         /*if (Input.GetKeyDown(KeyCode.F))
@@ -99,6 +101,7 @@ public class MainControl : MonoBehaviour
     private void ToggleMovement(bool canMove)
     {
         movementEnabled = canMove;
+        Debug.Log("Movement set to :" + movementEnabled);
     }
 
     public void RaiseItem()
@@ -149,6 +152,7 @@ public class MainControl : MonoBehaviour
     //Debug.Log(change);
     void MoveCharacter()
     {
+        if(!movementEnabled) return;
         //walksfx.SetActive(true);
         change.Normalize();
         myRigidbody.MovePosition(transform.position + change * speed * Time.deltaTime);
@@ -159,15 +163,18 @@ public class MainControl : MonoBehaviour
     {
         if (collision.gameObject.name == "EndGameTrigger")
         {
-            SceneManager.LoadScene("EndCutscene");
+            //SceneManager.LoadScene("EndCutscene");
+            GameDirector.OnSceneStateChanged(endCutscene);
         }
-        if (collision.gameObject.tag == "body")
+        if (collision.gameObject.CompareTag("body"))
         {
-            SceneManager.LoadScene("RecordPuzzleOpenScene");
+            //SceneManager.LoadScene("RecordPuzzleOpenScene");
+            GameDirector.OnSceneStateChanged(recordPuzzleOpenScene);
         }
-        if (collision.gameObject.tag == "locked")
+        if (collision.gameObject.CompareTag("locked"))
         {
-            SceneManager.LoadScene("BeforeGhostScene");
+            //SceneManager.LoadScene("BeforeGhostScene");
+            GameDirector.OnSceneStateChanged(beforeGhostScene);
         }
     }
     

@@ -44,8 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818d240107be57940bd993d8f2b80769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limboEffects: {fileID: 5773779807055684872, guid: 731a856349d80784d983303162a84f3f, type: 3}
+  limboEffects: {fileID: 0}
   enableDebugModeOnStart: 0
+  sceneStates:
+  - sceneStateType: {fileID: 0}
+    disablePlayerMovement: 0
+    worldMode: 0
+    sceneObjectsToEnable: []
 --- !u!114 &908636645
 MonoBehaviour:
   m_ObjectHideFlags: 0

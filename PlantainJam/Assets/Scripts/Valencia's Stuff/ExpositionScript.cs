@@ -1,9 +1,8 @@
 using Ink.Runtime;
-using System.Collections;
 using System.Collections.Generic;
+using Gameplay;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ExpositionScript : MonoBehaviour
@@ -16,6 +15,9 @@ public class ExpositionScript : MonoBehaviour
     public AudioSource cutsceneSFX;
     [SerializeField]
     private TextMeshProUGUI textObject;
+
+    [SerializeField] 
+    private SceneStateType dialogueEnd;
 
     private void Start()
     {
@@ -47,10 +49,12 @@ public class ExpositionScript : MonoBehaviour
             text = tags[0] + " : " + text;
             if (tags[0] == "EndSceneGhostIntro")
             {
+                //GameDirector.OnSceneStateChanged(dialogueEnd);
                 SceneManager.LoadScene("RunToBody");
             }
             else if (tags[0] == "StartRecordPuzzle")
             {
+                //GameDirector.OnSceneStateChanged(dialogueEnd);
                 SceneManager.LoadScene("RecordPuzzleScene");
             }
         }
@@ -80,6 +84,8 @@ public class ExpositionScript : MonoBehaviour
             Debug.Log(text);
 
         }
+        else GameDirector.OnSceneStateChanged(dialogueEnd);
+
         return text;
     }
 }

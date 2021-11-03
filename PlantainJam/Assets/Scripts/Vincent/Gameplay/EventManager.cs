@@ -8,13 +8,14 @@ namespace Gameplay
     {
         public delegate void GameEvent();
         public delegate void GameEvent<T>(T obj);
-        public delegate void GameEvent<T1, T2>(T1 obj1, T2 obj2);
 
-        public static event GameEvent<WorldMode> WorldTypeChange;
-        public static event GameEvent<bool> DebugMode;
         /// <summary>
         /// Only to be listened to by the Game Director for storing what hints are collected.
         /// </summary>
+        public static event GameEvent<WorldMode> WorldTypeChange;
+        
+        public static event GameEvent<bool> DebugMode;
+        
         public static event GameEvent<bool> TogglePlayerMovement;
 
         public static event GameEvent<AudioSource> AudioPlayRecordMusic;

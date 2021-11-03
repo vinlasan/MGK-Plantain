@@ -3,36 +3,45 @@ using UnityEngine;
 
 namespace Gameplay
 {
-    public class SceneState : MonoBehaviour
+    [Serializable]
+    public class SceneState
     {
+        public SceneStateType sceneStateType;
+        
         [SerializeField]
-        private bool disablePlayerMovement;
+        private bool enablePlayerMovement;
 
-        [SerializeField] 
-        private Transform[] sceneObjectsToEnable;
+        [SerializeField]
+        private WorldMode worldMode;
 
-        public void Awake()
+        [SerializeField]
+        private GameObject[] sceneObjectsToEnable;
+
+        public void InitState()
         {
             SetSceneObjects(false);
         }
-
-        public void InitializeState()
+        
+        public void EnterState()
         {
             SetSceneObjects(true);
+            EventManager.OnTogglePlayerMovement(enablePlayerMovement);
+            EventManager.OnWorldTypeChanged(worldMode);
         }
 
         public void ExitState()
         {
             SetSceneObjects(false);
+            EventManager.OnTogglePlayerMovement(enablePlayerMovement);
         }
 
         private void SetSceneObjects(bool enable)
         {
             if (sceneObjectsToEnable != null && sceneObjectsToEnable.Length != 0)
             {
-                foreach (Transform t in sceneObjectsToEnable)
-                {
-                    t.gameObject.SetActive(enable);
+                foreach (GameObject t in sceneObjectsToEnable)
+                { 
+                    if(t) t.SetActive(enable);
                 }
             }
         }

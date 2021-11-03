@@ -20,56 +20,116 @@ namespace Gameplay
         [SerializeField]
         private SceneState[] sceneStates;
 
-        private void Awake()
-        {
-           // DontDestroyOnLoad(this);
-            //CollectedHints = new List<HintState>();
-            Instance = this;
-        }
+        [SerializeField] private SceneStateType dummySceneType;
+
+        private SceneState currentSceneState, previousSceneState;
         
-        private void Start()
+        private delegate void DirectorEvent<T>(T obj);
+        private static event DirectorEvent<SceneStateType> SceneStateChange;
+        
+        public static void OnSceneStateChanged(SceneStateType state)
         {
-            if (SceneManager.GetActiveScene().name != "GhostIntro" && SceneManager.GetActiveScene().name != "RunToBody" && SceneManager.GetActiveScene().name != "RecordPuzzleOpenScene")
-            {
-                worldMode = WorldMode.RealWorld;
-            }
-            else 
-            {
-                worldMode = WorldMode.SpiritWorld;
-            }
-            EventManager.OnWorldTypeChanged(worldMode);
-            if (enableDebugModeOnStart)
-                EventManager.OnDebugMode(true);
-            else EventManager.OnDebugMode(false);
-            if (limboEffects != null)
-                limboEffects.SetActive(true);
+            if (SceneStateChange != null)
+                SceneStateChange(state);
         }
 
         private void OnEnable()
         {
             //EventManager.HintCollected += HintAdded;
-            EventManager.SwitchWorldType += ToggleWorldType;
+            EventManager.WorldTypeChange += ToggleWorldType;
+            SceneStateChange += ChangeSceneState;
         }
 
         private void OnDisable()
         {
             //EventManager.HintCollected -= HintAdded;
-            EventManager.SwitchWorldType -= ToggleWorldType;
+            EventManager.WorldTypeChange -= ToggleWorldType;
+            SceneStateChange -= ChangeSceneState;
         }
 
-        private void ToggleWorldType()
+        private void Awake()
         {
+            //DontDestroyOnLoad(this);
+            //CollectedHints = new List<HintState>();
+            Instance = this;
+        }
+
+        private void Start()
+        {
+            if (sceneStates != null && sceneStates.Length > 0)
+            {
+                ExitNonCurrentSceneStates();
+                currentSceneState = sceneStates[0];
+                currentSceneState.EnterState();
+                ChangeSceneState(sceneStates[0].sceneStateType);
+            }
+            else Debug.LogError("Scene states need to be assigned on the Director object " + this.gameObject.name);
+            //TODO remove this redundant code
+            /*if (SceneManager.GetActiveScene().name != "GhostIntro" && SceneManager.GetActiveScene().name != "RunToBody" && SceneManager.GetActiveScene().name != "RecordPuzzleOpenScene")
+                worldMode = WorldMode.RealWorld;
+            else worldMode = WorldMode.SpiritWorld;*/
+            
+            //EventManager.OnWorldTypeChanged(worldMode);
+            if (enableDebugModeOnStart)
+                EventManager.OnDebugMode(true);
+            else EventManager.OnDebugMode(false);
+            
+            //ToggleWorldType(worldMode);
+        }
+
+        private void ExitNonCurrentSceneStates()
+        {
+            foreach (SceneState sState in sceneStates)
+            {
+                //if(sState != currentSceneState)
+                sState.InitState();
+            }
+        }
+
+        private void ChangeSceneState(SceneStateType state)
+        {
+            Debug.Log("Scene state changed to " + state.name);
+            if(state == dummySceneType)
+                return;
+            
+            SceneState sState = null;
+            for (int i = 0; i < sceneStates.Length; i++)
+            {
+                if (sceneStates[i].sceneStateType == state)
+                {
+                    sState = sceneStates[i];
+                    break;
+                }
+            }
+
+            if (sState == null)
+            {
+                Debug.LogError("No matching scene state found");
+                return;
+            }
+            
+            previousSceneState = currentSceneState;
+            if(currentSceneState != null) 
+                currentSceneState.ExitState();
+            currentSceneState = sState;
+            currentSceneState.EnterState();
+        }
+
+        private void ToggleWorldType(WorldMode wMode)
+        {
+            if (worldMode != wMode)
+                worldMode = wMode;
             if (worldMode == WorldMode.RealWorld)
             {
                 worldMode = WorldMode.SpiritWorld;
-                EventManager.OnWorldTypeChanged(worldMode);
+                //EventManager.OnWorldTypeChanged(worldMode);
                 if (limboEffects != null)
                     limboEffects.SetActive(true);
             }
             else
             {
                 worldMode = WorldMode.RealWorld;
-                EventManager.OnWorldTypeChanged(worldMode);
+                //EventManager.OnWorldTypeChanged(worldMode);
                 if (limboEffects != null)
                     limboEffects.SetActive(false); 
             }

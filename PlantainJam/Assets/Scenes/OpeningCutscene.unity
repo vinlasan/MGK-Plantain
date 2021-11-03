@@ -188,6 +188,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17f8b11660aff9441bfab376d0387d5d, type: 3}
+--- !u!1 &719483049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 719483051}
+  - component: {fileID: 719483050}
+  m_Layer: 0
+  m_Name: DummyState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &719483050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719483049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479fa6bcd12d43f081896719d047438a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disablePlayerMovement: 1
+  worldMode: 0
+  sceneObjectsToEnable: []
+--- !u!4 &719483051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719483049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -47.527042, y: 16.20802, z: -8.333924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543948032
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,12 +599,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 42
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 24
-  m_fontSizeMax: 72
+  m_fontSizeMax: 42
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -765,6 +811,8 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 811e2ba75fa25ae40b5cae604b9ac4c8, type: 3}
   cutsceneSFX: {fileID: 1663523326}
   textObject: {fileID: 1750706668}
+  runToBody: {fileID: 719483050}
+  recordPuzzle: {fileID: 719483050}
 --- !u!114 &2036801726
 MonoBehaviour:
   m_ObjectHideFlags: 0
