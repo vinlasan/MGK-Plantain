@@ -7,11 +7,19 @@ namespace Gameplay
     public class SceneStateType : ScriptableObject
     {
         [SerializeField]
-        private string sceneStateName;
+        private string sceneStateDescription;
+
+        [SerializeField] 
+        private bool returnToPreviousScene;
 
         public string sceneType
         {
-            get { return sceneStateName; }
+            get { return this.name; }
+        }
+
+        public bool backToScene
+        {
+            get { return returnToPreviousScene; }
         }
     }
 }

@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a0083661d79db4fb51512c5992d9f9, type: 3}
-  m_Name: TestFollow
+  m_Script: {fileID: 11500000, guid: fef7fa64d344476587ef7de1a4331de7, type: 3}
+  m_Name: RecordPuzzleOpen
   m_EditorClassIdentifier: 
-  transitions:
-  - decisionChoice: 2
-    priorityLevel: 0
-    trueState: {fileID: 0}
-  startingPoint: {fileID: 0}
+  sceneStateDescription: 

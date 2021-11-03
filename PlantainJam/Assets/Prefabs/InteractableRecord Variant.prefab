@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8856952734572548481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: descriptionText
+      value: (Mom had so many Earth, Wind and Fire records. It was the only thing
+        that made Sunday cleaning bearable. Like everything from before, she threw
+        them out. Bruce Springstein? Who the heck is that?)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212712646221159227, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1271e1ced6fa6a74f8c27a74a2c4b568, type: 3}
+    - target: {fileID: 7595682874859226879, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d34d56fb486141f4899bbfef3484b36e, type: 3}
+    - target: {fileID: 7595682874859226879, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955213524130298602, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_Name
+      value: InteractableRecord Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}

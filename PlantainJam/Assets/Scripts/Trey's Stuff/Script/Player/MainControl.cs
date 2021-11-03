@@ -33,9 +33,8 @@ public class MainControl : MonoBehaviour
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
     public Collider2D triggerVolLimbo;
-
-    [SerializeField]
-    private SceneStateType endCutscene, recordPuzzleOpenScene, beforeGhostScene;
+    
+    //private SceneStateType endCutscene, recordPuzzleOpenScene, beforeGhostScene;
 
     // Start is called before the first frame update
     void Start()
@@ -43,8 +42,6 @@ public class MainControl : MonoBehaviour
         //playerInventory.currentItem = null;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        if(!endCutscene || !recordPuzzleOpenScene || !beforeGhostScene)
-            Debug.LogError("Assign the scene states for " + this.gameObject.name);
         //animator.SetFloat("moveX", 0);
         //animator.SetFloat("moveY", -1);
         //transform.position = startingPoint.initialValue;
@@ -101,7 +98,7 @@ public class MainControl : MonoBehaviour
     private void ToggleMovement(bool canMove)
     {
         movementEnabled = canMove;
-        Debug.Log("Movement set to :" + movementEnabled);
+        //Debug.Log("Movement set to :" + movementEnabled);
     }
 
     public void RaiseItem()
@@ -161,21 +158,20 @@ public class MainControl : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "EndGameTrigger")
+        /*if (collision.gameObject.name == "EndGameTrigger")
         {
-            //SceneManager.LoadScene("EndCutscene");
-            GameDirector.OnSceneStateChanged(endCutscene);
+            SceneManager.LoadScene("EndCutscene");
+            //GameDirector.OnSceneStateChanged(endCutscene);
         }
         if (collision.gameObject.CompareTag("body"))
         {
-            //SceneManager.LoadScene("RecordPuzzleOpenScene");
-            GameDirector.OnSceneStateChanged(recordPuzzleOpenScene);
+            SceneManager.LoadScene("RecordPuzzleOpenScene");
+            //GameDirector.OnSceneStateChanged(recordPuzzleOpenScene);
         }
         if (collision.gameObject.CompareTag("locked"))
         {
-            //SceneManager.LoadScene("BeforeGhostScene");
-            GameDirector.OnSceneStateChanged(beforeGhostScene);
-        }
+            SceneManager.LoadScene("BeforeGhostScene");
+            //GameDirector.OnSceneStateChanged(beforeGhostScene);
+        }*/
     }
-    
 }

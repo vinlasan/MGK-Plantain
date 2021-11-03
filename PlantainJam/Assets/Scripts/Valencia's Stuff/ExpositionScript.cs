@@ -13,8 +13,8 @@ public class ExpositionScript : MonoBehaviour
     //public TextMeshProUGUI textPrefab;
     //public GameObject image;
     public AudioSource cutsceneSFX;
-    [SerializeField]
-    private TextMeshProUGUI textObject;
+    //[SerializeField]
+    //private TextMeshProUGUI textObject;
 
     [SerializeField] 
     private SceneStateType dialogueEnd;
@@ -60,7 +60,7 @@ public class ExpositionScript : MonoBehaviour
         }
     
         //Debug.Log(storyText.text);
-        textObject.text = text;
+        EventManager.OnUpdateTextBox(text);
         cutsceneSFX.Play();
     }
 

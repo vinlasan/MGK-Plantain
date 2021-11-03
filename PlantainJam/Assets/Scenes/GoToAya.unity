@@ -289,6 +289,18 @@ PrefabInstance:
       propertyPath: limboEffects
       value: 
       objectReference: {fileID: 351511113}
+    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
+      propertyPath: dummySceneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 58480dbd8c62321438572ac7141b53d7, type: 2}
+    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
+      propertyPath: sceneStates.Array.data[0].sceneStateType
+      value: 
+      objectReference: {fileID: 11400000, guid: 58480dbd8c62321438572ac7141b53d7, type: 2}
+    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
+      propertyPath: sceneStates.Array.data[0].enablePlayerMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 939455389316934837, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: m_RootOrder
       value: 0

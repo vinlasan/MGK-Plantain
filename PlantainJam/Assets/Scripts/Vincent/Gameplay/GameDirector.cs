@@ -36,14 +36,14 @@ namespace Gameplay
         private void OnEnable()
         {
             //EventManager.HintCollected += HintAdded;
-            EventManager.WorldTypeChange += ToggleWorldType;
+            EventManager.WorldTypeChange += ChangeWorldType;
             SceneStateChange += ChangeSceneState;
         }
 
         private void OnDisable()
         {
             //EventManager.HintCollected -= HintAdded;
-            EventManager.WorldTypeChange -= ToggleWorldType;
+            EventManager.WorldTypeChange -= ChangeWorldType;
             SceneStateChange -= ChangeSceneState;
         }
 
@@ -52,6 +52,7 @@ namespace Gameplay
             //DontDestroyOnLoad(this);
             //CollectedHints = new List<HintState>();
             Instance = this;
+            worldMode = WorldMode.RealWorld;
         }
 
         private void Start()
@@ -70,6 +71,7 @@ namespace Gameplay
             else worldMode = WorldMode.SpiritWorld;*/
             
             //EventManager.OnWorldTypeChanged(worldMode);
+            limboEffects.SetActive(false);
             if (enableDebugModeOnStart)
                 EventManager.OnDebugMode(true);
             else EventManager.OnDebugMode(false);
@@ -89,25 +91,32 @@ namespace Gameplay
         private void ChangeSceneState(SceneStateType state)
         {
             Debug.Log("Scene state changed to " + state.name);
-            if(state == dummySceneType)
+            if (state == dummySceneType)
                 return;
-            
+
             SceneState sState = null;
-            for (int i = 0; i < sceneStates.Length; i++)
+            if (state.backToScene)
             {
-                if (sceneStates[i].sceneStateType == state)
+                sState = previousSceneState;
+            }
+            else
+            {
+                for (int i = 0; i < sceneStates.Length; i++)
                 {
-                    sState = sceneStates[i];
-                    break;
+                    if (sceneStates[i].sceneStateType == state)
+                    {
+                        sState = sceneStates[i];
+                        break;
+                    }
+                }
+
+                if (sState == null)
+                {
+                    Debug.LogError("No matching scene state found under name: " + state.sceneType);
+                    return;
                 }
             }
 
-            if (sState == null)
-            {
-                Debug.LogError("No matching scene state found");
-                return;
-            }
-            
             previousSceneState = currentSceneState;
             if(currentSceneState != null) 
                 currentSceneState.ExitState();
@@ -115,20 +124,20 @@ namespace Gameplay
             currentSceneState.EnterState();
         }
 
-        private void ToggleWorldType(WorldMode wMode)
+        private void ChangeWorldType(WorldMode wMode)
         {
             if (worldMode != wMode)
                 worldMode = wMode;
-            if (worldMode == WorldMode.RealWorld)
+            else return;
+            
+            if (worldMode == WorldMode.SpiritWorld)
             {
-                worldMode = WorldMode.SpiritWorld;
                 //EventManager.OnWorldTypeChanged(worldMode);
                 if (limboEffects != null)
                     limboEffects.SetActive(true);
             }
             else
             {
-                worldMode = WorldMode.RealWorld;
                 //EventManager.OnWorldTypeChanged(worldMode);
                 if (limboEffects != null)
                     limboEffects.SetActive(false); 

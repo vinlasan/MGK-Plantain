@@ -22,7 +22,9 @@ namespace Gameplay
         public static event GameEvent AudioStopRecordMusic;
         public static event GameEvent<float> AudioGhostApproach;
         public static event GameEvent GameStart;
-        public static event GameEvent SwitchWorldType;
+
+        public static event GameEvent<string> UpdateTextBox; 
+        //public static event GameEvent SwitchWorldType;
 
         public static void OnWorldTypeChanged(WorldMode worldMode)
         {
@@ -54,6 +56,12 @@ namespace Gameplay
                 AudioStopRecordMusic();
         }
 
+        public static void OnUpdateTextBox(string text)
+        {
+            if (UpdateTextBox != null)
+                UpdateTextBox(text);
+        }
+
         public static void OnAudioGhostApproach(float duration)
         {
             if (AudioGhostApproach != null)
@@ -66,10 +74,10 @@ namespace Gameplay
                 GameStart();
         }
 
-        public static void OnSwitchWorldType()
+        /*public static void OnSwitchWorldType()
         {
             if (SwitchWorldType != null)
                 SwitchWorldType();
-        }
+        }*/
     }
 }
