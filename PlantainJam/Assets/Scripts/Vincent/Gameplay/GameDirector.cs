@@ -1,7 +1,5 @@
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using System.Collections.Generic;
 
 namespace Gameplay
 {
@@ -23,6 +21,8 @@ namespace Gameplay
         [SerializeField] private SceneStateType dummySceneType;
 
         private SceneState currentSceneState, previousSceneState;
+        
+        //private Stack<SceneState> sceneStateLog;
         
         private delegate void DirectorEvent<T>(T obj);
         private static event DirectorEvent<SceneStateType> SceneStateChange;
@@ -53,6 +53,7 @@ namespace Gameplay
             //CollectedHints = new List<HintState>();
             Instance = this;
             worldMode = WorldMode.RealWorld;
+            //sceneStateLog = new Stack<SceneState>();
         }
 
         private void Start()
@@ -97,6 +98,7 @@ namespace Gameplay
             SceneState sState = null;
             if (state.backToScene)
             {
+                //currentSceneState = previousSceneState;
                 sState = previousSceneState;
             }
             else
@@ -117,9 +119,13 @@ namespace Gameplay
                 }
             }
 
-            previousSceneState = currentSceneState;
-            if(currentSceneState != null) 
+            if (currentSceneState != null)
+            {
+                //sceneStateLog.Push(sState);
+                if(!currentSceneState.sceneStateType.nonStoredState)
+                    previousSceneState = currentSceneState;
                 currentSceneState.ExitState();
+            }
             currentSceneState = sState;
             currentSceneState.EnterState();
         }

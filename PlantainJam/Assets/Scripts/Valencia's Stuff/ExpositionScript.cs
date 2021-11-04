@@ -81,7 +81,7 @@ public class ExpositionScript : MonoBehaviour
 
             text = story.Continue();
 
-            Debug.Log(text);
+            //Debug.Log(text);
 
         }
         else GameDirector.OnSceneStateChanged(dialogueEnd);

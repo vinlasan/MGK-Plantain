@@ -68,6 +68,8 @@ MonoBehaviour:
   descriptionText: 
   normal: {fileID: 1902646155101774707}
   highlighted: {fileID: 8260603897628677177}
+  textOpen: {fileID: 11400000, guid: 1dadc7c3200a4274b943a3c651992988, type: 2}
+  textClose: {fileID: 11400000, guid: 088bdbbb7739c1c458ef907d36fce7e8, type: 2}
 --- !u!50 &2858555297653684536
 Rigidbody2D:
   serializedVersion: 4
@@ -105,6 +107,8 @@ MonoBehaviour:
   descriptionText: 
   normal: {fileID: 0}
   highlighted: {fileID: 0}
+  textOpen: {fileID: 0}
+  textClose: {fileID: 0}
   isDown: 0
   contents: {fileID: 0}
   playerInventory: {fileID: 0}

@@ -10,7 +10,7 @@ namespace Gameplay
         private string sceneStateDescription;
 
         [SerializeField] 
-        private bool returnToPreviousScene;
+        private bool returnToPreviousScene, tempState;
 
         public string sceneType
         {
@@ -20,6 +20,11 @@ namespace Gameplay
         public bool backToScene
         {
             get { return returnToPreviousScene; }
+        }
+
+        public bool nonStoredState
+        {
+            get { return tempState; }
         }
     }
 }

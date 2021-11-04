@@ -30,23 +30,21 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        if (inRange)
+        if (inRange && Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            //if the dialogue has not been requested -> show display & update box
+            //otherwise request the box closes & set text to ""
+            if (!textRequested)
             {
-                //if the dialogue has not been requested -> show display & update box
-                //otherwise request the box closes & set text to ""
+                EventManager.OnUpdateTextBox(descriptionText);
+                GameDirector.OnSceneStateChanged(textOpen);
                 textRequested = !textRequested;
-                if (!textRequested)
-                {
-                    EventManager.OnUpdateTextBox(descriptionText);
-                    GameDirector.OnSceneStateChanged(textOpen);
-                }
-                else
-                {
-                    EventManager.OnUpdateTextBox("");
-                    GameDirector.OnSceneStateChanged(textClose);
-                }
+            }
+            else
+            {
+                EventManager.OnUpdateTextBox("");
+                GameDirector.OnSceneStateChanged(textClose);
+                textRequested = !textRequested;
             }
         }
     }
