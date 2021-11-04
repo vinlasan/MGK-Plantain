@@ -46,7 +46,7 @@ public class ExpositionScript : MonoBehaviour
         List<string> tags = story.currentTags;
         if (tags.Count > 0 && tags[0] != "#EndSceneGhostIntro")
         {
-            text = tags[0] + " : " + text;
+            //text = tags[0] + " : " + text;
             if (tags[0] == "EndSceneGhostIntro")
             {
                 //GameDirector.OnSceneStateChanged(dialogueEnd);
