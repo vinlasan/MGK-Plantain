@@ -50,12 +50,12 @@ public class ExpositionScript : MonoBehaviour
             if (tags[0] == "EndSceneGhostIntro")
             {
                 //GameDirector.OnSceneStateChanged(dialogueEnd);
-                SceneManager.LoadScene("RunToBody");
+                //SceneManager.LoadScene("RunToBody");
             }
             else if (tags[0] == "StartRecordPuzzle")
             {
                 //GameDirector.OnSceneStateChanged(dialogueEnd);
-                SceneManager.LoadScene("RecordPuzzleScene");
+                //SceneManager.LoadScene("RecordPuzzleScene");
             }
         }
     
