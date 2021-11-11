@@ -15,16 +15,18 @@ namespace Gameplay
         private WorldMode worldMode;
 
         [SerializeField]
-        private GameObject[] sceneObjectsToEnable;
+        private GameObject[] sceneObjectsToEnable, sceneObjectsToDisable;
+        
 
         public void InitState()
         {
-            SetSceneObjects(false);
+            SetSceneObjects(false, sceneObjectsToEnable);
         }
         
         public void EnterState()
         {
-            SetSceneObjects(true);
+            SetSceneObjects(true, sceneObjectsToEnable);
+            SetSceneObjects(false, sceneObjectsToDisable);
             EventManager.OnTogglePlayerMovement(enablePlayerMovement);
             if(!ignoreWorldType)
                 EventManager.OnWorldTypeChanged(worldMode);
@@ -32,15 +34,15 @@ namespace Gameplay
 
         public void ExitState()
         {
-            SetSceneObjects(false);
+            SetSceneObjects(false, sceneObjectsToEnable);
             EventManager.OnTogglePlayerMovement(enablePlayerMovement);
         }
 
-        private void SetSceneObjects(bool enable)
+        private void SetSceneObjects(bool enable, GameObject[] objects)
         {
-            if (sceneObjectsToEnable != null && sceneObjectsToEnable.Length != 0)
+            if (objects != null && objects.Length != 0)
             {
-                foreach (GameObject t in sceneObjectsToEnable)
+                foreach (GameObject t in objects)
                 { 
                     if(t) t.SetActive(enable);
                 }
