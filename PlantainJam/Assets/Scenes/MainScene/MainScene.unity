@@ -2514,6 +2514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 325139575}
     m_Modifications:
+    - target: {fileID: 3126827008250778587, guid: b66455bf468acb34ca4bf1e78cdde976, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a3576dbe130d594cb6a82f11d331006, type: 3}
     - target: {fileID: 7646378248802510448, guid: b66455bf468acb34ca4bf1e78cdde976, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3948,7 +3952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8ab00ef0d9684dcb9deb52811d91218, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 672b3fa8d0af9d44cbbfb53ec1cce73e, type: 3}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
