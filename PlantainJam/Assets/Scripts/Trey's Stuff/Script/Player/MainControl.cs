@@ -1,11 +1,9 @@
-using System;
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
 using Gameplay;
+using Gameplay.Puzzle;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using Fungus;
+using Collision2D = UnityEngine.Collision2D;
 
 public enum PlayerState
 {
@@ -33,6 +31,10 @@ public class MainControl : MonoBehaviour
     public Inventory playerInventory;
     public SpriteRenderer receivedItem;
     public Collider2D triggerVolLimbo;
+
+    private Queue<Plantain> plantains = new Queue<Plantain>();
+    private Plantain activePlantain;
+    private Interactable interactableInRange;
     
     //private SceneStateType endCutscene, recordPuzzleOpenScene, beforeGhostScene;
 
@@ -42,6 +44,8 @@ public class MainControl : MonoBehaviour
         //playerInventory.currentItem = null;
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        interactableInRange = null;
+        activePlantain = null;
         //animator.SetFloat("moveX", 0);
         //animator.SetFloat("moveY", -1);
         //transform.position = startingPoint.initialValue;
@@ -51,11 +55,13 @@ public class MainControl : MonoBehaviour
     private void OnEnable()
     {
         EventManager.TogglePlayerMovement += ToggleMovement;
+        EventManager.InteractableInRange += InteractableInRange;
     }
 
     private void OnDisable()
     {
         EventManager.TogglePlayerMovement -= ToggleMovement;
+        EventManager.InteractableInRange -= InteractableInRange;
     }
 
     // Update is called once per frame
@@ -77,12 +83,56 @@ public class MainControl : MonoBehaviour
             {
                 UpdateAnimationAndMove();
             }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (interactableInRange && !interactableInRange.textRequested)
+                    interactableInRange.DisplayText();
+                else
+                {
+                    if (activePlantain)
+                    {
+                        if (!activePlantain.pickedUp)
+                        {
+                            plantains.Enqueue(activePlantain);
+                            activePlantain.Pickup();
+                        }
+                    }
+                    else
+                    {
+                        if (plantains.Count > 0)
+                        {
+                            plantains.Peek().Place(transform.forward * 2 + transform.position);
+                            plantains.Dequeue();
+                        }
+                    }
+                }
+            }
+            
         }
         //disable this in favor of the new bed trigger setup
         /*if (Input.GetKeyDown(KeyCode.F))
         {
            EventManager.OnSwitchWorldType();
         }*/
+    }
+
+    public void InteractableInRange(Interactable interactable, bool inRange)
+    {
+        if (interactable is Plantain)
+        {
+            Plantain plantain = (Plantain) interactable;
+            if(inRange && plantain != activePlantain)
+                activePlantain = plantain;
+            else if (!inRange && plantain == activePlantain)
+                activePlantain = null;
+        }
+        else
+        {
+            if (inRange)
+                interactableInRange = interactable;
+            else interactableInRange = null;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)

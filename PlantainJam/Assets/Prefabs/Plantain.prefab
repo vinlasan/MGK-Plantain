@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2858555297653684540}
   - component: {fileID: 2858555297653684543}
   - component: {fileID: 2858555297653684536}
-  - component: {fileID: 5864052838529292132}
   m_Layer: 0
   m_Name: Plantain
   m_TagString: Untagged
@@ -65,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRange: 0
+  textRequested: 0
   descriptionText: 
   normal: {fileID: 1902646155101774707}
   highlighted: {fileID: 8260603897628677177}
@@ -91,28 +91,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5864052838529292132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2858555297653684515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b123b0f8edd0846a08b8a997050407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  descriptionText: 
-  normal: {fileID: 0}
-  highlighted: {fileID: 0}
-  textOpen: {fileID: 0}
-  textClose: {fileID: 0}
-  isDown: 0
-  contents: {fileID: 0}
-  playerInventory: {fileID: 0}
-  raiseItem: {fileID: 0}
 --- !u!1 &3695947792914709818
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 3695947792914709818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 2858555297653684542}
   m_RootOrder: 1

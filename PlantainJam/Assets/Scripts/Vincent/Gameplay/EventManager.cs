@@ -1,6 +1,5 @@
-using AudioUtilities;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
+using Gameplay.Puzzle;
 
 namespace Gameplay
 {
@@ -8,6 +7,7 @@ namespace Gameplay
     {
         public delegate void GameEvent();
         public delegate void GameEvent<T>(T obj);
+        public delegate void GameEvent<T1, T2>(T1 obj1, T2 obj2);
 
         /// <summary>
         /// Only to be listened to by the Game Director for storing what hints are collected.
@@ -22,6 +22,9 @@ namespace Gameplay
         public static event GameEvent AudioStopRecordMusic;
         public static event GameEvent<float> AudioGhostApproach;
         public static event GameEvent GameStart;
+
+        public static event GameEvent<Interactable, bool> InteractableInRange;
+        public static event GameEvent<bool> TextBoxStatusUpdate; 
 
         public static event GameEvent<string> UpdateTextBox; 
         //public static event GameEvent SwitchWorldType;
@@ -66,6 +69,18 @@ namespace Gameplay
         {
             if (AudioGhostApproach != null)
                 AudioGhostApproach(duration);
+        }
+        
+        public static void OnInteractableInRange(Interactable interactable, bool inRange)
+        {
+            if (InteractableInRange != null)
+                InteractableInRange(interactable, inRange);
+        }
+
+        public static void OnTextBoxStatusUpdate(bool status)
+        {
+            if (TextBoxStatusUpdate != null)
+                TextBoxStatusUpdate(status);
         }
 
         public static void OnGameStart()

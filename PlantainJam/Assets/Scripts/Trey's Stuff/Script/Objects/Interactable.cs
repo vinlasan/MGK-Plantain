@@ -10,16 +10,16 @@ public class Interactable : MonoBehaviour
     //public Notification context;
     public bool inRange;
 
-    private bool textRequested;
+    public bool textRequested { get; private set; }
     
     [SerializeField]
-    private string descriptionText;
+    public string descriptionText;
 
     [SerializeField] 
     private SpriteRenderer  normal, highlighted;
 
     [SerializeField] 
-    private SceneStateType textOpen, textClose;
+    private SceneStateType textOpen;
 
     // Use this for initialization
     protected void Start()
@@ -28,24 +28,34 @@ public class Interactable : MonoBehaviour
         textRequested = false;
     }
 
-    private void Update()
+    protected void OnEnable()
     {
-        if (inRange && Input.GetKeyDown(KeyCode.Space))
+        EventManager.TextBoxStatusUpdate += CanDisplayText;
+    }
+
+    protected void OnDisable()
+    {
+        EventManager.TextBoxStatusUpdate -= CanDisplayText;
+    }
+
+    private void CanDisplayText(bool textStatus)
+    {
+        textRequested = textStatus;
+    }
+
+    public void DisplayText()
+    {
+        if (!textRequested)
         {
-            //if the dialogue has not been requested -> show display & update box
-            //otherwise request the box closes & set text to ""
-            if (!textRequested)
-            {
-                EventManager.OnUpdateTextBox(descriptionText);
-                GameDirector.OnSceneStateChanged(textOpen);
-                textRequested = !textRequested;
-            }
-            else
-            {
-                EventManager.OnUpdateTextBox("");
-                GameDirector.OnSceneStateChanged(textClose);
-                textRequested = !textRequested;
-            }
+            EventManager.OnUpdateTextBox(descriptionText);
+            GameDirector.OnSceneStateChanged(textOpen);
+            textRequested = !textRequested;
+        }
+        else
+        {
+            EventManager.OnUpdateTextBox("");
+            //GameDirector.OnSceneStateChanged(textClose);
+            textRequested = !textRequested;
         }
     }
 
@@ -64,6 +74,7 @@ public class Interactable : MonoBehaviour
             //context.Raise();
             inRange = true;
             ChangeHighlight(true);
+            EventManager.OnInteractableInRange(this, true);
         }
     }
 
@@ -74,6 +85,7 @@ public class Interactable : MonoBehaviour
             //context.Raise();
             inRange = false;
             ChangeHighlight(false);
+            EventManager.OnInteractableInRange(this, false);
         }
     }
 }

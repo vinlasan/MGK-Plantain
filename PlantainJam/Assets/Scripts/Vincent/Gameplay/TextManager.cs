@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Gameplay
 {
@@ -8,6 +9,9 @@ namespace Gameplay
     {
         [SerializeField]
         private TextMeshProUGUI textObject;
+        
+        [SerializeField]
+        private UnityEvent TextDisplayEvent;
 
         private void Start()
         {
@@ -27,8 +31,13 @@ namespace Gameplay
 
         private void UpdateText(string text)
         {
-            textObject.text = text;
+            //textObject.text = text;
+            TextDisplayEvent.Invoke();
         }
-        
+
+        public void TextBoxStatus(bool open)
+        {
+            EventManager.OnTextBoxStatusUpdate(open);
+        }
     }
 }
