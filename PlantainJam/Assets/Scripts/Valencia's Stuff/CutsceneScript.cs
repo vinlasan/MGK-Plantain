@@ -63,7 +63,7 @@ public class CutsceneScript : MonoBehaviour
         else if (tags[0] == "EndRightChoice")
         {
             //SceneManager.LoadScene("EndGame");
-            GameDirector.OnSceneStateChanged(endGameScene);
+            EventManager.OnSceneStateChanged(endGameScene);
         }
 
 

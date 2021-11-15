@@ -23,28 +23,19 @@ namespace Gameplay
         private SceneState currentSceneState, previousSceneState;
         
         //private Stack<SceneState> sceneStateLog;
-        
-        private delegate void DirectorEvent<T>(T obj);
-        private static event DirectorEvent<SceneStateType> SceneStateChange;
-        
-        public static void OnSceneStateChanged(SceneStateType state)
-        {
-            if (SceneStateChange != null)
-                SceneStateChange(state);
-        }
 
         private void OnEnable()
         {
             //EventManager.HintCollected += HintAdded;
             EventManager.WorldTypeChange += ChangeWorldType;
-            SceneStateChange += ChangeSceneState;
+            EventManager.SceneStateChange += ChangeSceneState;
         }
 
         private void OnDisable()
         {
             //EventManager.HintCollected -= HintAdded;
             EventManager.WorldTypeChange -= ChangeWorldType;
-            SceneStateChange -= ChangeSceneState;
+            EventManager.SceneStateChange -= ChangeSceneState;
         }
 
         private void Awake()

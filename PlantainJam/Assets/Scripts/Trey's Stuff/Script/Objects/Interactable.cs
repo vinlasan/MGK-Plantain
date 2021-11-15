@@ -48,7 +48,7 @@ public class Interactable : MonoBehaviour
         if (!textRequested)
         {
             EventManager.OnUpdateTextBox(descriptionText);
-            GameDirector.OnSceneStateChanged(textOpen);
+            EventManager.OnSceneStateChanged(textOpen);
             textRequested = !textRequested;
         }
         else

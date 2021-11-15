@@ -6,7 +6,7 @@ namespace Gameplay
     [CreateAssetMenu(fileName = "NewState", menuName = "SceneManagement/StateType"), Serializable]
     public class SceneStateType : ScriptableObject
     {
-        [SerializeField]
+        [SerializeField, TextArea]
         private string sceneStateDescription;
 
         [SerializeField] 

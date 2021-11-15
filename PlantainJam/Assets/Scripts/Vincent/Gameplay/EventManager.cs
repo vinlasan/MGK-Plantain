@@ -26,8 +26,14 @@ namespace Gameplay
         public static event GameEvent<Interactable, bool> InteractableInRange;
         public static event GameEvent<bool> TextBoxStatusUpdate; 
 
-        public static event GameEvent<string> UpdateTextBox; 
-        //public static event GameEvent SwitchWorldType;
+        public static event GameEvent<string> UpdateTextBox;
+        public static event GameEvent<SceneStateType> SceneStateChange;
+        
+        public static void OnSceneStateChanged(SceneStateType state)
+        {
+            if (SceneStateChange != null)
+                SceneStateChange(state);
+        }
 
         public static void OnWorldTypeChanged(WorldMode worldMode)
         {

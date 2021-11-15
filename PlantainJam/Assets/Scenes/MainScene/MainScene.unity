@@ -772,17 +772,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &331331698 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-  m_PrefabInstance: {fileID: 1446443794}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 818d240107be57940bd993d8f2b80769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &403034602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1443,18 +1432,17 @@ GameObject:
   - component: {fileID: 796337025}
   - component: {fileID: 796337024}
   - component: {fileID: 796337026}
-  - component: {fileID: 796337031}
-  - component: {fileID: 796337028}
-  - component: {fileID: 796337032}
-  - component: {fileID: 796337033}
   - component: {fileID: 796337027}
-  - component: {fileID: 796337029}
-  - component: {fileID: 796337034}
   - component: {fileID: 796337038}
   - component: {fileID: 796337039}
   - component: {fileID: 796337035}
   - component: {fileID: 796337030}
   - component: {fileID: 796337036}
+  - component: {fileID: 796337034}
+  - component: {fileID: 796337033}
+  - component: {fileID: 796337032}
+  - component: {fileID: 796337029}
+  - component: {fileID: 796337028}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1558,8 +1546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 61.116066
-    y: 76.55103
+    x: -15.806989
+    y: -37.73466
     width: 167.5824
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1567,8 +1555,9 @@ MonoBehaviour:
   itemId: 1
   blockName: DisturbanceCutscene
   description: 
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 796337029}
   commandList:
+  - {fileID: 796337028}
   - {fileID: 796337017}
   - {fileID: 796337034}
   suppressAllAutoSelections: 0
@@ -1601,8 +1590,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -153.0165
-    y: -15.328364
+    x: -158.51103
+    y: -31.811882
     width: 78.57143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1618,7 +1607,7 @@ MonoBehaviour:
   - {fileID: 796337016}
   - {fileID: 796337024}
   - {fileID: 796337026}
-  - {fileID: 796337032}
+  - {fileID: 796337033}
   suppressAllAutoSelections: 0
 --- !u!114 &796337022
 MonoBehaviour:
@@ -1636,7 +1625,7 @@ MonoBehaviour:
   scrollPos: {x: 730.20355, y: 105.6968}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 441
+  blockViewHeight: 455
   zoom: 0.9100001
   scrollViewRect:
     serializedVersion: 2
@@ -1644,7 +1633,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 796337019}
   selectedCommands: []
   variables:
   - {fileID: 796337035}
@@ -1759,18 +1749,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 796337015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 12
+  itemId: 31
   indentLevel: 0
-  targetFlowchart: {fileID: 796337022}
-  targetBlock: {fileID: 796337019}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
+  description: Disable player movement
+  sceneStateType: {fileID: 11400000, guid: 8fcdccd29e8dcfe42935d9bbeb63593b, type: 2}
 --- !u!114 &796337029
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1780,12 +1765,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 796337015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Script: {fileID: 11500000, guid: 48fd253522474239aab640a0f86309c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 796337031}
+  parentBlock: {fileID: 796337019}
   suppressBlockAutoSelect: 0
-  message: Triggered
+  sceneStateType: {fileID: 11400000, guid: 06973927e4276fe4db74f3c79280bc05, type: 2}
 --- !u!114 &796337030
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1801,34 +1786,6 @@ MonoBehaviour:
   parentBlock: {fileID: 796337038}
   suppressBlockAutoSelect: 0
   outTextValue: {fileID: 796337035}
---- !u!114 &796337031
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796337015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 36.917824
-    y: -22.575684
-    width: 168.6813
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 10
-  blockName: Player at DoorTrigger
-  description: 
-  eventHandler: {fileID: 796337029}
-  commandList:
-  - {fileID: 796337033}
-  - {fileID: 796337028}
-  suppressAllAutoSelections: 0
 --- !u!114 &796337032
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1838,53 +1795,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 796337015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 14
+  itemId: 30
   indentLevel: 0
-  description: Enable Player Movement
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 331331698}
-        m_TargetAssemblyTypeName: Gameplay.GameDirector, Assembly-CSharp
-        m_MethodName: OnSceneStateChanged
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Gameplay.SceneStateType, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  description: Enable Player movement
+  sceneStateType: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
 --- !u!114 &796337033
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1894,65 +1811,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 796337015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 15
+  itemId: 29
   indentLevel: 0
-  description: Disable PlayerMovement
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 331331698}
-        m_TargetAssemblyTypeName: Gameplay.GameDirector, Assembly-CSharp
-        m_MethodName: OnSceneStateChanged
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 8fcdccd29e8dcfe42935d9bbeb63593b, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Gameplay.SceneStateType, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1417923328}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  description: 
+  sceneStateType: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
 --- !u!114 &796337034
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1962,53 +1827,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 796337015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 28
   indentLevel: 0
-  description: Enable Player Movement
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 331331698}
-        m_TargetAssemblyTypeName: Gameplay.GameDirector, Assembly-CSharp
-        m_MethodName: OnSceneStateChanged
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Gameplay.SceneStateType, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  description: Enable player movement
+  sceneStateType: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
 --- !u!114 &796337035
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2067,8 +1892,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -470.86206
-    y: -16.685839
+    x: -387.3451
+    y: -35.36716
     width: 159.8901
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2080,6 +1905,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 796337036}
   - {fileID: 796337039}
+  - {fileID: 796337032}
   suppressAllAutoSelections: 0
 --- !u!114 &796337039
 MonoBehaviour:
@@ -2101,18 +1927,6 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 331331698}
-        m_TargetAssemblyTypeName: Gameplay.GameDirector, Assembly-CSharp
-        m_MethodName: OnSceneStateChanged
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Gameplay.SceneStateType, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1274001591}
         m_TargetAssemblyTypeName: Gameplay.TextManager, Assembly-CSharp
         m_MethodName: TextBoxStatus
@@ -2865,11 +2679,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7646378248802510455, guid: b66455bf468acb34ca4bf1e78cdde976, type: 3}
   m_PrefabInstance: {fileID: 1411353454}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1417923328 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4799909728699565504, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
-  m_PrefabInstance: {fileID: 4799909729446366912}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1417923330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4799909728699565506, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
@@ -3019,7 +2828,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 58480dbd8c62321438572ac7141b53d7, type: 2}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[0].sceneStateType
@@ -3032,7 +2841,7 @@ PrefabInstance:
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[2].sceneStateType
       value: 
-      objectReference: {fileID: 11400000, guid: ce1017412fac7ad4385c39ec59efd1ba, type: 2}
+      objectReference: {fileID: 11400000, guid: 1dadc7c3200a4274b943a3c651992988, type: 2}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[3].sceneStateType
       value: 
@@ -3051,7 +2860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[2].ignoreWorldType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[3].ignoreWorldType
@@ -4484,7 +4293,7 @@ PrefabInstance:
     - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
       propertyPath: stateToTransitionTo
       value: 
-      objectReference: {fileID: 11400000, guid: 8fcdccd29e8dcfe42935d9bbeb63593b, type: 2}
+      objectReference: {fileID: 11400000, guid: 06973927e4276fe4db74f3c79280bc05, type: 2}
     - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -5,10 +5,11 @@ using EventHandler = Fungus.EventHandler;
 
 namespace FungusExtensions
 {
-    [EventHandlerInfo("Text", "Text Event", "This block will Execute when the ")]
+    [EventHandlerInfo("Custom", "Text Event", "This block will Execute when any text events are fired")]
     [AddComponentMenu("")]
     public class TextEventHandler : EventHandler
     {
+        
         [VariableProperty(typeof(StringVariable))]
         public StringVariable outTextValue;
         
