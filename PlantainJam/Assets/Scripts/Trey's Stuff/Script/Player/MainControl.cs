@@ -90,12 +90,12 @@ public class MainControl : MonoBehaviour
                     interactableInRange.DisplayText();
                 else
                 {
-                    if (activePlantain)
+                    if (GameDirector.Instance.worldMode == WorldMode.RealWorld && activePlantain)
                     {
                         if (!activePlantain.pickedUp)
                         {
                             plantains.Enqueue(activePlantain);
-                            activePlantain.Pickup();
+                            activePlantain.Pickup(transform.position);
                         }
                     }
                     else

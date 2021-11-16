@@ -21,8 +21,6 @@ namespace Gameplay
         [SerializeField] private SceneStateType dummySceneType;
 
         private SceneState currentSceneState, previousSceneState;
-        
-        //private Stack<SceneState> sceneStateLog;
 
         private void OnEnable()
         {
@@ -57,11 +55,7 @@ namespace Gameplay
                 ChangeSceneState(sceneStates[0].sceneStateType);
             }
             else Debug.LogError("Scene states need to be assigned on the Director object " + this.gameObject.name);
-            //TODO remove this redundant code
-            /*if (SceneManager.GetActiveScene().name != "GhostIntro" && SceneManager.GetActiveScene().name != "RunToBody" && SceneManager.GetActiveScene().name != "RecordPuzzleOpenScene")
-                worldMode = WorldMode.RealWorld;
-            else worldMode = WorldMode.SpiritWorld;*/
-            
+
             //EventManager.OnWorldTypeChanged(worldMode);
             limboEffects.SetActive(false);
             if (enableDebugModeOnStart)
@@ -82,7 +76,7 @@ namespace Gameplay
 
         private void ChangeSceneState(SceneStateType state)
         {
-            Debug.Log("Scene state changed to " + state.name);
+            //Debug.Log("Scene state changed to " + state.name);
             if (state == dummySceneType)
                 return;
 
@@ -145,11 +139,7 @@ namespace Gameplay
         {
             CollectedHints.Add(hint);
         }*/
-
-        /// <summary>
-        /// Checks if the HintType is recorded in the collection
-        /// </summary>
-        /// <param name="hintType"></param>
+        
         /*public bool WasHintCollected(HintType hintType)
         {
             foreach (HintState hState in CollectedHints)

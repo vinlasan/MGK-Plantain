@@ -5,37 +5,40 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OpeningCutscene.unity
     guid: fa296647b2b9db94fabd88df3e76dbbd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OpeningScene.unity
     guid: 0fe77cc277ec4c4458bea3b8f02f4a51
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GoToAya.unity
     guid: 8709ff6aa9b176544ba3eb21860cf1e4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BeforeGhostScene.unity
     guid: 2a6ba2230e6dc8c4da638d110d1e00e7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GhostIntro.unity
     guid: 61eeb70b71fcf0a449d3694ff9104593
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RunToBody.unity
     guid: b484b3b18a86f98499654af909e43452
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RecordPuzzleOpenScene.unity
     guid: f7d2c837105d2b241bb7e8473f8b812a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RecordPuzzleScene.unity
     guid: e0bc9c8e96e014447a7e5e091759c181
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Over.unity
     guid: a8da7bd2fe912d4448ac34a5e9413400
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EndGame.unity
     guid: c1e5560d35b3a63489a246c95b73ac3a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EndCutscene.unity
     guid: 7b153ea6442e8db4393db6b5b628200d
+  - enabled: 1
+    path: Assets/Scenes/MainScene/MainScene.unity
+    guid: e62bbb2d6c7f424429d4f83110b0aa45
   m_configObjects: {}

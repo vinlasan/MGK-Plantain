@@ -62,7 +62,7 @@ namespace Gameplay.Puzzle
         
         public void EnableSpiritWorldTraverse()
         {
-            Debug.Log("Plantain encountered ");
+            //Debug.Log("Plantain encountered ");
             spiritWorldTraverse = true;
         }
         
