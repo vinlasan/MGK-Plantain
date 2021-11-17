@@ -13,8 +13,8 @@ public class ExpositionScript : MonoBehaviour
     //public TextMeshProUGUI textPrefab;
     //public GameObject image;
     public AudioSource cutsceneSFX;
-    //[SerializeField]
-    //private TextMeshProUGUI textObject;
+    [SerializeField]
+    private TextMeshProUGUI textObject;
 
     [SerializeField] 
     private SceneStateType dialogueEnd;
@@ -50,7 +50,7 @@ public class ExpositionScript : MonoBehaviour
             if (tags[0] == "EndSceneGhostIntro")
             {
                 //GameDirector.OnSceneStateChanged(dialogueEnd);
-                //SceneManager.LoadScene("RunToBody");
+                SceneManager.LoadScene("MainScene");
             }
             else if (tags[0] == "StartRecordPuzzle")
             {
@@ -60,7 +60,7 @@ public class ExpositionScript : MonoBehaviour
         }
     
         //Debug.Log(storyText.text);
-        EventManager.OnUpdateTextBox(text);
+        textObject.text = text;
         cutsceneSFX.Play();
     }
 

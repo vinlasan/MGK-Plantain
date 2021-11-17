@@ -32,7 +32,9 @@ namespace Gameplay
         private void UpdateText(string text)
         {
             //textObject.text = text;
-            TextDisplayEvent.Invoke();
+            if(TextDisplayEvent ==  null)
+                textObject.text = text;
+            else TextDisplayEvent.Invoke();
         }
 
         public void TextBoxStatus(bool open)

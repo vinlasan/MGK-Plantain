@@ -90,20 +90,23 @@ public class MainControl : MonoBehaviour
                     interactableInRange.DisplayText();
                 else
                 {
-                    if (GameDirector.Instance.worldMode == WorldMode.RealWorld && activePlantain)
+                    if (GameDirector.Instance.worldMode == WorldMode.RealWorld)
                     {
-                        if (!activePlantain.pickedUp)
+                        if (activePlantain)
                         {
-                            plantains.Enqueue(activePlantain);
-                            activePlantain.Pickup(transform.position);
+                            if (!activePlantain.pickedUp)
+                            {
+                                plantains.Enqueue(activePlantain);
+                                activePlantain.Pickup(transform.position);
+                            }
                         }
-                    }
-                    else
-                    {
-                        if (plantains.Count > 0)
+                        else
                         {
-                            plantains.Peek().Place(transform.forward * 2 + transform.position);
-                            plantains.Dequeue();
+                            if (plantains.Count > 0)
+                            {
+                                plantains.Peek().Place(transform.forward * 2 + transform.position);
+                                plantains.Dequeue();
+                            }
                         }
                     }
                 }
