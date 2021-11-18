@@ -1,0 +1,33 @@
+--player walks into bedroom and triggers cutscene
+
+Spirit: Do you remember the times when you wanted to be anywhere else? 
+
+Spirit: When you couldn't stand to be in your body? And you went somewhere else?
+
+You: How do you know that?
+
+Spirit: I don't. 
+
+Spirit: Lay down. And think of that.
+
+--player goes to bed, interacts with it. Character lays down in bed. After a moment, traversal occurs and the player is in spirit form near their body and can see Theophilus
+
+Spirit: This is limbo.
+
+Spirit: Doritha is working her way into your sister now. She doesn't want to be interrupted. There is no way to get into that room from the world of the living, you have to do it this way.
+
+You: Am I dead?
+
+Spirit: No. We'll see by the end of the night, though.
+
+Spirit: These plantain chips should help you on your way.
+
+Spirit: When you put them down in the right place, you can make things disappear.
+
+Spirit: You can't touch them in limbo though.
+
+Spirit: Put the plantain chips in the right place when in the living world, then enter limbo. Avoid the blue flames and walk past the walls that the plantain chips have removed.  
+
+Spirit: There is a chip by your sister's door. Hurry. 
+
+--character in cutscene interacts with physical body again and returns to the physical world
