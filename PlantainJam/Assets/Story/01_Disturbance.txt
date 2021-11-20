@@ -1,12 +1,4 @@
-﻿--loud noise sounds at north of map
-
-You: (I should check on Mariah)
-
---walks toward sound
-
-You: (Midnight Yoga again, probably)
-
---Gets to door
+﻿--Gets to door
 
 --locked latch sound
 
