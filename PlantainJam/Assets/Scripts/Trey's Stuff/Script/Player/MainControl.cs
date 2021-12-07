@@ -2,7 +2,6 @@ using Gameplay;
 using Gameplay.Puzzle;
 using UnityEngine;
 using System.Collections.Generic;
-using Fungus;
 using Collision2D = UnityEngine.Collision2D;
 
 public enum PlayerState
@@ -15,7 +14,6 @@ public enum PlayerState
 }
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
 public class MainControl : MonoBehaviour
 {
     public GameObject RestartMenu;
@@ -42,7 +40,7 @@ public class MainControl : MonoBehaviour
     void Start()
     {
         //playerInventory.currentItem = null;
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         interactableInRange = null;
         activePlantain = null;
