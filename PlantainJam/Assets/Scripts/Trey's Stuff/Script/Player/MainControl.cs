@@ -40,7 +40,7 @@ public class MainControl : MonoBehaviour
     void Start()
     {
         //playerInventory.currentItem = null;
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         interactableInRange = null;
         activePlantain = null;

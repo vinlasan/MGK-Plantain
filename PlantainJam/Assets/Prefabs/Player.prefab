@@ -345,10 +345,22 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 8177875847605766202, guid: d22887737ed00354abc5e14665549b6d, type: 2}
     value: {fileID: 1801455805404932286}
+  - key: {fileID: 2627631006889730735, guid: d22887737ed00354abc5e14665549b6d, type: 2}
+    value: {fileID: 1801455805404932286}
+  - key: {fileID: 912612103400665426, guid: d22887737ed00354abc5e14665549b6d, type: 2}
+    value: {fileID: 1801455805404932286}
+  - key: {fileID: 2627631006889730735, guid: d22887737ed00354abc5e14665549b6d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 912612103400665426, guid: d22887737ed00354abc5e14665549b6d, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 1ef9b262ecd3ca84b9c09d4a3f5fee7b: {fileID: 1801455805404932275}
     - 3b1b61e500a7b8443a1cb78e87f86bca: {fileID: 1801455805404932275}
+    - : {fileID: 0}
+    - 22ae257b3d7fb1249aede34a97966abe: {fileID: 0}
+    - 756794922abfcf946908a66030b06ead: {fileID: 0}
+    - 10f8cc4e1b4dc954c91067e8febd1d06: {fileID: 1801455805404932275}
 --- !u!1 &2723835809565461361
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773779807055684872, guid: 731a856349d80784d983303162a84f3f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5773779807055684874, guid: 731a856349d80784d983303162a84f3f, type: 3}
       propertyPath: weight
