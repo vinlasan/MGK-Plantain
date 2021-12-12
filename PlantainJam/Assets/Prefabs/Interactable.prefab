@@ -211,11 +211,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inRange: 0
+  hasRecord: 1
   descriptionText: I don't think I can use this to open the door...
+  recordFoundText: 
   normal: {fileID: 7595682874859226879}
   highlighted: {fileID: 4212712646221159227}
   textOpen: {fileID: 11400000, guid: 1dadc7c3200a4274b943a3c651992988, type: 2}
-  textClose: {fileID: 11400000, guid: 088bdbbb7739c1c458ef907d36fce7e8, type: 2}
+  textActiveScene: {fileID: 11400000, guid: dcaa20d98f1da294ca92be4916aba622, type: 2}
 --- !u!58 &3648629217304997789
 CircleCollider2D:
   m_ObjectHideFlags: 0

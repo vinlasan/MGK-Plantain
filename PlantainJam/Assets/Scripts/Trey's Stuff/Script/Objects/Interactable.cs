@@ -1,46 +1,54 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Gameplay;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-
-    //public Notification context;
     public bool inRange;
 
     public bool textRequested { get; private set; }
+
+    [SerializeField, Tooltip("Only change this in editor for testing purposes")]
+    private bool hasRecord; 
+    private bool interactionActive;
     
     [SerializeField]
-    public string descriptionText;
+    public string descriptionText, recordFoundText;
 
     [SerializeField] 
     private SpriteRenderer  normal, highlighted;
 
     [SerializeField] 
-    private SceneStateType textOpen;
+    private SceneStateType textOpen, textActiveScene;
 
     // Use this for initialization
     protected void Start()
     {
         ChangeHighlight(false);
         textRequested = false;
+        interactionActive = false;
     }
 
     protected void OnEnable()
     {
         EventManager.TextBoxStatusUpdate += CanDisplayText;
+        EventManager.SceneStateChange += ActivateInteraction;
     }
 
     protected void OnDisable()
     {
         EventManager.TextBoxStatusUpdate -= CanDisplayText;
+        EventManager.SceneStateChange -= ActivateInteraction;
     }
 
     private void CanDisplayText(bool textStatus)
     {
         textRequested = textStatus;
+    }
+
+    private void ActivateInteraction(SceneStateType sceneStateType)
+    {
+        if (textActiveScene == sceneStateType)
+            interactionActive = true;
     }
 
     public void DisplayText()
@@ -54,12 +62,11 @@ public class Interactable : MonoBehaviour
         else
         {
             EventManager.OnUpdateTextBox("");
-            //GameDirector.OnSceneStateChanged(textClose);
             textRequested = !textRequested;
         }
     }
 
-    protected void ChangeHighlight(bool highlightActive)
+    private void ChangeHighlight(bool highlightActive)
     {
         if(normal)
             normal.gameObject.SetActive(!highlightActive);
@@ -69,9 +76,8 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+        if (interactionActive && collision.CompareTag("Player") && !collision.isTrigger)
         {
-            //context.Raise();
             inRange = true;
             ChangeHighlight(true);
             EventManager.OnInteractableInRange(this, true);
@@ -80,9 +86,8 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+        if (interactionActive && collision.CompareTag("Player") && !collision.isTrigger)
         {
-            //context.Raise();
             inRange = false;
             ChangeHighlight(false);
             EventManager.OnInteractableInRange(this, false);

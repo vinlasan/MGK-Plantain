@@ -12,6 +12,10 @@ PrefabInstance:
       value: (They don't even like this chair. They just bought it because it looked
         expensive.)
       objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: recordFoundText
+      value: Record Found!
+      objectReference: {fileID: 0}
     - target: {fileID: 3648629217304997789, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Radius
       value: 3

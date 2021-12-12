@@ -13,6 +13,10 @@ PrefabInstance:
         this light. We didn't have to say a word but we were more connected in silence
         than we ever were speaking)
       objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: recordFoundText
+      value: Record Found!
+      objectReference: {fileID: 0}
     - target: {fileID: 4212712646221159227, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Sprite
       value: 

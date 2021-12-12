@@ -8,9 +8,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: hasRecord
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: descriptionText
       value: (They threw out all of our old books...Lots of Ayn Rand here.)
       objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: recordFoundText
+      value: Record Found!
+      objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: textActiveScene
+      value: 
+      objectReference: {fileID: 11400000, guid: dcaa20d98f1da294ca92be4916aba622, type: 2}
     - target: {fileID: 4212712646221159227, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Sprite
       value: 

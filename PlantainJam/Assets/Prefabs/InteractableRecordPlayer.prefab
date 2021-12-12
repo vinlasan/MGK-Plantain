@@ -8,10 +8,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: hasRecord
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: descriptionText
       value: (Mom had so many Earth, Wind and Fire records. It was the only thing
         that made Sunday cleaning bearable. Like everything from before, she threw
         them out. Bruce Springstein? Who the heck is that?)
+      objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: recordFoundText
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2678779192595266794, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_IsActive

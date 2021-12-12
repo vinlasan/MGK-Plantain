@@ -2,7 +2,6 @@ using Gameplay;
 using Gameplay.Puzzle;
 using UnityEngine;
 using System.Collections.Generic;
-using Collision2D = UnityEngine.Collision2D;
 
 public enum PlayerState
 {
@@ -136,16 +135,6 @@ public class MainControl : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-            //set variable to allow Limbo switch
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-            //set variable to allow Limbo switch
-    }
-
     private void ToggleMovement(bool canMove)
     {
         movementEnabled = canMove;
@@ -207,9 +196,9 @@ public class MainControl : MonoBehaviour
         //walksfx.SetActive(false);
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (collision.gameObject.name == "EndGameTrigger")
+        if (collision.gameObject.name == "EndGameTrigger")
         {
             SceneManager.LoadScene("EndCutscene");
             //GameDirector.OnSceneStateChanged(endCutscene);
@@ -223,6 +212,6 @@ public class MainControl : MonoBehaviour
         {
             SceneManager.LoadScene("BeforeGhostScene");
             //GameDirector.OnSceneStateChanged(beforeGhostScene);
-        }*/
-    }
+        }
+    }*/
 }
