@@ -1,5 +1,4 @@
 using UnityEngine;
-using Gameplay.Puzzle;
 
 namespace Gameplay
 {
@@ -29,6 +28,7 @@ namespace Gameplay
         public static event GameEvent<string> UpdateTextBox;
         public static event GameEvent<SceneStateType> SceneStateChange;
         
+
         public static void OnSceneStateChanged(SceneStateType state)
         {
             if (SceneStateChange != null)
@@ -94,6 +94,7 @@ namespace Gameplay
             if (GameStart != null)
                 GameStart();
         }
+        
 
         /*public static void OnSwitchWorldType()
         {

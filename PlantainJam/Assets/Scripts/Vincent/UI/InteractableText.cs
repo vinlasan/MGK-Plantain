@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Gameplay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gameplay
+namespace UI
 {
-    public class TextManager : MonoBehaviour
+    public class InteractableText : MonoBehaviour
     {
         [SerializeField]
         private TextMeshProUGUI textObject;
