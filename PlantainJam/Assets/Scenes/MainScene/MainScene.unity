@@ -781,6 +781,26 @@ PrefabInstance:
       propertyPath: stateToTransitionTo
       value: 
       objectReference: {fileID: 11400000, guid: dd46f94263aab8949bdb78be67aa849b, type: 2}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStates.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dd46f94263aab8949bdb78be67aa849b, type: 2}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStatesToTrigger.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStatesToTrigger.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 796ddc13f0f65484fb05aa6bbac0de52, type: 2}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStatesToTrigger.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: dd46f94263aab8949bdb78be67aa849b, type: 2}
     - target: {fileID: 4799909728699565504, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
       propertyPath: m_Name
       value: LimboPuzzleSceneTrigger
@@ -1619,7 +1639,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 61.517838
     y: 153.59698
-    width: 145.52234
+    width: 140.74622
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1649,7 +1669,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 58.814484
     y: 69.09131
-    width: 136.56712
+    width: 132.38803
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1717,7 +1737,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -160.92337
     y: 120.8008
-    width: 129.10443
+    width: 128.80594
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2486,6 +2506,10 @@ PrefabInstance:
     - target: {fileID: 5544555268001319270, guid: c1d10a7efd4a3574db085e3603652766, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544555268001319272, guid: c1d10a7efd4a3574db085e3603652766, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544555268415420328, guid: c1d10a7efd4a3574db085e3603652766, type: 3}
       propertyPath: m_Name
@@ -3578,6 +3602,22 @@ PrefabInstance:
       propertyPath: stateToTransitionTo
       value: 
       objectReference: {fileID: 11400000, guid: f43d9fe8562085a459086b81e688de34, type: 2}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStates.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f43d9fe8562085a459086b81e688de34, type: 2}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStatesToTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStatesToTrigger.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f43d9fe8562085a459086b81e688de34, type: 2}
     - target: {fileID: 4799909728699565504, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
       propertyPath: m_Name
       value: LimboPuzzle2SceneTrigger (1)
@@ -4074,6 +4114,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
       propertyPath: stateToTransitionTo
+      value: 
+      objectReference: {fileID: 11400000, guid: 06973927e4276fe4db74f3c79280bc05, type: 2}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStates.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 06973927e4276fe4db74f3c79280bc05, type: 2}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStatesToTrigger.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}
+      propertyPath: sceneStatesToTrigger.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 06973927e4276fe4db74f3c79280bc05, type: 2}
     - target: {fileID: 2677324994687550158, guid: 44f64dfb8f6c30f48a5d288b27b60e36, type: 3}

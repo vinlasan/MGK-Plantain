@@ -7,9 +7,15 @@ namespace Gameplay.Puzzle
     [RequireComponent(typeof(BoxCollider2D))]
     public class SpiritBarrier : MonoBehaviour
     {
-        private Transform visuals;
-        private BoxCollider2D collider;
+        [SerializeField] private GameObject visuals;
+        [SerializeField] private BoxCollider2D collider;
 
+        public void Awake()
+        {
+            collider = GetComponent<BoxCollider2D>();
+            collider.enabled = false;
+        }
+        
         private void OnEnable()
         {
             EventManager.WorldTypeChange += WorldTypeChanged;
@@ -19,24 +25,18 @@ namespace Gameplay.Puzzle
         {
             EventManager.WorldTypeChange -= WorldTypeChanged;
         }
-
-        public void Awake()
-        {
-            visuals = GetComponentInChildren<Transform>();
-            collider = GetComponent<BoxCollider2D>();
-        }
-
+        
         private void WorldTypeChanged(WorldMode worldMode)
         {
             if (worldMode == WorldMode.SpiritWorld)
             {
+                visuals.SetActive(true);
                 collider.enabled = true;
-                visuals.gameObject.SetActive(true);
             }
             else
             {
+                visuals.SetActive(false);
                 collider.enabled = false;
-                visuals.gameObject.SetActive(false);
             }
         }
 
