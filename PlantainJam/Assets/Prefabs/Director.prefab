@@ -47,10 +47,98 @@ MonoBehaviour:
   limboEffects: {fileID: 0}
   enableDebugModeOnStart: 0
   sceneStates:
-  - sceneStateType: {fileID: 0}
-    disablePlayerMovement: 0
+  - sceneStateType: {fileID: 11400000, guid: 868cbbe52fab16d4fba4190aabd67e37, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 0
+    dontDisableObjectsOnExit: 0
     worldMode: 0
     sceneObjectsToEnable: []
+    sceneObjectsToDisable:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - sceneStateType: {fileID: 11400000, guid: 8fcdccd29e8dcfe42935d9bbeb63593b, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 0
+    worldMode: 0
+    sceneObjectsToEnable: []
+    sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
+    enablePlayerMovement: 1
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 0
+    worldMode: 0
+    sceneObjectsToEnable: []
+    sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: 1dadc7c3200a4274b943a3c651992988, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 0
+    worldMode: 0
+    sceneObjectsToEnable: []
+    sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: e020b9e1ce748304bb100de8ee2e94d5, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 0
+    dontDisableObjectsOnExit: 0
+    worldMode: 0
+    sceneObjectsToEnable: []
+    sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: d752596d63eabe24eb5813fbe5a07032, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 0
+    dontDisableObjectsOnExit: 0
+    worldMode: 1
+    sceneObjectsToEnable: []
+    sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: 08cc2c3153502cf40b6b30da00337f62, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 1
+    worldMode: 0
+    sceneObjectsToEnable:
+    - {fileID: 0}
+    - {fileID: 0}
+    sceneObjectsToDisable:
+    - {fileID: 0}
+  - sceneStateType: {fileID: 11400000, guid: dd46f94263aab8949bdb78be67aa849b, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 1
+    worldMode: 0
+    sceneObjectsToEnable:
+    - {fileID: 0}
+    sceneObjectsToDisable:
+    - {fileID: 0}
+  - sceneStateType: {fileID: 11400000, guid: f43d9fe8562085a459086b81e688de34, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 1
+    worldMode: 1
+    sceneObjectsToEnable:
+    - {fileID: 0}
+    sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: 980a51aec2f87cf40b090c20e8b0eea7, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 0
+    worldMode: 1
+    sceneObjectsToEnable:
+    - {fileID: 0}
+    sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: a925df407685629468644df03c3e2e40, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 1
+    worldMode: 1
+    sceneObjectsToEnable:
+    - {fileID: 0}
+    - {fileID: 0}
+    sceneObjectsToDisable: []
+  dummySceneType: {fileID: 11400000, guid: 58480dbd8c62321438572ac7141b53d7, type: 2}
 --- !u!114 &908636645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,5 +155,5 @@ MonoBehaviour:
   limboSnapshot: {fileID: 7287107925512867842, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
   physicalSnapShot: {fileID: 24500006, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
   bgmMutedSnapshot: {fileID: 1907764440575525580, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
-  limboMusic: {fileID: 4739893980903551047, guid: c61d787db8d662e4bb612ba446178fde, type: 3}
-  physicalMusic: {fileID: 1700809873435182612, guid: 57dc3714baa8d2a43be3c03ff3e63f86, type: 3}
+  limboMusic: {fileID: 0}
+  physicalMusic: {fileID: 0}
