@@ -8,17 +8,22 @@ public class Interactable : MonoBehaviour
     public bool textRequested { get; private set; }
 
     [SerializeField, Tooltip("Only change this in editor for testing purposes")]
-    private bool hasRecord; 
-    private bool interactionActive;
+    protected bool hasRecord; 
+    protected bool interactionActive;
     
     [SerializeField]
     public string descriptionText, recordFoundText;
 
     [SerializeField] 
-    private SpriteRenderer  normal, highlighted;
+    protected SpriteRenderer  normal, highlighted;
 
     [SerializeField] 
-    private SceneStateType textOpen, textActiveScene;
+    protected SceneStateType textOpen, textActiveScene;
+
+    public bool HasRecord
+    {
+        get { return hasRecord; }
+    }
 
     // Use this for initialization
     protected void Start()
@@ -28,13 +33,13 @@ public class Interactable : MonoBehaviour
         interactionActive = false;
     }
 
-    protected void OnEnable()
+    private void OnEnable()
     {
         EventManager.TextBoxStatusUpdate += CanDisplayText;
         EventManager.SceneStateChange += ActivateInteraction;
     }
 
-    protected void OnDisable()
+    private void OnDisable()
     {
         EventManager.TextBoxStatusUpdate -= CanDisplayText;
         EventManager.SceneStateChange -= ActivateInteraction;
@@ -45,7 +50,7 @@ public class Interactable : MonoBehaviour
         textRequested = textStatus;
     }
 
-    private void ActivateInteraction(SceneStateType sceneStateType)
+    protected virtual void ActivateInteraction(SceneStateType sceneStateType)
     {
         if (textActiveScene == sceneStateType)
             interactionActive = true;
