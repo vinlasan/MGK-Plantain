@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: dig
       objectReference: {fileID: 0}
+    - target: {fileID: 3753839173719002834, guid: d22265e9c6d3c6a4a917c22671b4cbb5, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2094899464547327791, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
     - target: {fileID: 6048763680238210595, guid: d22265e9c6d3c6a4a917c22671b4cbb5, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -189,6 +193,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 680378489449753176}
     m_Modifications:
+    - target: {fileID: 4145729529544167129, guid: 71af258620b89d94da133ffdd78d9186, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2094899464547327791, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
     - target: {fileID: 5021678565132958753, guid: 71af258620b89d94da133ffdd78d9186, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -255,6 +263,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 680378489449753176}
     m_Modifications:
+    - target: {fileID: 29215403381016324, guid: 8638538733d30ba4cb743634453c421d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2094899464547327791, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
     - target: {fileID: 3116932670299224432, guid: 8638538733d30ba4cb743634453c421d, type: 3}
       propertyPath: m_Name
       value: sfx-puzzleS2Piano
@@ -373,6 +385,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: jazz
       objectReference: {fileID: 0}
+    - target: {fileID: 8642501074171773945, guid: 138e8798792d5014d9df560bb386768b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2094899464547327791, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138e8798792d5014d9df560bb386768b, type: 3}
 --- !u!4 &2387164374155480929 stripped
@@ -395,6 +411,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: organ
       objectReference: {fileID: 0}
+    - target: {fileID: 1412483695460486911, guid: 7b672bf3e8590134aae5393eada694e6, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2094899464547327791, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
     - target: {fileID: 8075953150073255544, guid: 7b672bf3e8590134aae5393eada694e6, type: 3}
       propertyPath: m_RootOrder
       value: 5
