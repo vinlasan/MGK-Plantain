@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limboEffects: {fileID: 0}
+  mixerController: {fileID: 908636645}
   enableDebugModeOnStart: 0
   sceneStates:
   - sceneStateType: {fileID: 11400000, guid: 868cbbe52fab16d4fba4190aabd67e37, type: 2}
@@ -157,3 +158,8 @@ MonoBehaviour:
   bgmMutedSnapshot: {fileID: 1907764440575525580, guid: 9b702eaa99c09e648af36acfed6801ec, type: 2}
   limboMusic: {fileID: 0}
   physicalMusic: {fileID: 0}
+  option1: {fileID: 0}
+  option2: {fileID: 0}
+  option3: {fileID: 0}
+  option4: {fileID: 0}
+  option5: {fileID: 0}

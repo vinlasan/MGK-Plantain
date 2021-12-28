@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using AudioUtilities;
 
 namespace Gameplay
 {
@@ -9,6 +10,7 @@ namespace Gameplay
     {
         public GameObject limboEffects;
         public WorldMode worldMode { get; private set; }
+        public MixerController mixerController;
         
         [SerializeField]
         private bool enableDebugModeOnStart;

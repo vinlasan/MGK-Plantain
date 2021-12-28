@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 1199950574}
   - component: {fileID: 1199950575}
   - component: {fileID: 1199950576}
-  - component: {fileID: 3909906663083599201}
   - component: {fileID: 3317991417468411979}
   - component: {fileID: 9018024458837535583}
   - component: {fileID: 5533917255098904582}
@@ -86,7 +85,6 @@ GameObject:
   - component: {fileID: 8249655992181060748}
   - component: {fileID: 7374582647492079383}
   - component: {fileID: 7619727004881885048}
-  - component: {fileID: 6583974351625640801}
   - component: {fileID: 749217011226006149}
   - component: {fileID: 6481371865187916755}
   - component: {fileID: 394643250426101154}
@@ -127,14 +125,19 @@ GameObject:
   - component: {fileID: 3625596662743489487}
   - component: {fileID: 7105068016981170874}
   - component: {fileID: 4839295170122154424}
-  - component: {fileID: 7097590911321746895}
-  - component: {fileID: 1935409677500090618}
-  - component: {fileID: 6105624809072766863}
   - component: {fileID: 4529905292987514794}
   - component: {fileID: 7628281489485311977}
   - component: {fileID: 3923292460776693004}
   - component: {fileID: 6302681146924233506}
   - component: {fileID: 659832269163234166}
+  - component: {fileID: 6908721898209838608}
+  - component: {fileID: 4987627523961435435}
+  - component: {fileID: 8015256616628588700}
+  - component: {fileID: 6960082915611957341}
+  - component: {fileID: 1193504184336053445}
+  - component: {fileID: 2949997409184569456}
+  - component: {fileID: 2245257610949485082}
+  - component: {fileID: 7138212456572963362}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -169,11 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 874.1724, y: 214.49069}
+  scrollPos: {x: 594.02673, y: 240.09848}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 438
-  zoom: 0.7094996
+  zoom: 0.6692493
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -181,8 +184,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 6105624809072766877}
-  selectedCommands: []
+  - {fileID: 1199950526}
+  selectedCommands:
+  - {fileID: 8103686388789478119}
   variables:
   - {fileID: 6105624808659028998}
   - {fileID: 6105624808659029012}
@@ -193,6 +197,7 @@ MonoBehaviour:
   - {fileID: 6105624808659029023}
   - {fileID: 6105624808659029032}
   - {fileID: 1199950520}
+  - {fileID: 1193504184336053445}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -219,7 +224,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -522.2987
     y: -69.50202
-    width: 79.59833
+    width: 78.68886
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -268,7 +273,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 45.295937
     y: -176.17003
-    width: 171.21219
+    width: 174.31839
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -461,7 +466,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -572.5509
     y: -0.16612029
-    width: 161.34608
+    width: 165.9508
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -683,7 +688,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -567.4331
     y: -150.01859
-    width: 155.70831
+    width: 157.58322
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -871,7 +876,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 50.07323
     y: -42.873127
-    width: 150.07053
+    width: 151.60638
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -991,7 +996,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 50.20221
     y: 15.319534
-    width: 151.47998
+    width: 152.80176
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1005,6 +1010,7 @@ MonoBehaviour:
   - {fileID: 6105624808659029010}
   - {fileID: 6105624808659029028}
   - {fileID: 6105624808659029037}
+  - {fileID: 4987627523961435435}
   suppressAllAutoSelections: 0
 --- !u!114 &6105624808659029039
 MonoBehaviour:
@@ -1295,15 +1301,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -160.97394
-    y: -85.46666
-    width: 159.93665
+    x: -162.46814
+    y: -69.030304
+    width: 157.58322
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 57
   blockName: Record_Incorrect_2
-  description: John Coltrane - Take The Coltrane
+  description: 
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1199950529}
@@ -1312,8 +1318,8 @@ MonoBehaviour:
   - {fileID: 1199950530}
   - {fileID: 7220416440996236532}
   - {fileID: 4529905292987514794}
+  - {fileID: 0}
   - {fileID: 3317991417468411979}
-  - {fileID: 3909906663083599201}
   suppressAllAutoSelections: 0
 --- !u!114 &1199950523
 MonoBehaviour:
@@ -1331,7 +1337,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -162.31541
     y: -149.20654
-    width: 138.79498
+    width: 137.26196
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1357,8 +1363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 55
   indentLevel: 0
-  text: "\"All Blues\" \nA jazz song by an unknown artist. I can't stop tapping my
-    foot..."
+  text: "All Blues   \n\"I can't stop tapping my foot to this jazz...\""
   description: 
   targetBlock: {fileID: 1199950523}
   hideIfVisited: 1
@@ -1398,9 +1403,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -379.41266
+    x: -378.0032
     y: -19.514877
-    width: 127.519424
+    width: 128.89438
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1953,7 +1958,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -558.5188
     y: 101.57031
-    width: 150.07053
+    width: 152.80176
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1964,25 +1969,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1199950575}
   suppressAllAutoSelections: 0
---- !u!114 &3909906663083599201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6105624808659029242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 69
-  indentLevel: 1
-  _sceneName:
-    stringRef: {fileID: 0}
-    stringVal: Game Over
-  loadingImage: {fileID: 0}
-  sceneNameOLD: 
 --- !u!114 &3317991417468411979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2061,7 +2047,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 3
+    floatVal: 15
   durationOLD: 0
 --- !u!114 &4241312938866191597
 MonoBehaviour:
@@ -2179,9 +2165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 50.92341
-    y: 71.61501
-    width: 155.70831
+    x: 52.41762
+    y: 131.38347
+    width: 155.19249
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2193,22 +2179,6 @@ MonoBehaviour:
   - {fileID: 8249655992181060748}
   - {fileID: 4839295170122154424}
   suppressAllAutoSelections: 0
---- !u!114 &6583974351625640801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6105624808659029242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 77
-  indentLevel: 0
-  description: 
-  sceneStateType: {fileID: 11400000, guid: dcaa20d98f1da294ca92be4916aba622, type: 2}
 --- !u!114 &749217011226006149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,8 +2210,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 265.51562
-    y: -104.23284
-    width: 120.472206
+    y: -105.64229
+    width: 119.33141
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2250,9 +2220,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 6583974351625640801}
   - {fileID: 1201461565680139768}
   - {fileID: 9018024458837535583}
+  - {fileID: 8015256616628588700}
   - {fileID: 5533917255098904582}
   - {fileID: 2364527719009528696}
   suppressAllAutoSelections: 0
@@ -2340,7 +2310,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 75.20909
     y: -108.40381
-    width: 119.06276
+    width: 118.13605
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2353,6 +2323,7 @@ MonoBehaviour:
   - {fileID: 1199950533}
   - {fileID: 749217011226006149}
   - {fileID: 4241312938866191597}
+  - {fileID: 6908721898209838608}
   - {fileID: 7935360395890659070}
   - {fileID: 394643250426101154}
   suppressAllAutoSelections: 0
@@ -2370,9 +2341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -162.3834
-    y: -19.759003
-    width: 161.34608
+    x: -166.86604
+    y: -21.253214
+    width: 158.7786
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2866,7 +2837,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -163.81659
     y: 38.820206
-    width: 161.34608
+    width: 158.7786
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3360,7 +3331,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -161.89302
     y: 106.743
-    width: 159.93665
+    width: 157.58322
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3997,8 +3968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 126
   indentLevel: 0
-  text: "\"Take The Coltrane\"   \nA jazz song by an unknown artist. This song makes
-    my heart beat faster"
+  text: "Take The Coltrane   \n\"This jazz song makes my heart beat faster\""
   description: 
   targetBlock: {fileID: 1199950522}
   hideIfVisited: 1
@@ -4023,7 +3993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 127
   indentLevel: 0
-  text: "\"Monk's Dream\"   \nA jazz song by an unknown artist.  I can sway to this"
+  text: " Monk's Dream   \n\"I can sway to this jazz.\""
   description: 
   targetBlock: {fileID: 6105624809072766884}
   hideIfVisited: 1
@@ -4048,8 +4018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 128
   indentLevel: 0
-  text: '"Pela Luz dos Olhos Teus"   A bossa nova song by an unknown artist. I can
-    feel the sand and ocean.'
+  text: "Pela Luz dos Olhos Teus   \n\"I can feel the sand and ocean in this bossa
+    nova.\""
   description: 
   targetBlock: {fileID: 6105624809072766877}
   hideIfVisited: 1
@@ -4074,7 +4044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 129
   indentLevel: 0
-  text: "\"Think It Over\"   \nA blues song by an unknown artist. What a saucy guitar."
+  text: "Think It Over   \n\"What a saucy guitar in this blues.\""
   description: 
   targetBlock: {fileID: 6105624809072766870}
   hideIfVisited: 1
@@ -4133,64 +4103,6 @@ MonoBehaviour:
   indentLevel: 0
   description: 
   sceneStateType: {fileID: 11400000, guid: dcaa20d98f1da294ca92be4916aba622, type: 2}
---- !u!114 &7097590911321746895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6105624808659029242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 55.656223
-    y: 125.062805
-    width: 147.25165
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 136
-  blockName: RecordPuzzleFail
-  description: 
-  eventHandler: {fileID: 6105624809072766863}
-  commandList:
-  - {fileID: 1935409677500090618}
-  suppressAllAutoSelections: 0
---- !u!114 &1935409677500090618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6105624808659029242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 135
-  indentLevel: 0
-  description: 
-  sceneStateType: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
---- !u!114 &6105624809072766863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6105624808659029242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48fd253522474239aab640a0f86309c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 7097590911321746895}
-  suppressBlockAutoSelect: 0
-  sceneStateType: {fileID: 11400000, guid: 6d72fb25c57c75a4fad6db7367156d4a, type: 2}
 --- !u!114 &4529905292987514794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4269,5 +4181,208 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 142
   indentLevel: 1
+  description: 
+  sceneStateType: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
+--- !u!114 &6908721898209838608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 143
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4987627523961435435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 144
+  indentLevel: 0
+  description: 
+  sceneStateType: {fileID: 11400000, guid: 980a51aec2f87cf40b090c20e8b0eea7, type: 2}
+--- !u!114 &8015256616628588700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 145
+  indentLevel: 0
+  description: 
+  sceneStateType: {fileID: 11400000, guid: e020b9e1ce748304bb100de8ee2e94d5, type: 2}
+--- !u!114 &6960082915611957341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 56.342133
+    y: 188.85512
+    width: 170.7323
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 146
+  blockName: RecordPuzzleCorrect
+  description: 
+  eventHandler: {fileID: 2245257610949485082}
+  commandList:
+  - {fileID: 2949997409184569456}
+  - {fileID: 7138212456572963362}
+  suppressAllAutoSelections: 0
+--- !u!114 &1193504184336053445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: RecordPuzzleOptionChosen
+  value: 0
+--- !u!114 &2949997409184569456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 152
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 6105624808659029022}
+    stringVal: 
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+--- !u!114 &2245257610949485082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fd253522474239aab640a0f86309c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 6960082915611957341}
+  suppressBlockAutoSelect: 0
+  sceneStateType: {fileID: 11400000, guid: 64941be97029299468824d7be38f9495, type: 2}
+--- !u!114 &7138212456572963362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 154
+  indentLevel: 0
   description: 
   sceneStateType: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}

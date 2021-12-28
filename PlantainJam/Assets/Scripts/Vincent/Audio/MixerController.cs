@@ -7,6 +7,8 @@ namespace AudioUtilities
 {
     public class MixerController : MonoBehaviour
     {
+        //public static MixerController Instance { get; private set; }
+
         public enum MusicLevels { LimboNormal = -2, PhysicalNormal = 0, PhysicalMute = -80, LimboMute = -80}
         [SerializeField]
         private AudioMixer mixer;
@@ -16,6 +18,12 @@ namespace AudioUtilities
 
         [SerializeField] 
         private AudioSource limboMusic, physicalMusic;
+
+        public AudioSource option1;
+        public AudioSource option2;
+        public AudioSource option3;
+        public AudioSource option4;
+        public AudioSource option5;
 
         private bool puzzleMusicPlaying;
 
@@ -27,6 +35,7 @@ namespace AudioUtilities
 
         private void Start()
         {
+            //Instance = this;
             puzzleMusicPlaying = false;
             StartBGM();
             //bgmMusicGroup.audioMixer.SetFloat("Volume", 10);
