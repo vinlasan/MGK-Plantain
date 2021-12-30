@@ -33,6 +33,7 @@ public class MainControl : MonoBehaviour
     private Plantain activePlantain;
     private Interactable interactableInRange;
     
+    
     //private SceneStateType endCutscene, recordPuzzleOpenScene, beforeGhostScene;
 
     // Start is called before the first frame update

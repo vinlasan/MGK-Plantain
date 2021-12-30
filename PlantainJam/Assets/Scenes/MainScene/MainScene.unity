@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 764603303}
   - component: {fileID: 764603304}
   m_Layer: 0
-  m_Name: RecordPuzzle
+  m_Name: RecordTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,39 +2012,31 @@ PrefabInstance:
       objectReference: {fileID: 1621169903}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[11].worldMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[11].sceneStateType
+      propertyPath: sceneStates.Array.data[12].sceneStateType
       value: 
-      objectReference: {fileID: 11400000, guid: 3593e53f51e94a440913999bb1bfe76b, type: 2}
+      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[11].ignoreWorldType
+      propertyPath: sceneStates.Array.data[12].ignoreWorldType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[9].enablePlayerMovement
+      propertyPath: sceneStates.Array.data[12].enablePlayerMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[9].dontDisableObjectsOnExit
+      propertyPath: sceneStates.Array.data[12].dontDisableObjectsOnExit
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[11].dontDisableObjectsOnExit
+      propertyPath: sceneStates.Array.data[12].sceneObjectsToEnable.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
+      propertyPath: sceneStates.Array.data[12].sceneObjectsToDisable.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[11].sceneObjectsToEnable.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[11].sceneObjectsToDisable.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[6].sceneObjectsToEnable.Array.data[0]
@@ -2095,7 +2087,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1351526813}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
-      propertyPath: sceneStates.Array.data[11].sceneObjectsToEnable.Array.data[1]
+      propertyPath: sceneStates.Array.data[12].sceneObjectsToEnable.Array.data[0]
       value: 
       objectReference: {fileID: 1526518193}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
@@ -2112,6 +2104,14 @@ PrefabInstance:
       objectReference: {fileID: 727149924}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[11].sceneObjectsToDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 332830476}
+    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
+      propertyPath: sceneStates.Array.data[12].sceneObjectsToDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 332830476}
+    - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
+      propertyPath: sceneStates.Array.data[12].sceneObjectsToDisable.Array.data[1]
       value: 
       objectReference: {fileID: 332830476}
     - target: {fileID: 939455389316934837, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
@@ -2170,7 +2170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526518194}
   m_Layer: 0
-  m_Name: RecordPuzzle
+  m_Name: RecordPuzzleState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2791,6 +2791,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1081462908}
     m_Modifications:
+    - target: {fileID: 2343128779492877659, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.92
+      objectReference: {fileID: 0}
     - target: {fileID: 7953832498360152108, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
       propertyPath: m_Name
       value: InteractableRecordPlayer
@@ -2839,6 +2843,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206803406192404784, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
+      propertyPath: textActiveScene
+      value: 
+      objectReference: {fileID: 11400000, guid: a925df407685629468644df03c3e2e40, type: 2}
     - target: {fileID: 9206803406192404784, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
       propertyPath: recordPuzzleOpenState
       value: 
@@ -3316,6 +3324,14 @@ PrefabInstance:
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1528575920}
+    - target: {fileID: 1199950523, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.x
+      value: -163.80962
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199950523, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.y
+      value: -58.059654
+      objectReference: {fileID: 0}
     - target: {fileID: 1199950524, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: setMenuDialog
       value: 
@@ -3351,7 +3367,7 @@ PrefabInstance:
     - target: {fileID: 1558719465618358428, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: targetBlock
       value: 
-      objectReference: {fileID: 1199950522, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      objectReference: {fileID: 6105624809072766892}
     - target: {fileID: 6105624808659028994, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3440,15 +3456,65 @@ PrefabInstance:
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.Playables.PlayableDirector, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6105624809072766884, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.x
+      value: -165.37184
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105624809072766884, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.y
+      value: 28.055746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481371865187916755, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.x
+      value: 234.13802
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481371865187916755, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.y
+      value: -126.561226
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481371865187916755, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: commandList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481371865187916755, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 6105624809072766868}
+    - target: {fileID: 6481371865187916755, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 6105624809072766867}
+    - target: {fileID: 6481371865187916755, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 6105624809072766905}
+    - target: {fileID: 6481371865187916755, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: commandList.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619727004881885048, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.x
+      value: 40.464306
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619727004881885048, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.y
+      value: 110.46452
+      objectReference: {fileID: 0}
     - target: {fileID: 8103686388789478119, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: targetBlock
       value: 
-      objectReference: {fileID: 6105624809072766877, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      objectReference: {fileID: 6105624809072766892}
     - target: {fileID: 9133930563422738432, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: targetBlock
       value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+      objectReference: {fileID: 6105624809072766892}
+    m_RemovedComponents:
+    - {fileID: 2364527719009528696, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+    - {fileID: 9018024458837535583, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+    - {fileID: 2949997409184569456, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+    - {fileID: 7138212456572963362, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+    - {fileID: 2245257610949485082, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+    - {fileID: 6960082915611957341, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
 --- !u!1 &6105624809072766862 stripped
 GameObject:
@@ -3490,7 +3556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &6105624809072766866
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3504,6 +3570,44 @@ MonoBehaviour:
   indentLevel: 0
   description: 
   sceneStateType: {fileID: 11400000, guid: 3593e53f51e94a440913999bb1bfe76b, type: 2}
+--- !u!114 &6105624809072766867
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624809072766862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 161
+  indentLevel: 0
+  description: 
+  sceneStateType: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
+--- !u!114 &6105624809072766868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6105624809072766867, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+  m_PrefabInstance: {fileID: 6105624809072766861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624809072766862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6105624809072766892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6105624809072766884, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+  m_PrefabInstance: {fileID: 6105624809072766861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624809072766862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6105624809072766898 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 749217011226006149, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
@@ -3524,6 +3628,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6105624809072766905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5533917255098904582, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+  m_PrefabInstance: {fileID: 6105624809072766861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624809072766862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10c70f18ed04022af9276cb3ed9a752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8307177569247737064
@@ -3657,16 +3772,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2100330563, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
       propertyPath: objectiveTextData.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2100330563, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
       propertyPath: objectiveTextData.Array.data[1].text
       value: Find the 5 records
       objectReference: {fileID: 0}
     - target: {fileID: 2100330563, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
+      propertyPath: objectiveTextData.Array.data[2].text
+      value: Go to the record player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100330563, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
       propertyPath: objectiveTextData.Array.data[1].sceneStateType
       value: 
       objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
+    - target: {fileID: 2100330563, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
+      propertyPath: objectiveTextData.Array.data[2].sceneStateType
+      value: 
+      objectReference: {fileID: 11400000, guid: a925df407685629468644df03c3e2e40, type: 2}
     - target: {fileID: 5293472731427956865, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
       propertyPath: m_Name
       value: Objective Canvas

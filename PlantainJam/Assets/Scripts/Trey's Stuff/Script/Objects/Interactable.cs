@@ -18,7 +18,7 @@ public class Interactable : MonoBehaviour
     protected SpriteRenderer  normal, highlighted;
 
     [SerializeField] 
-    protected SceneStateType textOpen, textActiveScene;
+    protected SceneStateType textOpen, textActiveScene, recordFoundScene;
 
     public bool HasRecord
     {
@@ -33,19 +33,19 @@ public class Interactable : MonoBehaviour
         interactionActive = false;
     }
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         EventManager.TextBoxStatusUpdate += CanDisplayText;
         EventManager.SceneStateChange += ActivateInteraction;
     }
 
-    private void OnDisable()
+    protected void OnDisable()
     {
         EventManager.TextBoxStatusUpdate -= CanDisplayText;
         EventManager.SceneStateChange -= ActivateInteraction;
     }
 
-    private void CanDisplayText(bool textStatus)
+    protected void CanDisplayText(bool textStatus)
     {
         textRequested = textStatus;
     }
@@ -60,7 +60,14 @@ public class Interactable : MonoBehaviour
     {
         if (!textRequested)
         {
-            EventManager.OnUpdateTextBox(descriptionText);
+            string text = descriptionText;
+            if (hasRecord)
+            {
+                text = recordFoundText;
+                hasRecord = false;
+                EventManager.OnSceneStateChanged(recordFoundScene);
+            }
+            EventManager.OnUpdateTextBox(text);
             EventManager.OnSceneStateChanged(textOpen);
             textRequested = !textRequested;
         }
@@ -71,7 +78,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void ChangeHighlight(bool highlightActive)
+    protected void ChangeHighlight(bool highlightActive)
     {
         if(normal)
             normal.gameObject.SetActive(!highlightActive);

@@ -218,6 +218,7 @@ MonoBehaviour:
   highlighted: {fileID: 4212712646221159227}
   textOpen: {fileID: 11400000, guid: 1dadc7c3200a4274b943a3c651992988, type: 2}
   textActiveScene: {fileID: 11400000, guid: dcaa20d98f1da294ca92be4916aba622, type: 2}
+  recordFoundScene: {fileID: 11400000, guid: 9aa8d123c7166b64eb8e8e58c4d9d401, type: 2}
 --- !u!58 &3648629217304997789
 CircleCollider2D:
   m_ObjectHideFlags: 0

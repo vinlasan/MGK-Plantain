@@ -24,10 +24,11 @@ namespace Gameplay.Puzzle
         {
             if (interactionActive && collision.CompareTag("Player") && !collision.isTrigger && showRecordMenu)
             {
+                base.OnTriggerEnter2D(collision);
                 EventManager.OnSceneStateChanged(recordPuzzleOpenState);
             }
             
-            base.OnTriggerEnter2D(collision);
+            
         }
     }
 }

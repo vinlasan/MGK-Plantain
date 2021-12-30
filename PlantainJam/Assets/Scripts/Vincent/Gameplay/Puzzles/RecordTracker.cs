@@ -44,8 +44,10 @@ namespace Gameplay.Puzzle
             if (recordsFoundSceneState == sceneStateType)
             {
                 currentRecordCount++;
-                if(totalRecordCount == currentRecordCount)
+
+                if (totalRecordCount == currentRecordCount)
                     EventManager.OnSceneStateChanged(recordsAllFoundSceneState);
+                
             }
         }
     }
