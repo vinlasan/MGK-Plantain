@@ -123,9 +123,9 @@ MonoBehaviour:
     - {fileID: 0}
     sceneObjectsToDisable: []
   - sceneStateType: {fileID: 11400000, guid: 980a51aec2f87cf40b090c20e8b0eea7, type: 2}
-    enablePlayerMovement: 0
+    enablePlayerMovement: 1
     ignoreWorldType: 1
-    dontDisableObjectsOnExit: 0
+    dontDisableObjectsOnExit: 1
     worldMode: 1
     sceneObjectsToEnable:
     - {fileID: 0}
@@ -139,6 +139,16 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     sceneObjectsToDisable: []
+  - sceneStateType: {fileID: 11400000, guid: 3593e53f51e94a440913999bb1bfe76b, type: 2}
+    enablePlayerMovement: 0
+    ignoreWorldType: 1
+    dontDisableObjectsOnExit: 0
+    worldMode: 0
+    sceneObjectsToEnable:
+    - {fileID: 0}
+    sceneObjectsToDisable:
+    - {fileID: 0}
+    - {fileID: 0}
   dummySceneType: {fileID: 11400000, guid: 58480dbd8c62321438572ac7141b53d7, type: 2}
 --- !u!114 &908636645
 MonoBehaviour:

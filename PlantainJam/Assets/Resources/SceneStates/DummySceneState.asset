@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef7fa64d344476587ef7de1a4331de7, type: 3}
   m_Name: DummySceneState
   m_EditorClassIdentifier: 
-  sceneStateName: Empty
+  sceneStateDescription: 
+  returnToPreviousScene: 0
+  tempState: 1

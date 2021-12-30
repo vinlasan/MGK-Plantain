@@ -30,8 +30,8 @@ namespace AudioUtilities
         private AudioSource currentPlayingMusicTrack;
 
         private WorldMode worldMode;
-
-        public const string physicalMixerVolume = "PhysVolume", limboMixerVolume = "LimboVolume";
+        
+        private const string physicalMixerVolume = "PhysVolume", limboMixerVolume = "LimboVolume";
 
         private void Start()
         {

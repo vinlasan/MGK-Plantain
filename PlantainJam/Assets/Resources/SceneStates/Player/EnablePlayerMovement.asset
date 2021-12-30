@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: EnablePlayerMovement
   m_EditorClassIdentifier: 
   sceneStateDescription: 
+  returnToPreviousScene: 0
+  tempState: 1

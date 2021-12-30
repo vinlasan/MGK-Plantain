@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneStateDescription: 
   returnToPreviousScene: 0
-  tempState: 0
+  tempState: 1
