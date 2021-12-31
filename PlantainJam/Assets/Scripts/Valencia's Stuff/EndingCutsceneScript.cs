@@ -5,25 +5,22 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExpositionScript : MonoBehaviour
+public class EndingCutsceneScript : MonoBehaviour
 {
     public TextAsset inkJSON;
     private Story story;
-    
-    //public TextMeshProUGUI textPrefab;
-    //public GameObject image;
+
     public AudioSource cutsceneSFX;
     [SerializeField]
     private TextMeshProUGUI textObject;
 
-    [SerializeField] 
+    [SerializeField]
     private SceneStateType dialogueEnd;
 
     private void Start()
     {
         story = new Story(inkJSON.text);
-        //textObject = Instantiate(textPrefab, image.transform, false) as TextMeshProUGUI;
-        
+
         refreshUI();
     }
 
@@ -35,48 +32,29 @@ public class ExpositionScript : MonoBehaviour
 
         }
     }
+
     void refreshUI()
     {
-
-        //eraseUI();
-
-        //TextMeshPro storyText = Instantiate(textPrefab) as TextMeshPro;
 
         string text = loadStoryChunk();
         List<string> tags = story.currentTags;
 
         //check tags to determine when to transition to next scene according to inkle story
+        /*
         if (tags.Count > 0 && tags[0] != "#EndSceneGhostIntro")
         {
-            //text = tags[0] + " : " + text;
             if (tags[0] == "EndSceneGhostIntro")
             {
-                //GameDirector.OnSceneStateChanged(dialogueEnd);
                 SceneManager.LoadScene("MainScene");
             }
-            else if (tags[0] == "StartRecordPuzzle")
-            {
-                //GameDirector.OnSceneStateChanged(dialogueEnd);
-                //SceneManager.LoadScene("RecordPuzzleScene");
-            }
-            if (tags[0] == "EndGame")
-            {
-                Debug.Log("Game Finished!");
-            }
         }
-    
+        */
+
         //Debug.Log(storyText.text);
         textObject.text = text;
         cutsceneSFX.Play();
     }
 
-    /*void eraseUI()
-    {
-        for (int i = 0; i < image.transform.childCount; i++)
-        {
-            Destroy(image.transform.GetChild(i).gameObject);
-        }
-    }*/
 
     string loadStoryChunk()
     {
