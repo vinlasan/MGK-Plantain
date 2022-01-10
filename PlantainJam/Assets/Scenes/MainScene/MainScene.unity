@@ -646,22 +646,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableBrush Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 5208623418660650524, guid: 94c3892bdfa7e494fb6111b049154f7c, type: 3}
-      propertyPath: m_Radius
-      value: 2.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208623418660650524, guid: 94c3892bdfa7e494fb6111b049154f7c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 7772104734718679301, guid: 94c3892bdfa7e494fb6111b049154f7c, type: 3}
-      propertyPath: descriptionText
-      value: 'You: (I don''t think I can use this to open the door...)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7772104734718679301, guid: 94c3892bdfa7e494fb6111b049154f7c, type: 3}
-      propertyPath: textActiveScene
-      value: 
-      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c3892bdfa7e494fb6111b049154f7c, type: 3}
 --- !u!4 &404610887 stripped
@@ -1065,10 +1049,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1081462908}
     m_Modifications:
-    - target: {fileID: 358428028115481681, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1285604452389226564, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
       propertyPath: m_Name
       value: Bookshelf Variant
@@ -1076,14 +1056,6 @@ PrefabInstance:
     - target: {fileID: 1285604452389226567, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1285604452389226567, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1285604452389226567, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 1285604452389226567, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1125,22 +1097,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6333929026902796693, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 6859727434498841907, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
-      propertyPath: m_Radius
-      value: 2.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859727434498841907, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
-      propertyPath: m_Offset.y
-      value: -2.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 8981878280102328874, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
-      propertyPath: textActiveScene
-      value: 
-      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef05784afe96f24b9bd3673d159e203, type: 3}
 --- !u!4 &642188465 stripped
@@ -1432,10 +1388,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7210333492503881891, guid: 04ccd5d627104c3419d5e1d3d1fd2d40, type: 3}
-      propertyPath: textActiveScene
-      value: 
-      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ccd5d627104c3419d5e1d3d1fd2d40, type: 3}
 --- !u!4 &789498228 stripped
@@ -1632,10 +1584,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1081462908}
     m_Modifications:
-    - target: {fileID: 2328196951025087625, guid: 7d2c4f7e5f95e6945935f223ff993680, type: 3}
-      propertyPath: textActiveScene
-      value: 
-      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     - target: {fileID: 5565888455741196004, guid: 7d2c4f7e5f95e6945935f223ff993680, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2791,10 +2739,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1081462908}
     m_Modifications:
-    - target: {fileID: 2343128779492877659, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
-      propertyPath: m_Offset.y
-      value: -2.92
-      objectReference: {fileID: 0}
     - target: {fileID: 7953832498360152108, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
       propertyPath: m_Name
       value: InteractableRecordPlayer
@@ -2843,18 +2787,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9206803406192404784, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
-      propertyPath: textActiveScene
-      value: 
-      objectReference: {fileID: 11400000, guid: a925df407685629468644df03c3e2e40, type: 2}
-    - target: {fileID: 9206803406192404784, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
-      propertyPath: recordPuzzleOpenState
-      value: 
-      objectReference: {fileID: 11400000, guid: dcaa20d98f1da294ca92be4916aba622, type: 2}
-    - target: {fileID: 9206803406192404784, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
-      propertyPath: recordsAllFoundSceneState
-      value: 
-      objectReference: {fileID: 11400000, guid: a925df407685629468644df03c3e2e40, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 553aeb347634231408ecd389cdd06aed, type: 3}
 --- !u!4 &2044107418 stripped
@@ -3336,6 +3268,10 @@ PrefabInstance:
       propertyPath: setMenuDialog
       value: 
       objectReference: {fileID: 1852969633}
+    - target: {fileID: 1199950526, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: nodeRect.y
+      value: -7.561186
+      objectReference: {fileID: 0}
     - target: {fileID: 1199950536, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: commandList.Array.size
       value: 8
@@ -3419,6 +3355,14 @@ PrefabInstance:
     - target: {fileID: 6105624808659029234, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105624808659029235, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: scrollPos.x
+      value: 631.38214
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105624808659029235, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: scrollPos.y
+      value: 281.93634
       objectReference: {fileID: 0}
     - target: {fileID: 6105624808659029235, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: selectedBlocks.Array.size

@@ -9,19 +9,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: descriptionText
-      value: "(Who knew making plantain chips would've triggered the worst fight
+      value: "You: (Who knew making plantain chips would've triggered the worst fight
         we have ever had. No one defended me. No one was on my side\u2014Mariah and
         Dennis werent on Mom and Dad's side, but they werent on mine. Was that too
         much to expect?)"
       objectReference: {fileID: 0}
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: recordFoundText
-      value: Record Found!
+      value: You picked up the record, "Think It Over".
       objectReference: {fileID: 0}
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: textActiveScene
       value: 
-      objectReference: {fileID: 11400000, guid: dcaa20d98f1da294ca92be4916aba622, type: 2}
+      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     - target: {fileID: 2678779192595266794, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -64,15 +64,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -34.542118
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 18.427166
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.57353103
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -80,15 +80,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

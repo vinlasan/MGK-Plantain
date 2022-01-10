@@ -13,11 +13,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: descriptionText
-      value: (I don't think I can use this to open the door...)
+      value: 'You: (My hairbrush...)'
       objectReference: {fileID: 0}
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: recordFoundText
-      value: Record Found!
+      value: You picked up the record, "Pela Luz dos Olhos Teus".
+      objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: textActiveScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
+    - target: {fileID: 3648629217304997789, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_Radius
+      value: 2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648629217304997789, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4212712646221159227, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Sprite
@@ -57,15 +69,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.8751135
+      value: -40.42
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -60.373627
+      value: -10.624779
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.57353103
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -73,15 +85,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298601, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

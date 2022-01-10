@@ -9,13 +9,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: descriptionText
-      value: (They don't even like this chair. They just bought it because it looked
-        expensive.)
+      value: 'You: (They don''t even like this chair. They just bought it because
+        it looked expensive.)'
       objectReference: {fileID: 0}
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: recordFoundText
-      value: Record Found!
+      value: You picked up the record, "All Blues".
       objectReference: {fileID: 0}
+    - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
+      propertyPath: textActiveScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     - target: {fileID: 3648629217304997789, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Radius
       value: 3

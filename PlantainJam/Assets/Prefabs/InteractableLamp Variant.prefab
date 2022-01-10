@@ -9,13 +9,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: descriptionText
-      value: (This is from the last place we stayed at. Dad and I would read around
-        this light. We didn't have to say a word but we were more connected in silence
-        than we ever were speaking)
+      value: 'You: (This is from the last place we stayed at. Dad and I would read
+        around this light. We didn''t have to say a word but we were more connected
+        in silence than we ever were speaking)'
       objectReference: {fileID: 0}
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: recordFoundText
-      value: Record Found!
+      value: You picked up the record, "Take the Coltrane".
       objectReference: {fileID: 0}
     - target: {fileID: -7983149833280632700, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: textActiveScene
