@@ -62,6 +62,7 @@ public class ExpositionScript : MonoBehaviour
             if (tags[0] == "EndGame")
             {
                 Debug.Log("Game Finished!");
+                //TODO load back to main menu
             }
         }
     
