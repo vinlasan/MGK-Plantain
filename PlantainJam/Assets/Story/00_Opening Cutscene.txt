@@ -1,0 +1,45 @@
+{b}We are in Brooklyn. {/b} --pg
+
+{s}, {s=5} You are a medium. {/s} --pg
+
+{s},{s=10}{b}You have made a mistake. {/s}{/b} --pg
+
+In the house you live in, --ln
+
+but don't live in, --pg
+
+you think your brokenness is special --ln
+
+and it is (it isnt) --pg
+
+There is nothing wrong with being a common wound --ln
+
+It means the healing is common too --pg
+
+When your family looks through you --ln
+
+do you become --ln
+
+or disappear? --pg
+
+When the people of the city look past that --ln
+
+sidewalk daddy made or that --ln
+
+shop that Gerald got when he came back from the war or that --ln
+
+tree where music played and foots city-wide tapped to the 8-count --pg
+
+do we become --ln
+
+or disappear? --pg
+
+When you truly love something, you have the right to destroy it. --ln
+
+Wouldn't you agree? --pg
+
+This will not end well for you --pg
+
+It will all be over soon
+
+--Cut to Main character in bed

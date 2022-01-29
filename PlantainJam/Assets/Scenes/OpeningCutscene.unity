@@ -289,7 +289,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 61
     y: 171
-    width: 107
+    width: 106.57143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1308230180}
   selectedCommands:
-  - {fileID: 1308230189}
+  - {fileID: 1308230185}
   variables:
   - {fileID: 1308230184}
   description: 
@@ -472,7 +472,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 250
     y: 165
-    width: 140
+    width: 139.14285
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  textFile: {fileID: 0}
+  textFile: {fileID: 4900000, guid: 6c4699f2f276e6d4ca5b8594bdda3b70, type: 3}
   stringVariable: {fileID: 1308230184}
 --- !u!1001 &1318632792
 PrefabInstance:
