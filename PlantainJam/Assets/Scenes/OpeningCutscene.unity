@@ -289,7 +289,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 61
     y: 171
-    width: 106.57143
+    width: 109.2
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -328,9 +328,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1308230180}
+  - {fileID: 1308230188}
   selectedCommands:
-  - {fileID: 1308230185}
+  - {fileID: 1308230186}
   variables:
   - {fileID: 1308230184}
   description: 
@@ -418,7 +418,7 @@ MonoBehaviour:
     booleanVal: 1
 --- !u!114 &1308230186
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -437,7 +437,7 @@ MonoBehaviour:
   sceneNameOLD: 
 --- !u!114 &1308230187
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -458,7 +458,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1308230188
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -472,7 +472,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 250
     y: 165
-    width: 139.14285
+    width: 142
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1308230189
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
