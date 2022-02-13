@@ -63,7 +63,7 @@ public class Interactable : MonoBehaviour
             string text = descriptionText;
             if (hasRecord)
             {
-                text = recordFoundText;
+                text = recordFoundText + "\n" + descriptionText;
                 hasRecord = false;
                 EventManager.OnSceneStateChanged(recordFoundScene);
             }

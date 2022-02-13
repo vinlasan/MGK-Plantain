@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
     - target: {fileID: 3648629217304997789, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Radius
-      value: 2.42
+      value: 2.72
       objectReference: {fileID: 0}
     - target: {fileID: 3648629217304997789, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Offset.y
-      value: -2.08
+      value: -2.87
       objectReference: {fileID: 0}
     - target: {fileID: 4212712646221159227, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Sprite
@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955213524130298602, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
       propertyPath: m_Name
-      value: Bookshelf Variant
+      value: InteractableBook Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38fa90476ac4bfa4eab8f0c0fc0b577d, type: 3}
