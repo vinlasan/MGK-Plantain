@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7866433884558799152
 RectTransform:
   m_ObjectHideFlags: 0
@@ -119,6 +119,12 @@ MonoBehaviour:
   objectiveTextData:
   - sceneStateType: {fileID: 11400000, guid: 25c6bfbd5fe98864eaf59939c38267a3, type: 2}
     text: Get back to your room
+  - sceneStateType: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
+    text: Find the 5 records
+  - sceneStateType: {fileID: 11400000, guid: a925df407685629468644df03c3e2e40, type: 2}
+    text: Go to the record player
+  - sceneStateType: {fileID: 11400000, guid: 5fa3d437451d59b4891c44ab53255c34, type: 2}
+    text: Go to the unlocked room
   objectiveBoxObject: {fileID: 6903895644226996095}
 --- !u!1 &6512312697624775534
 GameObject:
