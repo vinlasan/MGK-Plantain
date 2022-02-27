@@ -111,6 +111,10 @@ GameObject:
   - component: {fileID: 5582401724579251153}
   - component: {fileID: 6963239738467182580}
   - component: {fileID: 1424264264710994060}
+  - component: {fileID: 6372777229204195969}
+  - component: {fileID: 7122859880312811633}
+  - component: {fileID: 6105624809072766863}
+  - component: {fileID: 6105624809072766864}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -146,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 631.38214, y: 281.93634}
+  scrollPos: {x: 580.5788, y: 265.50012}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 386
@@ -160,7 +164,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 6105624809072766884}
   selectedCommands:
-  - {fileID: 5582401724579251153}
+  - {fileID: 7122859880312811633}
   variables:
   - {fileID: 6105624808659028998}
   - {fileID: 6105624808659029012}
@@ -172,6 +176,7 @@ MonoBehaviour:
   - {fileID: 6105624808659029032}
   - {fileID: 1199950520}
   - {fileID: 1193504184336053445}
+  - {fileID: 6105624809072766863}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1813,6 +1818,9 @@ MonoBehaviour:
   - {fileID: 3950450590783177503}
   - {fileID: 5582401724579251153}
   - {fileID: 3920510877255491414}
+  - {fileID: 6372777229204195969}
+  - {fileID: 7122859880312811633}
+  - {fileID: 6105624809072766864}
   - {fileID: 7628281489485311977}
   suppressAllAutoSelections: 0
 --- !u!114 &6105624809072766883
@@ -3197,6 +3205,81 @@ MonoBehaviour:
   indentLevel: 0
   description: 
   sceneStateType: {fileID: 11400000, guid: 7cefd5a10a3f7264f96f64e96b7715fd, type: 2}
+--- !u!114 &6372777229204195969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 170
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &7122859880312811633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb064de1b711a449845627f19b7f7b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 171
+  indentLevel: 0
+  getOrSet: 1
+  property: 11
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  inOutVar: {fileID: 6105624809072766863}
+--- !u!114 &6105624809072766863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d769ea3513ad47aabf805db5252341d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: PlayerRoomLocation
+  value: {x: -30.04, y: -60.73, z: 0}
+--- !u!114 &6105624809072766864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105624808659029242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 172
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
 --- !u!1001 &2334293914144951917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3208,6 +3291,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8421338334491087797, guid: 2adf3940e4c7ac34798358a396e21d1d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 92425653f42bc5b48967efc8f1290bcb, type: 2}
+    - target: {fileID: 8421338334491087797, guid: 2adf3940e4c7ac34798358a396e21d1d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 92425653f42bc5b48967efc8f1290bcb, type: 2}
     - target: {fileID: 8421338334732022703, guid: 2adf3940e4c7ac34798358a396e21d1d, type: 3}
       propertyPath: m_Name
       value: Dialogue
@@ -3259,6 +3350,10 @@ PrefabInstance:
     - target: {fileID: 8421338334732022704, guid: 2adf3940e4c7ac34798358a396e21d1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421338334771815745, guid: 2adf3940e4c7ac34798358a396e21d1d, type: 3}
+      propertyPath: nameText
+      value: Theo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2adf3940e4c7ac34798358a396e21d1d, type: 3}
