@@ -2196,6 +2196,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1145594695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1199950526, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+  m_PrefabInstance: {fileID: 6105624809072766861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1145594697 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1199950524, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+  m_PrefabInstance: {fileID: 6105624809072766861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1168803702 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2763462241196084777, guid: 17340585b8d494d4599aeb27c7b0cab7, type: 3}
@@ -5274,9 +5296,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1528575920}
     - target: {fileID: 1199950524, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: hideIfVisited
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199950524, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: setMenuDialog
       value: 
       objectReference: {fileID: 1852969633}
+    - target: {fileID: 1558719465618358428, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: hideIfVisited
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6105624808659028994, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5329,6 +5359,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6105624808659029235, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105624808659029235, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: selectedBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1145594695}
+    - target: {fileID: 6105624808659029235, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1145594697}
     - target: {fileID: 6105624808659029242, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
       propertyPath: m_Name
       value: Flowchart
@@ -5341,6 +5383,18 @@ PrefabInstance:
       propertyPath: transformData.transformVal
       value: 
       objectReference: {fileID: 1621169904}
+    - target: {fileID: 8103686388789478119, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: hideIfVisited
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221974216396224692, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: hideIfVisited
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133930563422738432, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
+      propertyPath: hideIfVisited
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cb6d6a420939a6428e3626439f7f07a, type: 3}
 --- !u!1001 &6488205926431569698
@@ -5546,10 +5600,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2884236496862612902, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7056748699478295943, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
       propertyPath: cutsceneSFX
       value: 
       objectReference: {fileID: 1168803702}
+    - target: {fileID: 7681568282677982659, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681568282677982662, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681568282677982663, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7681568284512765260, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
       propertyPath: m_Name
       value: StateDependent

@@ -2,10 +2,8 @@ using UnityEngine;
 
 namespace Gameplay.Puzzle
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     public class ReturnToBody : MonoBehaviour
     {
-
         [SerializeField] private SceneStateType disableMovement, enableMovement, spiritWorld, realWorld;
 
         [SerializeField, Range(0.25f, 2)]
@@ -14,13 +12,28 @@ namespace Gameplay.Puzzle
         [SerializeField, Range(2, 6)] 
         private int getOutOfBedDistance;
         
-        private SpriteRenderer spriteRenderer;
+        [SerializeField] private GameObject effects;
         private bool transitioning;
 
         private void Awake()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
             transitioning = false;
+        }
+
+        private void OnEnable()
+        {
+            EventManager.WorldTypeChange += OnWorldTypeChanged;
+        }
+
+        private void OnDisable()
+        {
+            EventManager.WorldTypeChange -= OnWorldTypeChanged;
+        }
+
+        private void OnWorldTypeChanged(WorldMode mode)
+        {
+            if(mode == WorldMode.RealWorld)
+                effects.SetActive(false);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -43,7 +56,7 @@ namespace Gameplay.Puzzle
                 LeanTween.rotate(playerObject, transform.rotation.eulerAngles, transitionTime).setOnComplete(
                     () =>
                     {
-                        spriteRenderer.enabled = false;
+                        effects.SetActive(false);
                         LeanTween.rotate(playerObject, Vector3.zero, 0.15f).setOnComplete(
                             ()=>
                             {
@@ -60,7 +73,7 @@ namespace Gameplay.Puzzle
                 playerObject.transform.rotation = transform.rotation;
                 EventManager.OnSceneStateChanged(spiritWorld);
                 Vector3 outOfBed = new Vector3(transform.position.x + getOutOfBedDistance, transform.position.y, transform.position.z);
-                spriteRenderer.enabled = true;
+                effects.SetActive(true);
                 LeanTween.move(playerObject, outOfBed, transitionTime);
                 LeanTween.rotate(playerObject, Vector3.zero, transitionTime).setOnComplete(
                     () =>
