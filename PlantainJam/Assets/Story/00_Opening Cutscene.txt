@@ -1,45 +1,14 @@
-{b}We are in Brooklyn. {/b} --pg
+We are in Brooklyn. {wi}\nYou are a medium. {wi}\nYou have made a mistake.
 
-{s}, {s=5} You are a medium. {/s} --pg
+In the house you live in,{wi} but don't live in, {wi}\nyou think your brokenness is special {wi}\nand it is. {wi}{i}(it isn't){/i} 
 
-{s},{s=10}{b}You have made a mistake. {/s}{/b} --pg
+There is nothing wrong with being a common {wi}wound {wi}\nIt means the healing is common {wi}too 
 
-In the house you live in, --ln
+When your family looks through you {wi}\ndo you become {wi}\nor disappear? 
 
-but don't live in, --pg
+When the people of the city look through what we made {wi}\ndo we become {wi}\nor disappear? 
 
-you think your brokenness is special --ln
+When you truly love something, {wi}you have the right to destroy it. 
 
-and it is (it isnt) --pg
+Wouldn't you agree? 
 
-There is nothing wrong with being a common wound --ln
-
-It means the healing is common too --pg
-
-When your family looks through you --ln
-
-do you become --ln
-
-or disappear? --pg
-
-When the people of the city look past that --ln
-
-sidewalk daddy made or that --ln
-
-shop that Gerald got when he came back from the war or that --ln
-
-tree where music played and foots city-wide tapped to the 8-count --pg
-
-do we become --ln
-
-or disappear? --pg
-
-When you truly love something, you have the right to destroy it. --ln
-
-Wouldn't you agree? --pg
-
-This will not end well for you --pg
-
-It will all be over soon
-
---Cut to Main character in bed

@@ -1,33 +1,33 @@
-Theo: ...
+Theo:{color=blue}: ... {/color}
 
-Theo: ...
+Theo:{color=blue}: ...{/color}
 
-Theo: ...
+Theo:{color=blue}: ...{/color}
 
 --If we can get a humming sound, that would go here
 
-Theo: Congratulations. You live to blabber another day.
+Theo:{color=blue}: Congratulations.{wi} You live to run your mouth another day.{/color}
 
 You: Where is—
 
-Theo: Like I said before, she's with Doritha, further in the house.
+Theo:{color=blue} Like I said before,{wi} she's with Doritha,{wi} further in the house.{/color}
 
-Theo: The home warped quite a bit when we arrived.
+Theo:{color=blue} The home warped quite a bit when we arrived.{/color}
 
 You: We?
 
-Theo: The people who have lived and loved in this home.
+Theo:{color=blue} The people who have lived and loved in this home.{/color}
 
-Theo: The lining between our world and yours thinned a few hours ago and we came like bees to honey. 
+Theo:{color=blue} The lining between our world and yours thinned a few hours ago and we came like bees to honey.{/color}
 
-Theo: You called to us. Left the door wide open with a spiritual welcome mat.
+Theo:{color=blue} You called to us.{wi} Left the door wide open with a spiritual welcome mat.{/color}
 
-Theo: Here, this should help you.
+Theo:{color=blue} The door to the atrium should be open now.{/color}
 
 --door opens
 
 You: Why are you helping me?
 
-Theo: I'm not.
+Theo:{color=blue} I'm not.{/color}
 
-Theo: Good luck.
+Theo:{color=blue} Good luck.{/color}

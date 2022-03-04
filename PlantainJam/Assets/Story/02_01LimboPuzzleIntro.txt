@@ -1,14 +1,14 @@
 --player walks into bedroom and triggers cutscene
 
-Spirit: Do you remember the times when you wanted to be anywhere else? 
+Spirit: {color=blue}Do you remember the times {wi}when you wanted {wi}to be {wi}anywhere else?{/color}
 
-Spirit: When you couldn't stand to be in your body? And you went somewhere else?
+Spirit: {color=blue}When you couldn't stand to be in your body? {wi}And you went {wi}{i}somewhere{/i}?{/color}
 
 You: How do you know that?
 
-Spirit: I don't. 
+Spirit: {color=blue}I don't.{/color}
 
-Spirit: Lay down. And think of that.
+Spirit: {color=blue}Lay down. And think of that.{/color}
 
 --player goes to bed, interacts with it. Character lays down in bed. After a moment, traversal occurs and the player is in spirit form near their body and can see Theophilus
 

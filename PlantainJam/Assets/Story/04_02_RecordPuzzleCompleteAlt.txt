@@ -1,29 +1,29 @@
-Theo: Congratulations. You live to blabber another day.
+Theo:{color=blue}Congratulations. {wi}You live to blabber another day.{/color}
 
 You: Where is—
 
-Theo: You...you took too long. She isnt here anymore.
+Theo:{color=blue}You...you took too long.{wi} She isnt here anymore.{/color}
 
 You: What do you mean?
 
-Theo: You took too long, kid.
+Theo:{color=blue}You took {i}too{/i} long, kid.
 
-You: Then, why did you have me do this stupid puzzle...
+You: Then, {wi}{s}{s=4}{punch=10,5}{b}why {wi}did you{/s} {color=red}have me do{wi} this stupid{wi} puzzle...{/b}{/color}
 
-Theo: Why did you...suck...at said puzzle
-
-You: ...
-
-Theo: ...
+Theo:{color=blue}Why did you{wi}...suck{wi}...at it?{/color}
 
 You: ...
 
-Theo: ...
+Theo:{color=blue}...{/color}
 
-You: She’s. Gone. Then?
+You: ...
 
-Theo: You have a couple other family members, right? Better hurry.
+Theo:{color=blue}...{/color}
 
-Theo: The door to the atrium should be open now.
+You: She’s.{wi} Gone.{wi} Then?
 
-Theo: Do better for the others.
+Theo:{color=blue}You have a couple other family members, right? {wi}Better hurry.{/color}
+
+Theo:{color=blue}The door to the atrium should be open now.{/color}
+
+Theo:{color=blue}Do better for the others.{/color}

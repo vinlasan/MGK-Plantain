@@ -4,12 +4,14 @@ You: Mariah!
 
 You: This...this isn't her room. Where did her room go?
 
-You: Spirit! Where is she!
+You: {punch=10,0.5}Spirit! Where is she!
 
-Spirit: Use your indoor voice please.
+Spirit: {color=blue}She is {wi}where she is.{/color}
 
-You: Where is—
+You: {punch=10,0.5}Enoguh! Where is—
 
-Spirit: Shut up.
+Spirit: {color=blue}You still love them? {wi}Even after last night?{/color}
+
+Spirit: {color=blue}{s}{s=5}I don't believe you.{/color}
 
 --Spirit walks into room while inside of You's physical body

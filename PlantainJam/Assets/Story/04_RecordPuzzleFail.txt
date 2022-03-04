@@ -1,15 +1,17 @@
-﻿Theo: This was an interesting choice.
+﻿Theo:{color=blue} This was an interesting choice.{/color}
 
-Theo: ...
+Theo:{color=blue} ...{/color}
 
-Theo: You think I like something like {b} this {/b}.
+Theo:{color=blue} You think I like something like {b}this{/b}.{/color}
 
-Theo: You trying to rag on me?
+Theo:{color=blue} You trying to rag on me?{/color}
 
-Theo: Listen again.
+Theo:{color=blue} Listen {wi}again.{/color}
 
-Theo: Give me something with a soft **piano**. Fluttering almost. Gotta tune your ear to hear it beating its keys.
+Theo:{color=blue} Give me something with a soft {b}piano{/b}. {wi}Fluttering almost. {wi}Gotta tune your ear to hear it beating its keys.{/color}
 
-Theo: The only **voice** I want to hear is the squeak of brass.
+Theo:{color=blue} The only {b}voice{/b} I want to hear is the squeak of brass.{/color}
 
-Theo: No **jittery** mess. It's after midnight. This is a classy joint.
+Theo:{color=blue} No {b}jittery{/b} mess. {wi}It's after midnight. This is a classy joint.{/color}
+
+Theo:{color=blue} Don't insult me like that ever again. {vpunch=10,0.5}{wi}You hear me?{/color}

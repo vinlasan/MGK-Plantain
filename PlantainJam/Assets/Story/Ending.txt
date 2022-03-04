@@ -1,31 +1,15 @@
-You know what you did. --pg
+You know {wi}what you did.\nPretending like you care{wi} wont fix it.\nThey{wi}hurt{wi}you.
 
-Pretending like you care wont fix it. --pg
+There isn't a difference between possession {wi}and moving into a home\n{wi}and not caring to learn its name\n{wi}or what it likes
 
-We're the solution now. --pg
+Because{wi} homes are living things {wi}too\n{wi}and you cannot own living things
 
-There isnt a difference between possession --ln
+So,{wi}\n this home is family to us.
 
-and moving into a home --ln
+You say you want to protect your family, too.\n{wi}Okay.
 
-and not caring to learn its name --ln
+But we both know that they will never protect {wi}you.
 
-or what it likes --pg
+{color=red}My name is Yasmin.{/color} 
 
-Because homes are living things too --ln
-
-and you cannot own living things --ln
-
-So, this home is family to us. --ln
-
-You say you want to protect your family, too. --pg
-
-Okay. --ln
-
-But we both know that they will never protect --pg 
-
-you. --pg
-
-My name is Yasmin. --pg
-
-You do not belong here. --pg
+I will do all that I can,{wi} to make your wishes come{wi} true.

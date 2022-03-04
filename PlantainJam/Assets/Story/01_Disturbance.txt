@@ -14,30 +14,26 @@ You: Hey, Mariah. You good?
 
 --No response
 
-???: She's not.
-
-You: !!!
-
-???: No one is "good", here.
+???: {color=blue}{s}{s=5} She's not.{/s}{/color}
 
 You: Who is that?
 
 You: Mom! Dad! There is someone in the house and Mariah's—I can't open her door! I can't open it!
 
-???: Okay—okay. Stop yelling. Calm—
+???: {color=blue} Okay—okay. Stop yelling. Calm— {/color}
 
-You: AAAAAAAAAA
+You:{punch=10,0.5}{b}AAAAAAAAAA{/b}
 
-???: They can't hear you. The others made sure of that.
+???:{color=blue} They can't hear you. {wi}The others made sure of that. {/s} {/color}
 
-???: Oh, don't look like that. You might not know why we are here, but you let us in.
+???:{color=blue} Oh, don't look like that. You might not know why we are here, {wi} but you let us in. {/s} {/color}
 
-???: You know what we are, kid.
+???:{color=blue} You know what we are, kid. {/s} {/color}
 
-You: Spirits.
+You: Spirits. {/s} {/color}
 
-Spirit: More. 
+Spirit:{color=blue} More. {/s} {/color}
 
-Spirit: Or less.
+Spirit:{color=blue} Or less.{/s} {/color}
 
-Spirit: If you want to save your sister, meet me in your room.
+Spirit:{color=blue} If you want to save your sister, {wi}meet me in your room.{/s} {/color}

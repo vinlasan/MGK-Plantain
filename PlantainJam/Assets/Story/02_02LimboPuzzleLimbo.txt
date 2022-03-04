@@ -1,19 +1,19 @@
-Spirit: This is limbo.
+Spirit:{color=blue} This is limbo. {/color}
 
-Spirit: Doritha is working her way into your sister now. She doesn't want to be interrupted. There is no way to get into that room from the world of the living, you have to do it this way.
+Spirit:{color=blue} Doritha is working her way into your sister now. {wi}She doesn't want to be {wi}interrupted. {wi}There is no way to get into your sister's room from the world of the living, {wi}you have to do it this way.{/color}
 
 You: Am I dead?
 
-Spirit: No. We'll see by the end of the night, though.
+Spirit:{color=blue} No. We'll see by the end of the night, though.{/color}
 
-Spirit: These plantain chips should help you on your way.
+Spirit:{color=blue} These plantain chips should help you on your way. {/color}
 
-Spirit: When you put them down in the right place, you can make things disappear.
+Spirit:{color=blue} They make whatever they touch...less {wi}{i}here.{/i}{/color}
 
-Spirit: You can't touch them in limbo though.
+Spirit:{color=blue} You can't touch the chips in limbo, though. {/color}
 
-Spirit: Put the plantain chips in the right place when in the living world, then enter limbo. Avoid the blue flames and walk past the walls that the plantain chips have removed.  
+Spirit:{color=blue} Put the chips in the right place. Go to limbo. Use your brain.{/color}
 
-Spirit: There is a chip by your sister's door. Hurry. 
+Spirit:{color=blue} There is a chip by your sister's door. {wi}Hurry.{/color} 
 
 --character in cutscene interacts with physical body again and returns to the physical world
