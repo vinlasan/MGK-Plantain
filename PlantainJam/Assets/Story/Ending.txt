@@ -1,4 +1,4 @@
-You know {wi}what you did.\nPretending like you care{wi} wont fix it.\nThey{wi}hurt{wi}you.
+You know {wi}what you did.\nPretending like you care{wi} wont fix it.\nThey{wi} hurt {wi}you.
 
 There isn't a difference between possession {wi}and moving into a home\n{wi}and not caring to learn its name\n{wi}or what it likes
 

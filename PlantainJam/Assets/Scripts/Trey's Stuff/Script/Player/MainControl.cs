@@ -139,6 +139,7 @@ public class MainControl : MonoBehaviour
     private void ToggleMovement(bool canMove)
     {
         movementEnabled = canMove;
+        animator.SetBool("moving", false);
         //Debug.Log("Movement set to :" + movementEnabled);
     }
 

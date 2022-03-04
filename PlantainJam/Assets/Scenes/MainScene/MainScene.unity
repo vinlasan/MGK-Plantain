@@ -5620,6 +5620,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7681568284238923571, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7681568284512765260, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
       propertyPath: m_Name
       value: StateDependent
@@ -5667,6 +5671,10 @@ PrefabInstance:
     - target: {fileID: 7681568284512765261, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330083870769752004, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7681568284227118981, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
