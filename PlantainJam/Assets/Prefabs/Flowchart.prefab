@@ -170,7 +170,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1199950523}
   selectedCommands:
-  - {fileID: 275047462028371114}
+  - {fileID: 4624261611623818116}
   variables:
   - {fileID: 6105624808659028998}
   - {fileID: 6105624808659029012}
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   text: "All Blues   \n\"I can't stop tapping my foot to this jazz...\""
   description: 
   targetBlock: {fileID: 1199950523}
-  hideIfVisited: 1
+  hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2337,7 +2337,7 @@ MonoBehaviour:
   text: "Take The Coltrane   \n\"This jazz song makes my heart beat faster\""
   description: 
   targetBlock: {fileID: 6105624809072766884}
-  hideIfVisited: 1
+  hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2362,7 +2362,7 @@ MonoBehaviour:
   text: " Monk's Dream   \n\"I can sway to this jazz.\""
   description: 
   targetBlock: {fileID: 6105624809072766884}
-  hideIfVisited: 1
+  hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2388,7 +2388,7 @@ MonoBehaviour:
     nova.\""
   description: 
   targetBlock: {fileID: 6105624809072766884}
-  hideIfVisited: 1
+  hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -2413,7 +2413,7 @@ MonoBehaviour:
   text: "Think It Over   \n\"What a saucy guitar in this blues.\""
   description: 
   targetBlock: {fileID: 6105624809072766884}
-  hideIfVisited: 1
+  hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   indentLevel: 0
   anyOrAllConditions: 0
   conditions:
-  - compareOperator: 5
+  - compareOperator: 2
     anyVar:
       variable: {fileID: 1199950520}
       data:
