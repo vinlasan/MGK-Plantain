@@ -9,7 +9,7 @@ namespace Gameplay
         public SceneStateType sceneStateType;
         
         [SerializeField]
-        private bool enablePlayerMovement, ignoreWorldType, dontDisableObjectsOnExit;
+        private bool ignoreWorldType, dontDisableObjectsOnExit;
 
         [SerializeField]
         private WorldMode worldMode;
@@ -27,7 +27,6 @@ namespace Gameplay
         {
             SetSceneObjects(true, sceneObjectsToEnable);
             SetSceneObjects(false, sceneObjectsToDisable);
-            EventManager.OnTogglePlayerMovement(enablePlayerMovement);
             if(!ignoreWorldType)
                 EventManager.OnWorldTypeChanged(worldMode);
         }
@@ -36,7 +35,6 @@ namespace Gameplay
         {
             if(!dontDisableObjectsOnExit)
                 SetSceneObjects(false, sceneObjectsToEnable);
-            EventManager.OnTogglePlayerMovement(enablePlayerMovement);
         }
 
         private void SetSceneObjects(bool enable, GameObject[] objects)

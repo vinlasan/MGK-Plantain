@@ -5,14 +5,30 @@ namespace Gameplay.Puzzle
 {
     public class Plantain : Interactable 
     {
-        //TODO Create function playing sounds on pickup or put down
         public bool pickedUp { get; private set; }
 
+        [SerializeField] private ParticleSystem wallParticleSystem;
+
         private Vector3 originalScale;
+        private bool contactMade = false;
+        private float wallCount = 0;
 
         private void Awake()
         {
             originalScale = transform.localScale;
+            //wallParticleSystem.gameObject.SetActive(false);
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            EventManager.WorldTypeChange += OnWorldChanged;
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            EventManager.WorldTypeChange -= OnWorldChanged;
         }
 
         protected override void OnTriggerEnter2D(Collider2D col)
@@ -24,7 +40,12 @@ namespace Gameplay.Puzzle
                     EventManager.OnInteractableInRange(this, true);
             }
             if (col.TryGetComponent(out WallSwitcher wall))
+            {
                 wall.EnableSpiritWorldTraverse();
+                Vector2 dir = (transform.position - wall.transform.position).normalized;
+                wallParticleSystem.transform.position += (Vector3)dir;
+                contactMade = true;
+            }       
         }
         
         protected override void OnTriggerExit2D(Collider2D col)
@@ -33,7 +54,20 @@ namespace Gameplay.Puzzle
             if(col.CompareTag("Player"))
                 EventManager.OnInteractableInRange(this, false);
             if(col.TryGetComponent(out WallSwitcher wall))
+            {
                 wall.DisableSpiritWorldTraverse();
+                contactMade = false;
+            }
+        }
+
+        private void OnWorldChanged(WorldMode worldMode)
+        {
+            if(contactMade && worldMode == WorldMode.SpiritWorld)
+            {
+                wallParticleSystem.gameObject.SetActive(true);
+                wallParticleSystem.Play();
+            }
+            else wallParticleSystem.gameObject.SetActive(false);
         }
 
         public void Pickup(Vector3 playerLocation)

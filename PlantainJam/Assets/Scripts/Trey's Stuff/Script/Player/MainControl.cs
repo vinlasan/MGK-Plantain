@@ -15,7 +15,6 @@ public enum PlayerState
 [RequireComponent(typeof(Rigidbody2D))]
 public class MainControl : MonoBehaviour
 {
-    public GameObject RestartMenu;
     //public GameObject walksfx;
 
     public PlayerState currentState;
@@ -32,6 +31,8 @@ public class MainControl : MonoBehaviour
     private Queue<Plantain> plantains = new Queue<Plantain>();
     private Plantain activePlantain;
     private Interactable interactableInRange;
+
+    [SerializeField] SceneStateType movementEnabledState, movementDisabledState; 
     
     
     //private SceneStateType endCutscene, recordPuzzleOpenScene, beforeGhostScene;
@@ -52,14 +53,24 @@ public class MainControl : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.TogglePlayerMovement += ToggleMovement;
+        //EventManager.TogglePlayerMovement += ToggleMovement;
         EventManager.InteractableInRange += InteractableInRange;
+        EventManager.SceneStateChange += SceneStateChanged;
     }
 
     private void OnDisable()
     {
-        EventManager.TogglePlayerMovement -= ToggleMovement;
+        //EventManager.TogglePlayerMovement -= ToggleMovement;
         EventManager.InteractableInRange -= InteractableInRange;
+        EventManager.SceneStateChange -= SceneStateChanged;
+    }
+
+    private void SceneStateChanged(SceneStateType state)
+    {
+        if (movementEnabledState == state)
+            movementEnabled = true;
+        else if (movementDisabledState == state)
+            movementEnabled = false;
     }
 
     // Update is called once per frame

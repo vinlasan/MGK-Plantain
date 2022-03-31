@@ -33,13 +33,13 @@ public class Interactable : MonoBehaviour
         interactionActive = false;
     }
 
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         EventManager.TextBoxStatusUpdate += CanDisplayText;
         EventManager.SceneStateChange += ActivateInteraction;
     }
 
-    protected void OnDisable()
+    protected virtual void OnDisable()
     {
         EventManager.TextBoxStatusUpdate -= CanDisplayText;
         EventManager.SceneStateChange -= ActivateInteraction;

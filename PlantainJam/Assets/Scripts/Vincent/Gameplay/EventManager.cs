@@ -15,7 +15,7 @@ namespace Gameplay
         
         public static event GameEvent<bool> DebugMode;
         
-        public static event GameEvent<bool> TogglePlayerMovement;
+        //public static event GameEvent<bool> TogglePlayerMovement;
 
         public static event GameEvent<AudioSource> AudioPlayRecordMusic;
         public static event GameEvent AudioStopRecordMusic;
@@ -47,11 +47,11 @@ namespace Gameplay
                 DebugMode(enabled);
         }
         
-        public static void OnTogglePlayerMovement(bool shouldMove)
+        /*public static void OnTogglePlayerMovement(bool shouldMove)
         {
             if (TogglePlayerMovement != null)
                 TogglePlayerMovement(shouldMove);
-        }
+        }*/
 
         public static void OnAudioPlayRecordMusic(AudioSource clip)
         {
