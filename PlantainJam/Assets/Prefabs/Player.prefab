@@ -203,12 +203,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c841f7d3da25a8b4795f07b6afc024df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RestartMenu: {fileID: 0}
   currentState: 0
   speed: 10
   playerInventory: {fileID: 11400000, guid: e718e3204efb47c49925ff6b5ace05b6, type: 2}
   receivedItem: {fileID: 0}
   triggerVolLimbo: {fileID: 0}
+  movementEnabledState: {fileID: 11400000, guid: 55f3c00f1d5f5584ea9ee20546a71680, type: 2}
+  movementDisabledState: {fileID: 11400000, guid: 8fcdccd29e8dcfe42935d9bbeb63593b, type: 2}
 --- !u!70 &1839895257976571527
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -352,6 +353,8 @@ PlayableDirector:
   - key: {fileID: 2627631006889730735, guid: d22887737ed00354abc5e14665549b6d, type: 2}
     value: {fileID: 0}
   - key: {fileID: 912612103400665426, guid: d22887737ed00354abc5e14665549b6d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1284281618646870050, guid: 801b1849594d0fa4c84b39f2c6aac64a, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:

@@ -7,8 +7,6 @@ namespace AudioUtilities
 {
     public class MixerController : MonoBehaviour
     {
-        //public static MixerController Instance { get; private set; }
-
         public enum MusicLevels { LimboNormal = -2, PhysicalNormal = 0, PhysicalMute = -80, LimboMute = -80}
         [SerializeField]
         private AudioMixer mixer;
@@ -17,13 +15,9 @@ namespace AudioUtilities
         private AudioMixerSnapshot limboSnapshot, physicalSnapShot, bgmMutedSnapshot;
 
         [SerializeField] 
-        private AudioSource limboMusic, physicalMusic;
+        private AudioSource limboMusic, physicalMusic, doorUnlockSound;
 
-        public AudioSource option1;
-        public AudioSource option2;
-        public AudioSource option3;
-        public AudioSource option4;
-        public AudioSource option5;
+        [SerializeField] private SceneStateType disableRecordMusic, playDoorUnlockSound;
 
         private bool puzzleMusicPlaying;
 
@@ -47,6 +41,7 @@ namespace AudioUtilities
             EventManager.GameStart += StartBGM;
             EventManager.WorldTypeChange += SwitchSnapshots;
             EventManager.AudioStopRecordMusic += StopRecordAudio;
+            EventManager.SceneStateChange += SceneStateChanged;
         }
 
         private void OnDisable()
@@ -55,6 +50,7 @@ namespace AudioUtilities
             EventManager.GameStart -= StartBGM;
             EventManager.WorldTypeChange -= SwitchSnapshots;
             EventManager.AudioStopRecordMusic -= StopRecordAudio;
+            EventManager.SceneStateChange -= SceneStateChanged;
         }
 
         private void StartBGM()
@@ -67,6 +63,14 @@ namespace AudioUtilities
         {
             limboMusic.Stop();
             physicalMusic.Stop();
+        }
+
+        private void SceneStateChanged(SceneStateType stateType)
+        {
+            if(stateType == disableRecordMusic)
+                StopRecordAudio();
+            if(stateType == playDoorUnlockSound)
+                doorUnlockSound.Play();
         }
 
         private void SwitchSnapshots(WorldMode wMode)
@@ -91,8 +95,6 @@ namespace AudioUtilities
                 bgmMutedSnapshot.TransitionTo(1);
             else SwitchSnapshots(worldMode);
         }
-        
-        //private IEnumerator TransitionBackToBGM(float tranistionRate, )
 
         private void PlayRecordAudio(AudioSource audioSource)
         {

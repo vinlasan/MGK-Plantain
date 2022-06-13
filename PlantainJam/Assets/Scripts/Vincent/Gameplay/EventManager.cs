@@ -19,7 +19,6 @@ namespace Gameplay
 
         public static event GameEvent<AudioSource> AudioPlayRecordMusic;
         public static event GameEvent AudioStopRecordMusic;
-        public static event GameEvent<float> AudioGhostApproach;
         public static event GameEvent GameStart;
 
         public static event GameEvent<Interactable, bool> InteractableInRange;
@@ -71,12 +70,6 @@ namespace Gameplay
                 UpdateTextBox(text);
         }
 
-        public static void OnAudioGhostApproach(float duration)
-        {
-            if (AudioGhostApproach != null)
-                AudioGhostApproach(duration);
-        }
-        
         public static void OnInteractableInRange(Interactable interactable, bool inRange)
         {
             if (InteractableInRange != null)

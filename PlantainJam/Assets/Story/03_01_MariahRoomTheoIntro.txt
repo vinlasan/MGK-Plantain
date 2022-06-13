@@ -8,10 +8,16 @@ You: {punch=10,0.5}Spirit! Where is she!
 
 Spirit: {color=blue}She is {wi}where she is.{/color}
 
-You: {punch=10,0.5}Enoguh! Where is—
+You: {punch=10,0.5}Enough! Where is—
 
-Spirit: {color=blue}You still love them? {wi}Even after last night?{/color}
+Spirit: Use your indoor voice please.
 
-Spirit: {color=blue}{s}{s=5}I don't believe you.{/color}
+You: Where is—
+
+Spirit: Shut up.
+
+-- Spirit: {color=blue}You still love them? {wi}Even after last night?{/color}
+
+-- Spirit: {color=blue}{s}{s=5}I don't believe you.{/color}
 
 --Spirit walks into room while inside of You's physical body

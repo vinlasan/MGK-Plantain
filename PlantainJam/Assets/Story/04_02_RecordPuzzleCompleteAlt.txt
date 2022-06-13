@@ -2,7 +2,7 @@ Theo:{color=blue}Congratulations. {wi}You live to blabber another day.{/color}
 
 You: Where is—
 
-Theo:{color=blue}You...you took too long.{wi} She isnt here anymore.{/color}
+Theo:{color=blue}You...you took too long.{wi} She isn't here anymore.{/color}
 
 You: What do you mean?
 

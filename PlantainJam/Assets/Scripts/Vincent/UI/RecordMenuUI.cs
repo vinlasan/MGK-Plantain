@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Gameplay;
-using Gameplay.Puzzle;
-using AudioUtilities;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class RecordMenuUI : MonoBehaviour
@@ -15,6 +10,8 @@ public class RecordMenuUI : MonoBehaviour
     private SceneStateType PuzzleComplete;
     [SerializeField]
     private SceneStateType PuzzleFailed;
+
+    [SerializeField] private AudioSource option1, option2, option3, option4, option5;
 
     // Start is called before the first frame update
     void Start()
@@ -29,23 +26,23 @@ public class RecordMenuUI : MonoBehaviour
             case 0:
                 //PlayRecordAudio();
                 //EventManager.OnAudioStopRecordMusic();
-                EventManager.OnAudioPlayRecordMusic(GameDirector.Instance.mixerController.option1);
+                EventManager.OnAudioPlayRecordMusic(option1);
                 break;
             case 1:
                 //EventManager.OnAudioStopRecordMusic();
-                EventManager.OnAudioPlayRecordMusic(GameDirector.Instance.mixerController.option2);
+                EventManager.OnAudioPlayRecordMusic(option2);
                 break;
             case 2:
                 //EventManager.OnAudioStopRecordMusic();
-                EventManager.OnAudioPlayRecordMusic(GameDirector.Instance.mixerController.option3);
+                EventManager.OnAudioPlayRecordMusic(option3);
                 break;
             case 3:
                 //EventManager.OnAudioStopRecordMusic();
-                EventManager.OnAudioPlayRecordMusic(GameDirector.Instance.mixerController.option4);
+                EventManager.OnAudioPlayRecordMusic(option4);
                 break;
             case 4:
                // EventManager.OnAudioStopRecordMusic();
-                EventManager.OnAudioPlayRecordMusic(GameDirector.Instance.mixerController.option5);
+                EventManager.OnAudioPlayRecordMusic(option5);
                 break;
 
         }
@@ -59,13 +56,13 @@ public class RecordMenuUI : MonoBehaviour
         
     }
 
-    public void ButtonClicked(int optionNum)
+    /*public void ButtonClicked(int optionNum)
     {
         if(optionNum == 0)
             EventManager.OnSceneStateChanged(PuzzleComplete);
         else if(optionNum >= 1)
             EventManager.OnSceneStateChanged(PuzzleFailed);
-    }
+    }*/
 
         public void OnPointerEnter(PointerEventData eventData)
     {
