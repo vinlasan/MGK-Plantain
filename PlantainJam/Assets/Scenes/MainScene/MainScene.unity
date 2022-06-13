@@ -169,10 +169,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plantain (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2858555297653684540, guid: 9a7bf9675560eee4f9d28db0cfe01768, type: 3}
-      propertyPath: m_Radius
-      value: 11.09
-      objectReference: {fileID: 0}
     - target: {fileID: 2858555297653684542, guid: 9a7bf9675560eee4f9d28db0cfe01768, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -216,10 +212,6 @@ PrefabInstance:
     - target: {fileID: 2858555297653684542, guid: 9a7bf9675560eee4f9d28db0cfe01768, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2858555297653684543, guid: 9a7bf9675560eee4f9d28db0cfe01768, type: 3}
-      propertyPath: descriptionText
-      value: A plantain chip that should come in handy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a7bf9675560eee4f9d28db0cfe01768, type: 3}
