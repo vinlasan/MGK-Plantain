@@ -1,29 +1,29 @@
-Theo:{color=blue}Congratulations. {wi}You live to blabber another day.{/color}
+Theo:{color=#E63B2A}Congratulations. {wi}You live to blabber another day.{/color}
 
 You: Where is—
 
-Theo:{color=blue}You...you took too long.{wi} She isn't here anymore.{/color}
+Theo:{color=#E63B2A}You...you took too long.{wi} She isn't here anymore.{/color}
 
 You: What do you mean?
 
-Theo:{color=blue}You took {i}too{/i} long, kid.
+Theo:{color=#E63B2A}You took {i}too{/i} long, kid.
 
 You: Then, {wi}{s}{s=4}{punch=10,5}{b}why {wi}did you{/s} {color=red}have me do{wi} this stupid{wi} puzzle...{/b}{/color}
 
-Theo:{color=blue}Why did you{wi}...suck{wi}...at it?{/color}
+Theo:{color=#E63B2A}Why did you{wi}...suck{wi}...at it?{/color}
 
 You: ...
 
-Theo:{color=blue}...{/color}
+Theo:{color=#E63B2A}...{/color}
 
 You: ...
 
-Theo:{color=blue}...{/color}
+Theo:{color=#E63B2A}...{/color}
 
 You: She’s.{wi} Gone.{wi} Then?
 
-Theo:{color=blue}You have a couple other family members, right? {wi}Better hurry.{/color}
+Theo:{color=#E63B2A}You have a couple other family members, right? {wi}Better hurry.{/color}
 
-Theo:{color=blue}The door to the atrium should be open now.{/color}
+Theo:{color=#E63B2A}The door to the atrium should be open now.{/color}
 
-Theo:{color=blue}Do better for the others.{/color}
+Theo:{color=#E63B2A}Do better for the others.{/color}

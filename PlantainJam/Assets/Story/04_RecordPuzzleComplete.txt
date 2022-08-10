@@ -1,33 +1,33 @@
-Theo:{color=blue}: ... {/color}
+Theo:{color=#E63B2A}: ... {/color}
 
-Theo:{color=blue}: ...{/color}
+Theo:{color=#E63B2A}: ...{/color}
 
-Theo:{color=blue}: ...{/color}
+Theo:{color=#E63B2A}: ...{/color}
 
 --If we can get a humming sound, that would go here
 
-Theo:{color=blue}: Congratulations.{wi} You live to run your mouth another day.{/color}
+Theo:{color=#E63B2A}: Congratulations.{wi} You live to run your mouth another day.{/color}
 
 You: Where is—
 
-Theo:{color=blue} Like I said before,{wi} she's with Doritha,{wi} further in the house.{/color}
+Theo:{color=#E63B2A} Like I said before,{wi} she's with Doritha,{wi} further in the house.{/color}
 
-Theo:{color=blue} The home warped quite a bit when we arrived.{/color}
+Theo:{color=#E63B2A} The home warped quite a bit when we arrived.{/color}
 
 You: We?
 
-Theo:{color=blue} The people who have lived and loved in this home.{/color}
+Theo:{color=#E63B2A} The people who have lived and loved in this home.{/color}
 
-Theo:{color=blue} The lining between our world and yours thinned a few hours ago and we came like bees to honey.{/color}
+Theo:{color=#E63B2A} The lining between our world and yours thinned a few hours ago and we came like bees to honey.{/color}
 
-Theo:{color=blue} You called to us.{wi} Left the door wide open with a spiritual welcome mat.{/color}
+Theo:{color=#E63B2A} You called to us.{wi} Left the door wide open with a spiritual welcome mat.{/color}
 
-Theo:{color=blue} The door to the atrium should be open now.{/color}
+Theo:{color=#E63B2A} The door to the atrium should be open now.{/color}
 
 --door opens
 
 You: Why are you helping me?
 
-Theo:{color=blue} I'm not.{/color}
+Theo:{color=#E63B2A} I'm not.{/color}
 
-Theo:{color=blue} Good luck.{/color}
+Theo:{color=#E63B2A} Good luck.{/color}

@@ -1,63 +1,63 @@
 ﻿You: How...
 
-Spirit: {color=blue}My name is Theophilus. Call me Theo.{/color}
+Spirit: {color=#E63B2A}My name is Theophilus. Call me Theo.{/color}
 
 You: Why are you in my body?
 
-Theo:{color=blue}{color=blue}'Cause you don't want it.{/color}
+Theo:{color=#E63B2A}{color=#E63B2A}'Cause you don't want it.{/color}
 
-You: I—No, I—that's not. {wi}{size=10}You tricked me.{/size}
+You: I—No, I—that's not. {wi}You tricked me.
 
-Theo:{color=blue}Don't worry. You're too strong for me to stay in it. Just need to borrow every now and then.{/color}
+Theo:{color=#E63B2A}Don't worry. You're too strong for me to stay in it. Just need to borrow every now and then.{/color}
 
-You: {size=10}She's {wi}dead. {wi}Everyone is dead. I'm {wi}dead.{/size}
+You: She's {wi}dead. {wi}Everyone is dead. I'm {wi}dead.
 
-Theo:{color=blue}...{/color}
+Theo:{color=#E63B2A}...{/color}
 
-Theo:{color=blue}...{/color}
+Theo:{color=#E63B2A}...{/color}
 
-Theo:{color=blue}...{/color}
+Theo:{color=#E63B2A}...{/color}
 
-Theo: {color=blue}Wait.{/color}
+Theo: {color=#E63B2A}Wait.{/color}
 
-Theo: {color=blue}This isn't what you wanted?{/color}
+Theo: {color=#E63B2A}This isn't what you wanted?{/color}
 
 You: Why would I want this?
 
-Theo: {color=blue}Because you asked for it.{/color}
+Theo: {color=#E63B2A}Because you asked for it.{/color}
 
 You: I{s}{s=1}...{/s}this is not what I asked for.
 
-Theo: {color=blue}That's not how this works.{/color}
+Theo: {color=#E63B2A}That's not how this works.{/color}
 
-Theo:{color=blue}{s}{s=1}...{/color}
+Theo:{color=#E63B2A}{s}{s=1}...{/color}
 
-Theo:{color=blue}You can't stop them. They've been hungry for so long.{/color}
+Theo:{color=#E63B2A}You can't stop them. They've been hungry for so long.{/color}
 
-Theo:{color=blue}I'll help you if you give me something.{/color}
+Theo:{color=#E63B2A}I'll help you if you give me something.{/color}
 
 You: Take whatever you want.
 
-Theo:{color=blue}I don't want {wi}"whatever". {wi}Taste should do just fine.{/color}
+Theo:{color=#E63B2A}I don't want {wi}"whatever". {wi}Taste should do just fine.{/color}
 
-Theo:{color=blue}Not the kind on your tongue, the kind in your soul.{/color}
+Theo:{color=#E63B2A}Not the kind on your tongue, the kind in your soul.{/color}
 
 --This line is subject to change depending on edits made to the record puzzle
 
-Theo:{color=blue}Play me a song that I could put on at my club.  Cats usually wear sharp suits to my joint.{/color} 
+Theo:{color=#E63B2A}Play me a song that I could put on at my club.  Cats usually wear sharp suits to my joint.{/color} 
 
-Theo:{color=blue}But we ain't high-strung. We laugh and drink in clouds of smoke.{/color} 
+Theo:{color=#E63B2A}But we ain't high-strung. We laugh and drink in clouds of smoke.{/color} 
 
-Theo:{color=blue}We're all cool...by accident. {wi}Get it? {wi}That's what this song should be.{/color}
+Theo:{color=#E63B2A}We're all cool...by accident. {wi}Get it? {wi}That's what this song should be.{/color}
 
-Theo:{color=blue}Give me something with a soft {b}piano{/b}. Fluttering almost. Gotta tune your ear to hear it beating its keys.{/color}
+Theo:{color=#E63B2A}Give me something with a soft {b}piano{/b}. Fluttering almost. Gotta tune your ear to hear it beating its keys.{/color}
 
-Theo:{color=blue}The only {b}voice{/b} I want to hear is the squeak of brass.{/color}
+Theo:{color=#E63B2A}The only {b}voice{/b} I want to hear is the squeak of brass.{/color}
 
-Theo:{color=blue}No {b}jittery{/b} mess. It's after midnight. This is a classy joint.{/color}
+Theo:{color=#E63B2A}No {b}jittery{/b} mess. It's after midnight. This is a classy joint.{/color}
 
-Theo:{color=blue}Then we'll talk with our indoor voices. {wi}Ghost {wi}to person.{/color}
+Theo:{color=#E63B2A}Then we'll talk with our indoor voices. {wi}Ghost {wi}to person.{/color}
 
-Theo:{color=blue}Here, take your body back, unless you want to stay like that.{/color}
+Theo:{color=#E63B2A}Here, take your body back, unless you want to stay like that.{/color}
 
-Theo:{color=blue}Chop, chop.{/color}
+Theo:{color=#E63B2A}Chop, chop.{/color}

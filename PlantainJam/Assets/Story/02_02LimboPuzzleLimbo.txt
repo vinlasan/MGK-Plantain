@@ -1,19 +1,19 @@
-Spirit:{color=blue} This is limbo. {/color}
+Spirit:{color=#E63B2A} This is limbo. {/color}
 
-Spirit:{color=blue} Doritha is working her way into your sister now. {wi}She doesn't want to be {wi}interrupted. {wi}There is no way to get into your sister's room from the world of the living, {wi}you have to do it this way.{/color}
+Spirit:{color=#E63B2A} Doritha is working her way into your sister now. {wi}She doesn't want to be {wi}interrupted. {wi}There is no way to get into your sister's room from the world of the living, {wi}you have to do it this way.{/color}
 
 You: Am I dead?
 
-Spirit:{color=blue} No. We'll see by the end of the night, though.{/color}
+Spirit:{color=#E63B2A} No. We'll see by the end of the night, though.{/color}
 
-Spirit:{color=blue} These plantain chips should help you on your way. {/color}
+Spirit:{color=#E63B2A} These plantain chips should help you on your way. {/color}
 
-Spirit:{color=blue} They make whatever they touch...less {wi}{i}here.{/i}{/color}
+Spirit:{color=#E63B2A} They make whatever they touch...less {wi}{i}here.{/i}{/color}
 
-Spirit:{color=blue} You can't touch the chips in limbo, though. {/color}
+Spirit:{color=#E63B2A} You can't touch the chips in limbo, though. {/color}
 
-Spirit:{color=blue} Put the chips in the right place. Go to limbo. Use your brain.{/color}
+Spirit:{color=#E63B2A} Put the chips in the right place. Go to limbo. Use your brain.{/color}
 
-Spirit:{color=blue} There is a chip by your sister's door. {wi}Hurry.{/color} 
+Spirit:{color=#E63B2A} There is a chip by your sister's door. {wi}Hurry.{/color} 
 
 --character in cutscene interacts with physical body again and returns to the physical world

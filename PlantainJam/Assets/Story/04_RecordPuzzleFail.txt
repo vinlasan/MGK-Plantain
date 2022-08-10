@@ -1,17 +1,17 @@
-﻿Theo:{color=blue} This was an interesting choice.{/color}
+﻿Theo:{color=#E63B2A} This was an interesting choice.{/color}
 
-Theo:{color=blue} ...{/color}
+Theo:{color=#E63B2A} ...{/color}
 
-Theo:{color=blue} You think I like something like {b}this{/b}.{/color}
+Theo:{color=#E63B2A} You think I like something like {b}this{/b}.{/color}
 
-Theo:{color=blue} You trying to rag on me?{/color}
+Theo:{color=#E63B2A} You trying to rag on me?{/color}
 
-Theo:{color=blue} Listen {wi}again.{/color}
+Theo:{color=#E63B2A} Listen {wi}again.{/color}
 
-Theo:{color=blue} Give me something with a soft {b}piano{/b}. {wi}Fluttering almost. {wi}Gotta tune your ear to hear it beating its keys.{/color}
+Theo:{color=#E63B2A} Give me something with a soft {b}piano{/b}. {wi}Fluttering almost. {wi}Gotta tune your ear to hear it beating its keys.{/color}
 
-Theo:{color=blue} The only {b}voice{/b} I want to hear is the squeak of brass.{/color}
+Theo:{color=#E63B2A} The only {b}voice{/b} I want to hear is the squeak of brass.{/color}
 
-Theo:{color=blue} No {b}jittery{/b} mess. {wi}It's after midnight. This is a classy joint.{/color}
+Theo:{color=#E63B2A} No {b}jittery{/b} mess. {wi}It's after midnight. This is a classy joint.{/color}
 
-Theo:{color=blue} Don't insult me like that ever again. {vpunch=10,0.5}{wi}You hear me?{/color}
+Theo:{color=#E63B2A} Don't insult me like that ever again. {vpunch=10,0.5}{wi}You hear me?{/color}

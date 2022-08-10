@@ -128,6 +128,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7681568284223458335, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
   m_PrefabInstance: {fileID: 7681568284292643130}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &72942104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1111747090, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
+  m_PrefabInstance: {fileID: 9096267850569048351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &222203429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7681568284341565215, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
@@ -429,6 +440,14 @@ PrefabInstance:
     - target: {fileID: 2888385527763705071, guid: d73c5903384bf3e449db191b675bf66c, type: 3}
       propertyPath: m_Name
       value: 'MainMap '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749179944108515676, guid: d73c5903384bf3e449db191b675bf66c, type: 3}
+      propertyPath: m_Name
+      value: EndGameDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749179944108515676, guid: d73c5903384bf3e449db191b675bf66c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d73c5903384bf3e449db191b675bf66c, type: 3}
@@ -1081,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[11].sceneObjectsToDisable.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[12].sceneObjectsToDisable.Array.size
@@ -1218,7 +1237,7 @@ PrefabInstance:
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[11].sceneObjectsToDisable.Array.data[1]
       value: 
-      objectReference: {fileID: 332830476}
+      objectReference: {fileID: 2131120451}
     - target: {fileID: 939455389316934836, guid: 1a2aafcfa719f564da423760c9104dd0, type: 3}
       propertyPath: sceneStates.Array.data[12].sceneObjectsToDisable.Array.data[0]
       value: 
@@ -1816,6 +1835,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2131120451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4749179944108515676, guid: d73c5903384bf3e449db191b675bf66c, type: 3}
+  m_PrefabInstance: {fileID: 662523543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1122505120440445702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2917,6 +2941,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7681568284524539444, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_Size.x
+      value: 3.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681568284524539444, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681568284524539444, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.07
+      objectReference: {fileID: 0}
     - target: {fileID: 7681568284701709950, guid: 40c43e1efd8315e48b8c0b6106f5ba82, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2941,6 +2977,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2100330563, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
+      propertyPath: textObject
+      value: 
+      objectReference: {fileID: 72942104}
     - target: {fileID: 5293472731427956865, guid: 9d41f9dcc84f5c341b7939f52e2d7f53, type: 3}
       propertyPath: m_Name
       value: Objective Canvas

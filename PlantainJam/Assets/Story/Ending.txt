@@ -10,6 +10,6 @@ You say you want to protect your family, too.\n{wi}Okay.
 
 But we both know that they will never protect {wi}you.
 
-{color=red}My name is Yasmin.{/color} 
+{color=#E63B2A}My name is Yasmin.{/color} 
 
 I will do all that I can,{wi} to make your wishes come{wi} true.

@@ -6,7 +6,7 @@ You: This...this isn't her room. Where did her room go?
 
 You: {punch=10,0.5}Spirit! Where is she!
 
-Spirit: {color=blue}She is {wi}where she is.{/color}
+Spirit: {color=#E63B2A}She is {wi}where she is.{/color}
 
 You: {punch=10,0.5}Enough! Where is—
 
@@ -16,8 +16,8 @@ You: Where is—
 
 Spirit: Shut up.
 
--- Spirit: {color=blue}You still love them? {wi}Even after last night?{/color}
+-- Spirit: {color=#E63B2A}You still love them? {wi}Even after last night?{/color}
 
--- Spirit: {color=blue}{s}{s=5}I don't believe you.{/color}
+-- Spirit: {color=#E63B2A}{s}{s=5}I don't believe you.{/color}
 
 --Spirit walks into room while inside of You's physical body
