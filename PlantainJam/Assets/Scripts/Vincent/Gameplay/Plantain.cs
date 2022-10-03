@@ -10,13 +10,11 @@ namespace Gameplay.Puzzle
         [SerializeField] private ParticleSystem wallParticleSystem;
 
         private Vector3 originalScale;
-        //private bool contactMade = false;
         private float wallCount = 0;
 
         private void Awake()
         {
             originalScale = transform.localScale;
-            //wallParticleSystem.gameObject.SetActive(false);
         }
 
         protected override void OnEnable()
@@ -43,9 +41,10 @@ namespace Gameplay.Puzzle
             {
                 wallCount++;
                 wall.EnableSpiritWorldTraverse();
-                Vector2 dir = (transform.position - wall.transform.position).normalized;
-                wallParticleSystem.transform.position += (Vector3)dir;
-                //contactMade = true;
+                Vector3 localPos = transform.localPosition;
+                Vector3 wallPos = transform.InverseTransformDirection(wall.transform.position);
+                Vector2 effectPosition =   (localPos - wallPos)/2 ;
+                wallParticleSystem.transform.localPosition = effectPosition;
             }       
         }
         
@@ -54,12 +53,15 @@ namespace Gameplay.Puzzle
             base.OnTriggerExit2D(col);
             if(col.CompareTag("Player"))
                 EventManager.OnInteractableInRange(this, false);
+
+            if (GameDirector.Instance.worldMode == WorldMode.SpiritWorld)
+                return;
+            
             if(col.TryGetComponent(out WallSwitcher wall))
             {
                 wallCount--;
                 wallCount = wallCount < 0 ? 0 : wallCount;
                 wall.DisableSpiritWorldTraverse();
-                //contactMade = false;
             }
         }
 

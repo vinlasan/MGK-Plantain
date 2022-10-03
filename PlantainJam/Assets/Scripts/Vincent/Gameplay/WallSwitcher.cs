@@ -15,16 +15,17 @@ namespace Gameplay.Puzzle
         [SerializeField]
         private Color realColor, spiritColor;
 
+        [SerializeField] 
+        private BoxCollider2D boxCollider2D = default; 
+        
         private void OnEnable()
         {
             EventManager.WorldTypeChange += WorldTypeChanged;
-            EventManager.DebugMode += EnableDebugVisuals;
         }
 
         private void OnDisable()
         {
             EventManager.WorldTypeChange -= WorldTypeChanged;
-            EventManager.DebugMode -= EnableDebugVisuals;
         }
 
         public void Awake()
@@ -33,24 +34,18 @@ namespace Gameplay.Puzzle
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
 
-        public void EnableDebugVisuals(bool enabled)
-        {
-            debugVisuals = enabled;
-            spriteRenderer.gameObject.SetActive(enabled);
-        }
-
         private void WorldTypeChanged(WorldMode worldMode)
         {
             //if no plantain detected nearby toggle normally
             if (worldMode == WorldMode.SpiritWorld && spiritWorldTraverse)
             {
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                boxCollider2D.enabled = false;
                 if(debugVisuals)
                     spriteRenderer.color = Color.grey;
             }
             else
             {
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                boxCollider2D.enabled = true;
                 if (debugVisuals)
                 {
                     if (worldMode == WorldMode.RealWorld)

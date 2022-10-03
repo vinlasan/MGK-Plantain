@@ -8,50 +8,55 @@ namespace UI
 {
     public class ObjectiveText : MonoBehaviour
     {
-        //enable the objective box 
-        //an event fires with the text to update 
-        //use scene states to determine when to enable the scene state and disable it
-        
         [SerializeField]
         private SceneStateType enableTextBox, disableTextBox;
-        [SerializeField]
-        private TextMeshProUGUI textObject;
 
-        [SerializeField]
-        private List<ObjectiveTextData> objectiveTextData;
+        [SerializeField] 
+        private GameObject canvasObject = default;
         
         [SerializeField]
-        private GameObject objectiveBoxObject;
+        private TextMeshProUGUI textObject = default;
+
+        [SerializeField]
+        private List<ObjectiveTextData> objectiveTextData = default;
+        
+        [SerializeField]
+        private GameObject objectiveBoxObject = default;
 
         private void Awake()
         {
-            textObject = GetComponentInChildren<TextMeshProUGUI>();
-            HandleSceneState(disableTextBox);
+            OnSceneStateChanged(disableTextBox);
         }
 
         private void OnEnable()
         {
-            EventManager.SceneStateChange += HandleSceneState;
+            EventManager.SceneStateChange += OnSceneStateChanged;
         }
 
         private void OnDisable()
         {
-            EventManager.SceneStateChange -= HandleSceneState;
+            EventManager.SceneStateChange -= OnSceneStateChanged;
         }
 
         //Check if the scenestate is one that correlates to an objective text. If so update the text object
-        private void HandleSceneState(SceneStateType stateType)
+        private void OnSceneStateChanged(SceneStateType stateType)
         {
             foreach (ObjectiveTextData objTextData in objectiveTextData)
             {
                 if(objTextData.sceneStateType == stateType)
                     textObject.text = objTextData.text;
             }
-            
+
             if (stateType == enableTextBox)
+            {
+                canvasObject.SetActive(true);
                 objectiveBoxObject.SetActive(true);
+            }
             else if (stateType == disableTextBox)
+            {
+                canvasObject.SetActive(false);
                 objectiveBoxObject.SetActive(false);
+            }
         }
     }
     

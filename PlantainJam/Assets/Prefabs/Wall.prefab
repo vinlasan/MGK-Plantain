@@ -157,3 +157,4 @@ MonoBehaviour:
   debugVisuals: 0
   realColor: {r: 1, g: 1, b: 1, a: 1}
   spiritColor: {r: 0, g: 0.821918, b: 1, a: 1}
+  boxCollider2D: {fileID: 1127549624}
