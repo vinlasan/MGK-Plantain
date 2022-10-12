@@ -5,18 +5,19 @@ namespace Gameplay.Puzzle
     public class RecordPlayer : Interactable
     {
         [SerializeField]
-        private SceneStateType recordsAllFoundSceneState, recordPuzzleOpenState;
+        private SceneStateType recordsAllFoundSceneState, 
+            recordPuzzleOpenState, 
+            recordPuzzleClose;
 
         private bool showRecordMenu;
         
-        //this needs disable the interaction text when the records are found
-        //subscribe to records found event
-        //when interacted with fire the scene state event to open the menu options\
 
         protected override void ActivateInteraction(SceneStateType sceneStateType)
         {
             if (sceneStateType == recordsAllFoundSceneState)
                 showRecordMenu = true;
+            if (sceneStateType == recordPuzzleClose)
+                showRecordMenu = false;
             base.ActivateInteraction(sceneStateType);
         }
 

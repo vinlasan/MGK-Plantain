@@ -41,10 +41,7 @@ namespace Gameplay.Puzzle
             {
                 wallCount++;
                 wall.EnableSpiritWorldTraverse();
-                Vector3 localPos = transform.localPosition;
-                Vector3 wallPos = transform.InverseTransformDirection(wall.transform.position);
-                Vector2 effectPosition =   (localPos - wallPos)/2 ;
-                wallParticleSystem.transform.localPosition = effectPosition;
+                wallParticleSystem.transform.localPosition = transform.InverseTransformPoint(wall.transform.position);
             }       
         }
         
